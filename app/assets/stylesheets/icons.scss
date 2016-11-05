@@ -1,0 +1,83 @@
+.bars::before {
+  content: '\f0c9';
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+}
+// =map
+//   content: '\f041'
+//   font-family: 'FontAwesome'
+//
+// =clock
+//   content: '\f017'
+//   font-family: 'FontAwesome'
+//
+// =github
+//   content: '\f09b'
+//   font-family: 'FontAwesome'
+//
+// =close
+//   content: '\f057'
+//   font-family: 'FontAwesome'
+//
+// =coffee
+//   content: '\f0f4'
+//   font-family: 'FontAwesome'
+//
+// =laptop
+//   content: '\f109'
+//   font-family: 'FontAwesome'
+//
+// =sitemap
+//   content: '\f0e8'
+//   font-family: 'FontAwesome'
+//
+// =learning
+//   content: '\f19d'
+//   font-family: 'FontAwesome'
+//
+// =facebook
+//   content: '\f09a'
+//   font-family: 'FontAwesome'
+//
+// =twitter
+//   content: '\f099'
+//   font-family: 'FontAwesome'
+//
+// =map_marker
+//   content: '\f041'
+//   font-family: 'FontAwesome'
+//
+// =calendar
+//   content: '\f073'
+//   font-family: 'FontAwesome'
+//
+// =credit_card
+//   content: '\f09d'
+//   font-family: 'FontAwesome'
+//
+// =large-icon
+//   font-size: 1.3rem
+//
+// =before_text
+//   &::before
+//     padding-right: $little-space
+//
+// =fixed_width_icon
+//   display: inline-block
+//   padding-right: $little-space
+//   text-align: center
+//   width: 1.3rem
+//
+// // Applying icon styles everywhere
+//
+// time.date::before
+//   +calendar
+//
+// time.hours::before
+//   +clock
+//
+// .price::before
+//   +credit_card
+//
+// .address::before
+//   +map

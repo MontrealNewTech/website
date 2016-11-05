@@ -1,0 +1,82 @@
+header {
+  width: 100%;
+  padding: $med-space;
+
+  @include above($small-screen) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    background-image: image-url('logo.png');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    height: 65px;
+    width: 230px;
+    transition: background-size 0.5s;
+
+    @include on($small-screen) {
+      display: none;
+    }
+  }
+
+  .mini-logo {
+    background-image: image-url('mini-logo.png');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    height: 50px;
+    width: 90px;
+    transition: background-size 0.5s;
+    float: left;
+
+    @include above($small-screen) {
+      display: none;
+    }
+  }
+
+  .logo:hover {
+    background-size: 260px;
+    background-color: transparent;
+  }
+
+  .mini-logo:hover {
+    background-size: 75px;
+    background-color: transparent;
+  }
+
+  .menu-toggle {
+    float: right;
+    @include above($small-screen) {
+      display: none;
+    }
+  }
+
+  ul {
+    @include size-reset;
+
+  }
+
+  nav#toggle_menu {
+    clear: both;
+    display: block;
+    @include on($small-screen) {
+      display: none;
+    }
+
+    li {
+      list-style: none;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: $little-space 0 $little-space $little-space;
+      @include above($small-screen) {
+        display: inline;
+      }
+    }
+  }
+}

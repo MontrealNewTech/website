@@ -1,0 +1,16 @@
+@mixin above($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin on($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin size-reset {
+  margin: 0;
+  padding: 0;
+}

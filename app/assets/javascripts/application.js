@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+import toggleMenu from 'toggleMenu'
+import smoothScroll from 'smoothScroll'
+
+$(document).on('ready page:load', function() {
+  toggleMenu()
+  smoothScroll()
+})
+
