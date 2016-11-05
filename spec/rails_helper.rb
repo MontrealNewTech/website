@@ -2,8 +2,8 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'spec_helper'
 require 'rspec/rails'
+require 'spec_helper'
 require 'capybara/rspec'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
@@ -25,8 +25,8 @@ RSpec.configure do |config|
 
   config.include Features, type: :feature
   config.include ActiveJob::TestHelper, type: :job
-  config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include Warden::Test::Helpers
-  config.before(:suite) { Warden.test_mode!  }
-  config.after(:each)   { Warden.test_reset! }
+  # config.include Devise::Test::ControllerHelpers, type: :controller
+  # config.include Warden::Test::Helpers
+  # config.before(:suite) { Warden.test_mode!  }
+  # config.after(:each)   { Warden.test_reset! }
 end

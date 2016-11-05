@@ -6,7 +6,6 @@ gem 'puma', '~> 3.0'
 
 # Assets
 gem 'autoprefixer-rails'
-gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets', '>= 3.0.0'
