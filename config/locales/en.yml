@@ -10,3 +10,8 @@ en:
       hashtag: "#mtlnewtech"
       sponsors: Sponsors
       team: Team
+  errors:
+    count:
+      one: "1 problem"
+      other: "%{count} problems"
+    message: kept this form from being submitted

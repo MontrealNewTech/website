@@ -1,0 +1,11 @@
+<% if object.errors.any? %>
+  <div id='error_explanation'>
+    <h2><%= t('errors.count', count: object.errors.count) %> <%= t('errors.message') %>:</h2>
+
+    <ul>
+    <% object.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
