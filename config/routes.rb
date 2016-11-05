@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :events
   resources :organizations
   resources :locations
+  resources :contacts, only: [:new, :create]
 end
