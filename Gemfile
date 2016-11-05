@@ -9,7 +9,7 @@ gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets', '>= 3.0.0'
-gem 'sprockets-es6'
+gem 'sprockets-commoner'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 

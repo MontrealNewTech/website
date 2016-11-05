@@ -1,0 +1,12 @@
+{
+  "name": "mtlnewtech",
+  "version": "1.0.0",
+  "description": "Front-facing website and admin back-end for MTL New Tech",
+  "author": "",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.9.0"
+  }
+}
