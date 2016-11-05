@@ -13,6 +13,10 @@ gem 'sprockets-es6'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
+# Image uploading
+gem 'carrierwave'
+gem 'cloudinary'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'bullet'
