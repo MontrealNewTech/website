@@ -12,11 +12,13 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
+    @locations = Location.all
     @event = Event.new
   end
 
   # GET /events/1/edit
   def edit
+    @locations = Location.all
   end
 
   # POST /events
@@ -53,6 +55,6 @@ class EventsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def event_params
-      params.require(:event).permit(:name, :description, :start_at, :duration, :location_id)
+      params.require(:event).permit(:name, :description, :start_at, :duration, :location_id, :cover_image)
     end
 end

@@ -1,15 +1,5 @@
 <%= form_for(event) do |f| %>
-  <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% event.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%=  render 'shared/error_messages', object: f.object %>
 
   <div class="field">
     <%= f.label :name %>
@@ -33,7 +23,13 @@
 
   <div class="field">
     <%= f.label :location_id %>
-    <%= f.text_field :location_id %>
+    <%= f.collection_select :location_id, @locations, :id, :name  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cover_image %>
+    <%= f.hidden_field :cover_image_cache %>
+    <%= f.file_field :cover_image, accept: 'image/jpeg, image/gif, image/jpg, image/png' %>
   </div>
 
   <div class="actions">
