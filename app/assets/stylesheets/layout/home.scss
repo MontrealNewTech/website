@@ -11,7 +11,7 @@
 }
 
 #mtlnewtech {
-  @include flex-column-center;
+  background-repeat: no-repeat;
   background-size: cover;
   background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
   color: $light-text;
@@ -83,6 +83,10 @@
 
   #email_sign_up_box {
     flex: 1;
+
+    h2 {
+      font-size: $large-font-size;
+    }
 
     @include above($small-screen) {
       text-align: left;

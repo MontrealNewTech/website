@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :locations
   resources :contacts, only: [:new, :create]
 
-  get '/about' => 'pages#about'
+  get '/about' => 'pages#about', as: :about
 end

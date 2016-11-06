@@ -21,6 +21,14 @@ en:
       upcoming: Events
       sign_up: Sign Up
       latest: Latest News
+    footer:
+      about: About us
+      address: '51 Rue Sherbrooke O, Montréal, QC, H2X 1X2'
+      phone: 514-880-4464
+      email: demo@mtlnewtech.com
+      team: Meet our team
+      made_in_mtl_html: Made with %{heart} in Montreal
+      github: View source and contribute on Github!
   nav:
     what_we_do: What we do
   errors:
