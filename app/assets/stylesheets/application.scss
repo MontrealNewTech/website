@@ -5,13 +5,18 @@
 
 * {
   box-sizing: border-box;
-  font-family: $main;
-  font-size: 16px;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background: $white;
+  color: $text;
+  font-family: $main-font;
+  font-size: 16px;
+}
+
 a {
-  text-decoration: none;
   color: $links;
+  text-decoration: none;
 }

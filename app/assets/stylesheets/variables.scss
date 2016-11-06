@@ -1,14 +1,20 @@
 // COLORS
-$links: orange;
 $grey: #333;
+$light-grey: lighten($grey, 20%);
+$white: #fefefe;
+
+$links: $light-grey;
+$text: $grey;
+$light-text: $white;
 
 // FONTS
-$main: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
+$main-font: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
 
 // SIZING
 $little-space: 0.5rem;
 $med-space: 1rem;
 $large-space: 2rem;
+$xl-space: 4rem;
 
 // MEDIA QUERIES
 $small-screen: 42rem;

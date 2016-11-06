@@ -25,9 +25,10 @@ header {
     height: 65px;
     transition: background-size 0.5s;
     width: 250px;
+    display: none;
 
-    @include on($small-screen) {
-      display: none;
+    @include above($medium-screen) {
+      display: inline-block;
     }
   }
 
@@ -41,7 +42,7 @@ header {
     transition: background-size 0.5s;
     width: 90px;
 
-    @include above($small-screen) {
+    @include above($medium-screen) {
       display: none;
     }
   }
