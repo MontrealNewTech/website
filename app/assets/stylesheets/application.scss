@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'mixins';
 @import 'icons';
+@import 'buttons';
+@import 'forms';
 @import 'layout/*';
 
 * {
@@ -10,13 +12,23 @@
 }
 
 body {
-  background: $white;
+  background: $background-color;
   color: $text;
   font-family: $main-font;
-  font-size: 16px;
+  font-size: $base-font-size;
 }
 
 a {
   color: $links;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headers;
+  font-weight: normal;
+  padding-bottom: $med-space;
+}
+
+p {
+  line-height: $base-line-height;
 }

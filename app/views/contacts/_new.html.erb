@@ -1,10 +1,10 @@
 <%= form_for @contact, remote: true do |f| %>
   <div class="field">
     <%= f.text_field :email, placeholder: t('.email')%>
+    <%= show_error(f.object, :email) %>
   </div>
 
   <div class="actions">
     <%= f.submit t('.button')%>
   </div>
-  <%= show_error(f.object, :email) %>
 <% end %>

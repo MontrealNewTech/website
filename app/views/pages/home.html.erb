@@ -1,11 +1,11 @@
 <section id='mtlnewtech'>
   <h2><%= t('.mtlnewtech.main') %></h2>
+  <h3><%= t('.mtlnewtech.sub') %></h3>
 </section>
 
 <section id='what_we_do'>
   <h2><%= t('.what_we_do') %></h2>
   <p><%= t('.description') %></p>
-  <p>Click here to learn more about what we do and meet the team!</p>
 </section>
 
 <section id='events'>
@@ -13,8 +13,10 @@
 </section>
 
 <section id='sign_up'>
-  <h2><%= t('.sign_up.header') %></h2>
-  <h3><%= t('.sign_up.sub') %></h3>
+  <div class='email-collection'>
+    <h2><%= t('.sign_up.header') %></h2>
+    <h3><%= t('.sign_up.sub') %></h3>
+  </div>
   <div id='email_sign_up_box'>
     <%= render 'contacts/new' %>
   </div>

@@ -9,11 +9,11 @@ header {
   padding: $med-space;
 
   @include above($small-screen) {
-    @include flex-center;
+    @include flex-center-between;
   }
 
   .top-bar {
-    @include flex-center;
+    @include flex-center-between;
   }
 
   .logo {
@@ -70,6 +70,8 @@ header {
 
   nav#toggle_menu {
     display: block;
+    font-family: $headers;
+
     @include on($small-screen) {
       display: none;
     }

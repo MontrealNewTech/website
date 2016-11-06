@@ -1,14 +1,92 @@
 [data-controller=pages][data-action=home] {
   section {
-    padding: $xl-space;
+    @include flex-column-center;
+    padding: $med-space;
+    text-align: center;
+
+    @include above($small-screen) {
+      padding: $xl-space;
+    }
   }
 }
 
 #mtlnewtech {
-  @include flex-center;
-  background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
+  @include flex-column-center;
   background-size: cover;
-  min-height: 100vh;
+  background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
   color: $light-text;
+  min-height: 100vh;
   text-align: center;
+
+  h2 {
+    font-size: $xl-font-size;
+    position: relative;
+    top: -4rem;
+  }
+}
+
+#what_we_do {
+  background-color: $darker-background;
+}
+
+#sign_up {
+  background-color: $main-color;
+  color: $background-color;
+
+  @include above($small-screen) {
+    @include flex-row-center;
+  }
+
+  input[type='submit'] {
+    @include button($color: $darker-background);
+  }
+
+  input[type="text"] {
+    background: transparent;
+    border-bottom: 2px solid $background-color;
+    color: $background-color;
+    padding: $little-space;
+    width: 100%;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $background-color;
+    opacity: 1;
+  }
+
+  ::-moz-placeholder {
+    color: $background-color;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder {
+    color: $background-color;
+    opacity: 1;
+  }
+
+  ::placeholder {
+    color: $background-color;
+    opacity: 1;
+  }
+
+  .field-error {
+    color: $background-color;
+  }
+
+  .email-collection {
+    flex: 2;
+
+    @include above($medium-screen) {
+      padding: $xl-space;
+    }
+  }
+
+  #email_sign_up_box {
+    flex: 1;
+
+    @include above($small-screen) {
+      text-align: left;
+      padding: $large-space 0 $large-space $xl-space;
+    }
+  }
 }

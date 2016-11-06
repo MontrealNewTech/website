@@ -1,0 +1,41 @@
+@mixin button($color: $main-color) {
+  background: $color;
+  border-radius: $base-border-radius;
+  border: none;
+  color: set-text-color($color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: $headers;
+  font-size: $base-font-size;
+  margin: $little-space 0;
+  padding: $little-space $med-space;
+
+  a {
+    color: $background-color;
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+    transition: all $long-duration $base-timing;
+  }
+
+  &:active {
+    background: darken($color, 15%);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button,
+input[type='submit'],
+.button {
+  @include button($color: $buttons);
+}
+
