@@ -1,1 +1,29 @@
-<h2>HEADER</h2>
+<header>
+  <div class='top-bar'>
+    <a class='logo scroll-on-page' href='/' title='logo'></a>
+    <a class='mini-logo scroll-on-page' href='/' title='logo'></a>
+
+    <a class='menu-toggle bars' href='javascript:void(0)'></a>
+  </div>
+
+  <nav id='toggle_menu'>
+    <% if current_page?(root_path) %>
+    <ul>
+      <li>
+        <a href='#what_we_do' class='scroll-on-page'><%= t('.what_we_do') %></a>
+      </li>
+      <li>
+        <a href='#events' class='scroll-on-page'><%= t('.upcoming') %></a>
+      </li>
+      <li>
+        <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
+      </li>
+      <li>
+        <a href='#latest' class='scroll-on-page'><%= t('.latest') %></a>
+      </li>
+    </ul>
+    <% else %>
+      <%= render 'nav' %>
+    <% end %>
+  </nav>
+</header>

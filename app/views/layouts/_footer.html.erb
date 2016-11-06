@@ -1,1 +1,38 @@
-<h2>FOOTER</h2>
+<footer>
+  <div class='links'>
+    <ul>
+      <li class='map fixed-width-icon'>
+        <span><%= t('.address') %></span>
+      </li>
+      <li class='phone fixed-width-icon'>
+        <%= link_to t('.phone'), "tel:#{t('.phone')}" %>
+      </li>
+      <li class='mail fixed-width-icon'>
+        <%= mail_to t('.email'), t('.email') %>
+        <%= link_to t('.about'), about_path %>
+      </li>
+    </ul>
+
+
+    <nav>
+      <ul>
+        <li>
+          <%= link_to t('.about'), about_path %>
+        </li>
+        <li>
+          <%= link_to t('.team'), about_path %>
+        </li>
+        <li>
+          <%= link_to t('.about'), about_path %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class='bottom'>
+    <p><%= t('.made_in_mtl_html', heart: '<i class="heart"></i>'.html_safe) %></p>
+    <a href='https://github.com/montrealnewtech/website' target='_blank' class='github'>
+      <%= t('.github') %>
+    </a>
+  </div>
+</footer>

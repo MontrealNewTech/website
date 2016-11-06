@@ -1,0 +1,94 @@
+[data-controller=pages][data-action=home] {
+  // header {
+  //   position: fixed;
+  // }
+}
+
+header {
+  width: 100%;
+  padding: $med-space;
+
+  @include above($small-screen) {
+    @include flex-center-between;
+  }
+
+  .top-bar {
+    @include flex-center-between;
+  }
+
+  .logo {
+    background-color: transparent;
+    background-image: image-url('logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    height: 65px;
+    transition: background-size 0.5s;
+    width: 250px;
+    display: none;
+
+    @include above($medium-screen) {
+      display: inline-block;
+    }
+  }
+
+  .mini-logo {
+    background-color: transparent;
+    background-image: image-url('mini-logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    height: 50px;
+    transition: background-size 0.5s;
+    width: 90px;
+
+    @include above($medium-screen) {
+      display: none;
+    }
+  }
+
+  .logo:hover {
+    background-size: 260px;
+    background-color: transparent;
+  }
+
+  .mini-logo:hover {
+    background-size: 75px;
+    background-color: transparent;
+  }
+
+  .menu-toggle {
+    float: right;
+    @include above($small-screen) {
+      display: none;
+    }
+  }
+
+  ul {
+    @include size-reset;
+  }
+
+  nav#toggle_menu {
+    display: block;
+    font-family: $headers;
+
+    @include on($small-screen) {
+      display: none;
+    }
+
+    li {
+      list-style: none;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-bottom: $little-space;
+      @include above($small-screen) {
+        display: inline;
+        padding-left: $med-space;
+      }
+      @include above($medium-screen) {
+        padding-left: $large-space;
+      }
+    }
+  }
+}

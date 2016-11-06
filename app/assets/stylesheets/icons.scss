@@ -1,0 +1,63 @@
+.bars::before {
+  content: '\f0c9';
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.heart::before {
+  content: '\f004';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.github::before {
+  content: '\f09b';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.map::before {
+  content: '\f041';
+  font-family: 'FontAwesome';
+  font-style: normal;;
+}
+
+.phone::before {
+  content: '\f095';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.mail::before {
+  content: '\f0e0';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.facebook::before {
+  content: '\f09a';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.twitter::before {
+  content: '\f099';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.instagram::before {
+  content: '\f16d';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.fixed-width-icon {
+  &::before {
+    display: inline-block;
+    padding-right: $little-space;
+    text-align: center;
+    width: 1.3rem;
+  }
+}

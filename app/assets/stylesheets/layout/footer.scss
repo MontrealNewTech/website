@@ -1,0 +1,45 @@
+footer {
+  background-color: $grey;
+  color: $darker-background;
+  font-family: $headers;
+  font-size: $footer-font-size;
+  line-height: $base-line-height;
+  padding: $little-space;
+
+  @include above($small-screen) {
+    padding: $large-space;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $darker-background;
+  }
+
+  nav {
+    padding-top: $med-space;
+
+    @include above($small-screen) {
+      text-align: right;
+      padding-top: 0;
+    }
+
+    a {
+      color: $lighter-grey;
+    }
+  }
+
+  .links, .bottom {
+    width: 100%;
+    @include above($small-screen) {
+      @include flex-center-between;
+    }
+  }
+
+  .bottom {
+    padding-top: $large-space;
+    font-size: $small-font-size;
+  }
+}

@@ -1,0 +1,49 @@
+// FUNCTIONS
+@function set-text-color($background) {
+  @if (lightness($background) > 55) {
+    @return $light-grey;
+  }
+  @else {
+    @return $background-color;
+  }
+}
+
+// MEDIA QUERIES
+@mixin above($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin on($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+// RESETS
+@mixin size-reset {
+  margin: 0;
+  padding: 0;
+}
+
+// FLEX
+@mixin flex-center-between {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-column-center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex-row-center {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
