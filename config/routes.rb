@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   namespace :admin do
     resources :contacts
-resources :events
-resources :locations
-resources :organizations
+    resources :events
+    resources :locations
+    resources :organizations
 
-    root to: "contacts#index"
+    root to: 'events#index'
   end
 
-  root "pages#home"
+  root to: 'pages#home'
 
   resources :events
   resources :organizations
