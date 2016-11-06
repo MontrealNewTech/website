@@ -12,6 +12,6 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:email)
+    params.require(:contact).permit(:email).merge(remote_ip: request.remote_ip)
   end
 end
