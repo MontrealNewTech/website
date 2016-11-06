@@ -17,6 +17,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'carrierwave'
 gem 'cloudinary'
 
+# Admin dashboard
+gem 'administrate'
+gem 'bourbon'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'bullet'

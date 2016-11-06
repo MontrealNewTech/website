@@ -20,6 +20,7 @@ footer {
 
   nav {
     padding-top: $med-space;
+    text-transform: uppercase;
 
     @include above($small-screen) {
       text-align: right;
