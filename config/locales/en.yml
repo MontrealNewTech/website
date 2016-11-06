@@ -14,6 +14,12 @@ en:
       sign_up:
         header: Want us to notify you?
         sub: We'll send you reminders about upcoming events and updates about the community.
+  layouts:
+    header:
+      what_we_do: What we do
+      upcoming: Events
+      sign_up: Sign Up
+      latest: Latest News
   nav:
     what_we_do: What we do
   errors:
