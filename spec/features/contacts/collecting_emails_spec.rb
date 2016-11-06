@@ -2,12 +2,14 @@ require 'rails_helper'
 
 RSpec.feature 'collecting email addresses from the home page', js: true do
   scenario 'someone submits a valid email' do
+    allow_any_instance_of(ActionDispatch::Request).to receive(:remote_ip).and_return('1.2.3.4')
     visit root_path
 
     fill_form :contact, 'Your email address': 'valid@email.com'
     click_button 'Keep me posted'
 
     expect(page).to have_content 'Thanks for signing up!'
+    expect(Contact.last.remote_ip).to eq '1.2.3.4'
   end
 
   scenario 'someone submits an invalid or duplicate email' do
