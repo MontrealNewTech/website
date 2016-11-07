@@ -1,4 +1,8 @@
 [data-controller=pages][data-action=home] {
+  main {
+    padding: 0;
+  }
+
   section {
     @include flex-column-center;
     padding: $med-space;
@@ -35,6 +39,11 @@
 
   @include above($small-screen) {
     @include flex-row-center;
+
+    h2 {
+      font-size: $xl-font-size;
+      padding-bottom: $med-space;
+    }
   }
 
   input[type='submit'] {

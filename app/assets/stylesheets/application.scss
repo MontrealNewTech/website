@@ -14,8 +14,16 @@
 body {
   background: $background-color;
   color: $text;
+  display: flex;
+  flex-direction: column;
   font-family: $main-font;
   font-size: $base-font-size;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: $little-space;
 }
 
 a {
