@@ -2,7 +2,6 @@ class Organization < ApplicationRecord
   mount_uploader :logo, ImageUploader
 
   validates_presence_of :name
-  validates_presence_of :description
 
   validate :logo_size
 

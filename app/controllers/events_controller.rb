@@ -28,6 +28,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to @event, notice: 'Event was successfully created.'
     else
+      @locations = Location.all
       render :new
     end
   end

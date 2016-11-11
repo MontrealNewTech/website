@@ -1,6 +1,5 @@
 <section id='mtlnewtech'>
-  <h2><%= t('.mtlnewtech.main') %></h2>
-  <h3><%= t('.mtlnewtech.sub') %></h3>
+  <img src="http://res.cloudinary.com/mtl-new-tech/image/upload/v1478829461/s9bmicat2vu08rxl58y8.jpg" >
 </section>
 
 <section id='what_we_do'>
@@ -29,4 +28,7 @@
 
 <section id='sponsors'>
   <h2><%= t('.sponsors') %></h2>
+  <% @sponsors.each do |sponsor| %>
+    <img src="<%= sponsor.logo %>">
+  <% end %>
 </section>

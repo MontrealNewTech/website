@@ -11,12 +11,16 @@
 }
 
 #mtlnewtech {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
-  color: $light-text;
-  min-height: 100vh;
-  text-align: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
+  // color: $light-text;
+  // min-height: 100vh;
+  // text-align: center;
+
+  img {
+    width: 100%;
+  }
 
   h2 {
     font-size: $xl-font-size;
