@@ -17,9 +17,11 @@
 
 import toggleMenu from 'toggleMenu'
 import smoothScroll from 'smoothScroll'
+import maxPictureSize from 'maxPictureSize'
 
 $(document).on('ready page:load', function() {
   toggleMenu()
   smoothScroll()
+  maxPictureSize()
 })
 
