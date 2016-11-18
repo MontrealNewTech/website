@@ -53,3 +53,30 @@ en:
             email:
               invalid: Looks like that's not a valid email address. Could you double check it?
               taken: Looks like you're already signed up! We have that email already.
+  forms:
+    email: Email
+    new_password: Password (min %{count} characters)
+    password: Password
+    forgot: Forgot your password?
+    send_password: Send me reset password instructions
+    confirm: Confirm password
+    remember: Remember me
+    sign_up: Sign up
+    log_in: Log in
+  devise:
+    shared:
+      links:
+        log_in: Already have an account? Log in
+        sign_up: Don't have an account? Sign up.
+        forgot: Forgot your password?
+  errors:
+    messages:
+      already_confirmed: was already confirmed, please try signing in
+      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
+      expired: has expired, please request a new one
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: 'There is one problem:'
+        other: 'There are %{count} problems:'
+

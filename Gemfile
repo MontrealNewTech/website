@@ -23,6 +23,9 @@ gem 'cloudinary'
 gem 'administrate'
 gem 'bourbon'
 
+# Authentication
+gem 'devise'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'bullet'

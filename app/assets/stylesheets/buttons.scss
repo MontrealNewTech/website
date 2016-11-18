@@ -7,8 +7,11 @@
   display: inline-block;
   font-family: $headers;
   font-size: $base-font-size;
+  letter-spacing: 2px;
   margin: $little-space 0;
   padding: $little-space $med-space;
+  text-transform: uppercase;
+  white-space: normal;
 
   a {
     color: $background-color;

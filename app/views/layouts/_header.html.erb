@@ -8,22 +8,35 @@
 
   <nav id='toggle_menu'>
     <% if current_page?(root_path) %>
-    <ul>
-      <li>
-        <a href='#what_we_do' class='scroll-on-page'><%= t('.what_we_do') %></a>
-      </li>
-      <li>
-        <a href='#events' class='scroll-on-page'><%= t('.upcoming') %></a>
-      </li>
-      <li>
-        <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
-      </li>
-      <li>
-        <a href='#latest' class='scroll-on-page'><%= t('.latest') %></a>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <a href='#what_we_do' class='scroll-on-page'><%= t('.what_we_do') %></a>
+        </li>
+        <li>
+          <a href='#events' class='scroll-on-page'><%= t('.upcoming') %></a>
+        </li>
+        <li>
+          <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
+        </li>
+        <li>
+          <a href='#latest' class='scroll-on-page'><%= t('.latest') %></a>
+        </li>
+      </ul>
     <% else %>
-      <%# <%= render 'nav' %>
+      <ul>
+        <li>
+          Link here
+        </li>
+        <li>
+          link here
+        </li>
+        <li>
+          another link
+        </li>
+        <li>
+          whoo more links
+        </li>
+      </ul>
     <% end %>
   </nav>
 </header>
