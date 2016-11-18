@@ -2,5 +2,6 @@
   <%= f.label field.attribute %>
 </div>
 <div class="field-unit__field">
-  <%= f.text_field field.attribute %>
+  <%= f.hidden_field "#{field.attribute}_cache".to_sym %>
+  <%= f.file_field field.attribute, accept: 'image/jpeg, image/gif, image/jpg, image/png' %>
 </div>

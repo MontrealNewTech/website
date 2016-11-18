@@ -14,7 +14,7 @@ class EventDashboard < Administrate::BaseDashboard
     description: Field::Text,
     start_at: Field::DateTime,
     duration: Field::Number,
-    cover_image: Field::String,
+    cover_image: FileField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
