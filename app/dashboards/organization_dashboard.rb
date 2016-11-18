@@ -11,7 +11,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::Text,
-    logo: Field::String,
+    logo: FileField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
