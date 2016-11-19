@@ -28,6 +28,7 @@ gem 'devise'
 
 # Awesome debugging
 gem 'awesome_print'
+gem 'pry-rails'
 
 group :development, :test do
   gem 'bullet'
@@ -35,7 +36,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
 end
 
