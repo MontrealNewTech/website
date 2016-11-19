@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      render js: "$('#email_sign_up_box').html('<p>#{ t('.thanks') }</p>')"
+      render js: "$('#email_sign_up_box').html('<h3>#{ t('.thanks') }</h3>')"
     else
       render 'fail'
     end
