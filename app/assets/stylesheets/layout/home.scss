@@ -110,14 +110,15 @@
 
 .logos {
   @include flex-row-center;
-
-  overflow: scroll;
-  white-space: nowrap;
-  width: 100%;
+  flex-flow: wrap;
 
   img {
     display: inline-block;
-    padding: 0 $med-space;
-    max-height: 25vh;
+    padding: $large-space;
+    max-height: 18vh;
+
+    @include above($small-screen) {
+      max-height: 25vh;
+    }
   }
 }

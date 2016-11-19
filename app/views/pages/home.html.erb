@@ -30,7 +30,7 @@
   <h2><%= t('.sponsors') %></h2>
   <div class='logos'>
     <% @sponsors.each do |sponsor| %>
-      <img src="<%= sponsor.logo %>">
+      <div class='logo'><img src="<%= sponsor.logo %>"></div>
     <% end %>
   </div>
 </section>

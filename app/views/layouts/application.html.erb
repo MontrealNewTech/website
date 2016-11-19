@@ -6,7 +6,6 @@
     <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Montserrat' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
   </head>
@@ -26,5 +25,7 @@
       <%= yield %>
     </main>
     <%= render 'layouts/footer' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
