@@ -8,7 +8,7 @@ en:
       description: MTL NewTech is a non-profit organization dedicated to the success of the Montreal startup entrepreneurs. Every first Tuesday of the month 4-6 startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students etc. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
       latest: Latest from MTL NewTech
       hashtag: "#mtlnewtech"
-      sponsors: Sponsors
+      sponsors: Our Partners
       team: Team
       upcoming: Upcoming Events
       sign_up: Sign Up
@@ -79,4 +79,8 @@ en:
       not_saved:
         one: 'There is one problem:'
         other: 'There are %{count} problems:'
+  admin:
+    application:
+      sidebar:
+        view_website: View Website
 

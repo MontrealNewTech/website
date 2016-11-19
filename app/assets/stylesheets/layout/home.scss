@@ -107,3 +107,17 @@
     }
   }
 }
+
+.logos {
+  @include flex-row-center;
+
+  overflow: scroll;
+  white-space: nowrap;
+  width: 100%;
+
+  img {
+    display: inline-block;
+    padding: 0 $med-space;
+    max-height: 25vh;
+  }
+}

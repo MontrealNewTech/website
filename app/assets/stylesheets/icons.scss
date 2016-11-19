@@ -53,6 +53,12 @@
   font-style: normal;
 }
 
+.new-tab::before {
+  content: '\f08e';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
 .fixed-width-icon {
   &::before {
     display: inline-block;

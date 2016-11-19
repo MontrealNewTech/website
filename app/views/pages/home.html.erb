@@ -28,7 +28,9 @@
 
 <section id='sponsors'>
   <h2><%= t('.sponsors') %></h2>
-  <% @sponsors.each do |sponsor| %>
-    <img src="<%= sponsor.logo %>">
-  <% end %>
+  <div class='logos'>
+    <% @sponsors.each do |sponsor| %>
+      <img src="<%= sponsor.logo %>">
+    <% end %>
+  </div>
 </section>
