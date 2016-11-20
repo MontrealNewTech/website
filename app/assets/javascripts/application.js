@@ -18,10 +18,12 @@
 import toggleMenu from 'toggleMenu'
 import smoothScroll from 'smoothScroll'
 import maxPictureSize from 'maxPictureSize'
+import flashHelper from 'flashHelper'
 
 $(document).on('ready page:load', function() {
   toggleMenu()
   smoothScroll()
   maxPictureSize()
+  flashHelper()
 })
 

@@ -15,6 +15,13 @@ $main-color: $orange;
 $buttons: $main-color;
 $error: $main-color;
 
+$flashes: (
+  'alert': #ffe8c5,
+  'error': #fbe3e4,
+  'notice': #84f0e3,
+  'success': #e6efc2,
+);
+
 // FONTS
 $main-font: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
 $headers: 'Montserrat', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;

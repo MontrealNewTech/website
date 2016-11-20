@@ -1,0 +1,23 @@
+@each $flash-type, $flash-color in $flashes {
+  .flash-#{$flash-type} {
+    @include flex-center-between;
+
+    background-color: $flash-color;
+    border-radius: $base-border-radius;
+    color: darken($flash-color, 60%);
+    padding: $med-space;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+
+    a {
+      color: darken($flash-color, 70%);
+
+      &:focus,
+      &:hover {
+        color: darken($flash-color, 90%);
+      }
+    }
+  }
+}
+

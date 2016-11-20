@@ -15,9 +15,9 @@
     <main>
       <% if flash.any? %>
         <% flash.each do |type, message| %>
-          <div class="flash-#{type}" id='flash'>
+          <div class=<%= "flash-#{type}" %> id='flash'>
             <%= message %>
-            <span class='close-flash'></span>
+            <span class='close'></span>
           </div>
         <% end %>
       <% end %>

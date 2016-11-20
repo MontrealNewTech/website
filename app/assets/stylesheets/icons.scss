@@ -59,6 +59,13 @@
   font-style: normal;
 }
 
+.close::before {
+  content: '\f00d';
+  cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
 .fixed-width-icon {
   &::before {
     display: inline-block;

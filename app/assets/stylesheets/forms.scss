@@ -20,8 +20,9 @@ form {
   }
 
   .checkbox {
-    font-size: $subtext-font-size;
     border: none;
+    flex-direction: row;
+    font-size: $subtext-font-size;
   }
 
   input, textarea {
