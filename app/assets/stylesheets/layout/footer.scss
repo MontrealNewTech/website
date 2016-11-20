@@ -10,6 +10,10 @@ footer {
     padding: $large-space;
   }
 
+  ul {
+    @include size-reset
+  }
+
   li {
     list-style: none;
   }

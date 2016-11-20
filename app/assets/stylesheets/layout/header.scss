@@ -1,12 +1,7 @@
-[data-controller=pages][data-action=home] {
-  // header {
-  //   position: fixed;
-  // }
-}
-
 header {
-  width: 100%;
+  box-sizing: border-box;
   padding: $med-space;
+  width: 100%;
 
   @include above($small-screen) {
     @include flex-center-between;

@@ -1,5 +1,6 @@
 form {
   .field-error {
+    border: none;
     font-size: $small-font-size;
     line-height: 1rem;
     margin-top: $little-space;
@@ -11,10 +12,11 @@ form {
   }
 
   .field {
-    border-bottom: 1px solid $lighter-grey;
-    margin: $med-space 0;
-    display: flex;
     align-items: center;
+    border-bottom: 1px solid $lighter-grey;
+    display: flex;
+    flex-direction: column;
+    margin: $med-space 0;
   }
 
   .checkbox {

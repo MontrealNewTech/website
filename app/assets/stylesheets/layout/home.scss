@@ -5,12 +5,15 @@
 
   section {
     @include flex-column-center;
-    padding: $med-space;
+    padding: $xxl-space $med-space $med-space $med-space;
+    margin-top: $xl-space;
     text-align: center;
+  }
 
-    @include above($small-screen) {
-      padding: $xl-space;
-    }
+  header {
+    background-color: $background-color;
+    position: fixed;
+    top: 0;
   }
 }
 
@@ -80,6 +83,10 @@
   ::placeholder {
     color: $background-color;
     opacity: 1;
+  }
+
+  .field {
+    border: none;
   }
 
   .field-error {
