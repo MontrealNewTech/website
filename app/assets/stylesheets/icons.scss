@@ -66,6 +66,13 @@
   font-style: normal;
 }
 
+.localization::before {
+  content: '\f0ac';
+  cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
 .fixed-width-icon {
   &::before {
     display: inline-block;
