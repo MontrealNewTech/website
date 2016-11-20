@@ -18,9 +18,10 @@ en:
   layouts:
     header:
       what_we_do: What we do
-      upcoming: Events
       sign_up: Sign Up
+      log_out: Log Out
       latest: Latest News
+      events: Events
     footer:
       about: About us
       address: '51 Rue Sherbrooke O, Montréal, QC, H2X 1X2'

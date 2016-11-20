@@ -13,7 +13,7 @@
           <a href='#what_we_do' class='scroll-on-page'><%= t('.what_we_do') %></a>
         </li>
         <li>
-          <a href='#events' class='scroll-on-page'><%= t('.upcoming') %></a>
+          <a href='#events' class='scroll-on-page'><%= t('.events') %></a>
         </li>
         <li>
           <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
@@ -25,7 +25,7 @@
     <% else %>
       <ul>
         <li>
-          Link here
+          <%= link_to t('.events'), events_path %>
         </li>
         <li>
           link here
@@ -34,7 +34,9 @@
           another link
         </li>
         <li>
-          whoo more links
+          <% if current_user.present? %>
+            <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
+          <% end %>
         </li>
       </ul>
     <% end %>
