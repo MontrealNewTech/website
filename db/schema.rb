@@ -27,10 +27,11 @@ ActiveRecord::Schema.define(version: 20161119232004) do
   create_table "events", force: :cascade do |t|
     t.string   "name",        null: false
     t.text     "description", null: false
-    t.datetime "start_at",    null: false
+    t.datetime "starts_at",   null: false
     t.integer  "duration"
     t.integer  "location_id"
     t.string   "cover_image"
+    t.string   "slug"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["location_id"], name: "index_events_on_location_id", using: :btree
@@ -46,7 +47,7 @@ ActiveRecord::Schema.define(version: 20161119232004) do
 
   create_table "organizations", force: :cascade do |t|
     t.string   "name",        null: false
-    t.text     "description", null: false
+    t.text     "description"
     t.string   "logo"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -56,6 +57,7 @@ ActiveRecord::Schema.define(version: 20161119232004) do
     t.integer  "user_id"
     t.text     "bio"
     t.string   "position"
+    t.string   "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_team_members_on_user_id", using: :btree
@@ -64,6 +66,8 @@ ActiveRecord::Schema.define(version: 20161119232004) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "first_name"
+    t.string   "last_name"
     t.integer  "role",                                null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"

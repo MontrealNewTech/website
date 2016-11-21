@@ -1,8 +1,7 @@
 class Organization < ApplicationRecord
   mount_uploader :logo, ImageUploader
 
-  validates_presence_of :name
-
+  validates :name, presence: true, uniqueness: true
   validate :logo_size
 
   private

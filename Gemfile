@@ -26,6 +26,9 @@ gem 'bourbon'
 # Authentication
 gem 'devise'
 
+# Nice urls
+gem 'friendly_id'
+
 # Awesome debugging
 gem 'awesome_print'
 gem 'pry-rails'

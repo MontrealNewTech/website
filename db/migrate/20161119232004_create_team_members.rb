@@ -4,6 +4,7 @@ class CreateTeamMembers < ActiveRecord::Migration[5.0]
       t.references :user, foreign_key: true
       t.text :bio
       t.string :position
+      t.string :slug
 
       t.timestamps
     end
