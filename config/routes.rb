@@ -10,14 +10,15 @@ Rails.application.routes.draw do
     resources :contacts, only: [:new, :create]
 
     get '/about' => 'pages#about', as: :about
-    namespace :admin do
-      resources :contacts
-      resources :events
-      resources :locations
-      resources :organizations
-      resources :team_members
+  end
 
-      root to: 'events#index'
-    end
+  namespace :admin do
+    resources :contacts
+    resources :events
+    resources :locations
+    resources :organizations
+    resources :team_members
+
+    root to: 'events#index'
   end
 end
