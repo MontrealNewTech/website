@@ -6,28 +6,35 @@
   section {
     @include flex-column-center;
     padding: $xxl-space $med-space $med-space $med-space;
-    margin-top: $xl-space;
     text-align: center;
   }
 
   header {
-    background-color: $background-color;
     position: fixed;
     top: 0;
+    transition: all 0.4s ease;
+
+    &.transparent {
+      a {
+        color: $background-color;
+      }
+    }
+
+    &.sticky {
+      background-color: $background-color;
+      font-size: 80%;
+      padding: 0 $med-space;
+    }
   }
 }
 
 #mtlnewtech {
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
-  // color: $light-text;
-  // min-height: 100vh;
-  // text-align: center;
-
-  img {
-    width: 100%;
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
+  color: $light-text;
+  min-height: 100vh;
+  text-align: center;
 
   h2 {
     font-size: $xl-font-size;

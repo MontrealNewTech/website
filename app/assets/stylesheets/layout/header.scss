@@ -2,6 +2,7 @@ header {
   box-sizing: border-box;
   padding: $med-space;
   width: 100%;
+  z-index: 1;
 
   @include above($small-screen) {
     @include flex-center-between;

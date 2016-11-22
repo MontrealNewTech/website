@@ -19,11 +19,13 @@ import toggleMenu from 'toggleMenu'
 import smoothScroll from 'smoothScroll'
 import maxPictureSize from 'maxPictureSize'
 import flashHelper from 'flashHelper'
+import stickyHeader from 'stickyHeader'
 
 $(document).on('ready page:load', function() {
   toggleMenu()
   smoothScroll()
   maxPictureSize()
   flashHelper()
+  stickyHeader()
 })
 

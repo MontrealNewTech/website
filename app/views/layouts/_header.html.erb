@@ -1,4 +1,4 @@
-<header>
+<header class='transparent'>
   <div class='top-bar'>
     <a class='logo scroll-on-page' href='/' title='logo'></a>
     <a class='mini-logo scroll-on-page' href='/' title='logo'></a>
@@ -7,7 +7,7 @@
   </div>
 
   <nav id='toggle_menu'>
-    <% if current_page?(root_path) %>
+    <% if controller.controller_name == "pages" && controller.action_name == "home" %>
       <ul>
         <li>
           <a href='#what_we_do' class='scroll-on-page'><%= t('.what_we_do') %></a>
