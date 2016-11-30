@@ -44,6 +44,14 @@
     // }
   }
 
+  @each $flash-type, $flash-color in $flashes {
+    .flash-#{$flash-type} {
+      position: fixed;
+      bottom: 2rem;
+      margin: 0 auto;
+    }
+  }
+
   #mtlnewtech {
     background-repeat: no-repeat;
     background-size: cover;
