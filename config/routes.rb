@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root to: 'pages#home'
 
     resources :team_members, only: :index
-    resources :events, only: [:index, :show]
+    resources :events, only: :index
     resources :contacts, only: [:new, :create]
     resources :initiatives, only: :index
 
