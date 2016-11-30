@@ -30,18 +30,6 @@
     .mini-logo {
       display: none;
     }
-
-    .logo {
-      // @include above($medium-screen) {
-      //   display: inline-block;
-      // }
-    }
-
-    // .mini-logo {
-    //   @include above($medium-screen) {
-    //     display: none;
-    //   }
-    // }
   }
 
   @each $flash-type, $flash-color in $flashes {
@@ -141,7 +129,7 @@
 
       @include above($small-screen) {
         text-align: left;
-        padding: $large-space 0 $large-space $xl-space;
+        padding: $xl-space;
       }
     }
   }

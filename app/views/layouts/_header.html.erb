@@ -1,7 +1,7 @@
 <header class='transparent'>
   <div class='top-bar'>
-    <a class='logo scroll-on-page' href='/' title='logo'></a>
-    <a class='mini-logo scroll-on-page' href='/' title='logo'></a>
+    <%= link_to '', root_path, class: 'logo scroll-on-page', title: 'logo' %>
+    <%= link_to '', root_path, class: 'mini-logo scroll-on-page', title: 'logo' %>
 
     <a class='menu-toggle bars' href='javascript:void(0)'></a>
   </div>
@@ -10,10 +10,10 @@
     <% if controller.controller_name == "pages" && controller.action_name == "home" %>
       <ul>
         <li>
-          <%= link_to t('.about'), about_path, class: 'scroll-on-page' %>
+          <%= link_to t('.about'), about_path %>
         </li>
         <li>
-          <%= link_to t('.initiatives'), initiatives_path, class: 'scroll-on-page' %>
+          <%= link_to t('.initiatives'), initiatives_path %>
         </li>
         <li>
           <a href='#events' class='scroll-on-page'><%= t('.events') %></a>
