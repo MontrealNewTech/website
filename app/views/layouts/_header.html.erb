@@ -10,7 +10,10 @@
     <% if controller.controller_name == "pages" && controller.action_name == "home" %>
       <ul>
         <li>
-          <a href='#what_we_do' class='scroll-on-page'><%= t('.what_we_do') %></a>
+          <%= link_to t('.about'), about_path, class: 'scroll-on-page' %>
+        </li>
+        <li>
+          <%= link_to t('.initiatives'), initiatives_path, class: 'scroll-on-page' %>
         </li>
         <li>
           <a href='#events' class='scroll-on-page'><%= t('.events') %></a>

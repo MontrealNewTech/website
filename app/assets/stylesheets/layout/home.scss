@@ -12,127 +12,144 @@
   header {
     position: fixed;
     top: 0;
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
 
     &.transparent {
       a {
-        color: $background-color;
+        color: $grey;
       }
     }
 
     &.sticky {
       background-color: $background-color;
       font-size: 80%;
-      padding: 0 $med-space;
+      padding: $little-space;
     }
+
+    .logo,
+    .mini-logo {
+      display: none;
+    }
+
+    .logo {
+      // @include above($medium-screen) {
+      //   display: inline-block;
+      // }
+    }
+
+    // .mini-logo {
+    //   @include above($medium-screen) {
+    //     display: none;
+    //   }
+    // }
   }
-}
 
-#mtlnewtech {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: linear-gradient(rgba($grey, 0.65), rgba($grey, 0.85) ), image-url('homepage.png');
-  color: $light-text;
-  min-height: 100vh;
-  text-align: center;
-
-  h2 {
-    font-size: $xl-font-size;
-    position: relative;
-    top: -4rem;
-  }
-}
-
-#what_we_do {
-  background-color: $darker-background;
-}
-
-#sign_up {
-  background-color: $main-color;
-  color: $background-color;
-
-  @include above($small-screen) {
-    @include flex-row-center;
+  #mtlnewtech {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: image-url('homepage.jpg');
+    color: $light-text;
+    min-height: 100vh;
+    text-align: center;
 
     h2 {
       font-size: $xl-font-size;
-      padding-bottom: $med-space;
+      position: relative;
+      top: -4rem;
     }
   }
 
-  input[type='submit'] {
-    @include button($color: $darker-background);
+  #what_we_do {
+    background-color: $darker-background;
   }
 
-  input[type="text"] {
-    background: transparent;
-    border-bottom: 2px solid $background-color;
+  #sign_up {
+    background-color: $main-color;
     color: $background-color;
-    padding: $little-space;
-    width: 100%;
-  }
-
-  ::-webkit-input-placeholder {
-    color: $background-color;
-    opacity: 1;
-  }
-
-  ::-moz-placeholder {
-    color: $background-color;
-    opacity: 1;
-  }
-
-  :-ms-input-placeholder {
-    color: $background-color;
-    opacity: 1;
-  }
-
-  ::placeholder {
-    color: $background-color;
-    opacity: 1;
-  }
-
-  .field {
-    border: none;
-  }
-
-  .field-error {
-    color: $background-color;
-  }
-
-  .email-collection {
-    flex: 2;
-
-    @include above($medium-screen) {
-      padding: $xl-space;
-    }
-  }
-
-  #email_sign_up_box {
-    flex: 1;
-
-    h2 {
-      font-size: $large-font-size;
-    }
 
     @include above($small-screen) {
-      text-align: left;
-      padding: $large-space 0 $large-space $xl-space;
+      @include flex-row-center;
+
+      h2 {
+        font-size: $xl-font-size;
+        padding-bottom: $med-space;
+      }
+    }
+
+    input[type='submit'] {
+      @include button($color: $darker-background);
+    }
+
+    input[type="text"] {
+      background: transparent;
+      border-bottom: 2px solid $background-color;
+      color: $background-color;
+      padding: $little-space;
+      width: 100%;
+    }
+
+    ::-webkit-input-placeholder {
+      color: $background-color;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder {
+      color: $background-color;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+      color: $background-color;
+      opacity: 1;
+    }
+
+    ::placeholder {
+      color: $background-color;
+      opacity: 1;
+    }
+
+    .field {
+      border: none;
+    }
+
+    .field-error {
+      color: $background-color;
+    }
+
+    .email-collection {
+      flex: 2;
+
+      @include above($medium-screen) {
+        padding: $xl-space;
+      }
+    }
+
+    #email_sign_up_box {
+      flex: 1;
+
+      h2 {
+        font-size: $large-font-size;
+      }
+
+      @include above($small-screen) {
+        text-align: left;
+        padding: $large-space 0 $large-space $xl-space;
+      }
     }
   }
-}
 
-.logos {
-  @include flex-row-center;
-  flex-flow: wrap;
+  .logos {
+    @include flex-row-center;
+    flex-flow: wrap;
 
-  img {
-    display: inline-block;
-    padding: $large-space;
-    max-height: 18vh;
+    img {
+      display: inline-block;
+      padding: $large-space;
+      max-height: 18vh;
 
-    @include above($small-screen) {
-      max-height: 25vh;
+      @include above($small-screen) {
+        max-height: 25vh;
+      }
     }
   }
 }

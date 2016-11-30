@@ -1,6 +1,7 @@
 header {
   box-sizing: border-box;
   padding: $med-space;
+  height: 70px;
   width: 100%;
   z-index: 1;
 
@@ -17,7 +18,7 @@ header {
     background-image: image-url('logo.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 250px;
+    background-size: 230px;
     height: 65px;
     transition: background-size 0.5s;
     width: 250px;
@@ -44,7 +45,7 @@ header {
   }
 
   .logo:hover {
-    background-size: 260px;
+    background-size: 235px;
     background-color: transparent;
   }
 
