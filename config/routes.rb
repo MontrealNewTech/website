@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :team_members, only: :index
     resources :events, only: [:index, :show]
     resources :contacts, only: [:new, :create]
+    resources :initiatives, only: :index
 
     get '/about' => 'pages#about', as: :about
   end
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
     resources :locations
     resources :organizations
     resources :team_members
+    resources :initiatives
 
     root to: 'events#index'
   end
