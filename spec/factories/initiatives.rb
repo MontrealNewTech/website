@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :initiative do
-    title "MyString"
-    description "MyText"
-    link "MyString"
+    title 'A Great Initiative'
+    description 'This one will be good'
   end
 end
