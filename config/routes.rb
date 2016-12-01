@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   scope '(:locale)', locale: /en|fr/ do
     devise_for :users,
-               path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+               path_names: { sign_in: 'login', sign_out: 'logout' }
 
     root to: 'pages#home'
 
