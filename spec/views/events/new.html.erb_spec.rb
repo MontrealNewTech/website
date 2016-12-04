@@ -10,7 +10,7 @@ RSpec.describe "events/new", type: :view do
     ))
   end
 
-  it "renders new event form" do
+  xit "renders new event form" do
     render
 
     assert_select "form[action=?][method=?]", events_path, "post" do

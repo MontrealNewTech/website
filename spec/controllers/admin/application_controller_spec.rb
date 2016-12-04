@@ -27,7 +27,6 @@ RSpec.describe Admin::ApplicationController do
         user = build_stubbed :user
         # allow(request.env['warden']).to receive(:authenticate!).and_return(user)
         allow(controller).to receive(:current_user).and_return user
-        binding.pry
         get :admin_route
         expect(response).to redirect_to new_user_session_path
       end
