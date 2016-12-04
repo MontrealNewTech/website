@@ -68,7 +68,6 @@ GEM
     bundler-audit (0.5.0)
       bundler (~> 1.2)
       thor (~> 0.18)
-    byebug (9.0.6)
     capybara (2.10.1)
       addressable
       mime-types (>= 1.16)
@@ -174,9 +173,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.4.0)
-      byebug (~> 9.0)
-      pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     public_suffix (2.0.4)
@@ -335,7 +331,6 @@ DEPENDENCIES
   launchy
   listen
   pg
-  pry-byebug
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
