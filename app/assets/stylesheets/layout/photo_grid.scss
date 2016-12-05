@@ -1,0 +1,27 @@
+.photos {
+  column-count: 4;
+  column-gap: 3%;
+  column-width: 30%;
+
+  img {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .photos {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .photos {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .photos {
+    column-count: 1;
+  }
+}
