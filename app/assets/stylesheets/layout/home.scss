@@ -6,7 +6,8 @@
   section {
     @include flex-column-center;
     padding: $xxl-space $med-space $med-space $med-space;
-    text-align: center;
+    text-align: left;
+    /*text-align: center;*/
   }
 
   header {
@@ -45,10 +46,14 @@
     background-size: cover;
     background: image-url('homepage.jpg');
     /*color: $light-text;*/
-    min-height: 100vh;
+    min-height: 95vh;
     text-align: center;
 
     h2 {
+      font-size: $xl-font-size;
+      text-align: left;
+   /*   position: absolute;
+      top: 18rem;*/
       font-size: $xl-font-size;
       position: relative;
       top: -4rem;
