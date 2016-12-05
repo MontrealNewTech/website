@@ -44,3 +44,7 @@ p {
   line-height: $base-line-height;
 }
 
+.content {
+  margin: 0 auto;
+  max-width: $medium-screen;
+}
