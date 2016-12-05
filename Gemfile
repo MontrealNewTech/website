@@ -29,6 +29,9 @@ gem 'devise'
 # Nice urls
 gem 'friendly_id'
 
+# Google calendar import
+gem 'icalendar'
+
 # Awesome debugging
 gem 'awesome_print'
 gem 'pry-rails'

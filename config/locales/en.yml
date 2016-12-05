@@ -15,6 +15,9 @@ en:
       sign_up:
         header: Want us to notify you?
         sub: We'll send you reminders about upcoming events and updates about the community.
+    about:
+      header: About Us
+      about_us: MTL NewTech is a non-profit organization dedicated to the success of Montreal startup entrepreneurs. Every first Tuesday of the month, a handful of startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students and other interested parties. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
   layouts:
     header:
       about: About
@@ -23,6 +26,7 @@ en:
       log_out: Log Out
       latest: Latest News
       events: Events
+      contact: Contact
     footer:
       about: About us
       address: '51 Rue Sherbrooke O, Montréal, QC, H2X 1X2'
@@ -93,3 +97,10 @@ en:
       sidebar:
         view_website: View Website
 
+  time:
+    formats:
+      date: "%B %-e, %Y"
+      full: "%A, %B %-e at %-l:%M %P"
+      long: "%A, %B %-e"
+      time: "%-l:%M %P"
+    minutes: minutes

@@ -28,13 +28,16 @@
     <% else %>
       <ul>
         <li>
+          <%= link_to t('.about'), about_path %>
+        </li>
+        <li>
+          <%= link_to t('.initiatives'), initiatives_path %>
+        </li>
+        <li>
           <%= link_to t('.events'), events_path %>
         </li>
         <li>
-          link here
-        </li>
-        <li>
-          another link
+          <%= link_to t('.contact'), root_path %>
         </li>
         <li>
           <% if current_user.present? %>
