@@ -1,11 +1,11 @@
 <div class="content">
   <h1>Events</h1>
 
-  <ul class="accordion-tabs-minimal">
+  <ul class="accordion-tabs">
     <% @events_by_date.each do |date, events| %>
       <li class="tab-header-and-content">
         <a href="#" class="tab-link">
-          <h3><%= l(date, format: :short) %></h3>
+          <%= l(date, format: :short) %>
         </a>
         <div class="tab-content">
           <% events.each do |event| %>
