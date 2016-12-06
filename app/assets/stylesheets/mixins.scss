@@ -47,3 +47,8 @@
   flex-direction: row;
   justify-content: center;
 }
+
+@mixin squairy-light-background {
+  background-image: image-url('squairy_light.png');
+  background-repeat: repeat;
+}

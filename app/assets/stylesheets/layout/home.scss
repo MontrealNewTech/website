@@ -36,11 +36,10 @@
   }
 
   #mtlnewtech {
-    background-repeat: no-repeat;
     background-size: cover;
-    background: image-url('homepage.jpg');
+    background: image-url('homepage.jpg') no-repeat center center fixed;
     /*color: $light-text;*/
-    min-height: 95vh;
+    min-height: 100vh;
     text-align: center;
 
     h2 {
@@ -54,8 +53,11 @@
     }
   }
 
+  #events {
+    @include squairy-light-background;
+  }
+
   #what_we_do {
-    background-color: $darker-background;
   }
 
   #sign_up {
