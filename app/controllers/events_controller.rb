@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
   def index
-    @events ||= IcalEvent.new.upcoming_events
+    @events ||= GoogleCalendarEventFetcher.new.all_events
   end
 end

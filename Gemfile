@@ -34,6 +34,7 @@ gem 'friendly_id'
 
 # Google calendar import
 gem 'icalendar'
+gem 'httparty'
 
 # Awesome debugging
 gem 'awesome_print'

@@ -3,9 +3,11 @@
 
   <% @events.each do |event| %>
     <article class='event'>
-      <p><b><%= event.summary %></b></p>
-      <p><%= l(event.dtstart, format: :full) %></p>
-      <p><%= event.location %></p>
+      <% cache event do %>
+        <p><b><%= event.summary %></b></p>
+        <p><%= l(event.dtstart, format: :full) %></p>
+        <p><%= event.location %></p>
+      <% end %>
     </article>
   <% end %>
 </div>
