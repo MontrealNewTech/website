@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  scope '(:locale)', locale: /en|fr/ do
-    devise_for :users,
-               path_names: { sign_in: 'login', sign_out: 'logout' }
+  devise_for :users,
+              path_names: { sign_in: 'login', sign_out: 'logout' }
 
+  localized do
     root to: 'pages#home'
 
     resources :team_members, only: :index
