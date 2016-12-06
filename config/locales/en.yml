@@ -97,6 +97,10 @@ en:
       sidebar:
         view_website: View Website
 
+  date:
+    formats:
+      date: "%B %-e, %Y"
+      short: "%a, %b %-e"
   time:
     formats:
       date: "%B %-e, %Y"

@@ -14,6 +14,8 @@ gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-commoner'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'bourbon'
+gem 'neat'
 
 # Internationalization
 gem 'route_translator'
@@ -33,8 +35,7 @@ gem 'devise'
 gem 'friendly_id'
 
 # Google calendar import
-gem 'icalendar'
-gem 'httparty'
+gem 'google-api-client'
 
 # Awesome debugging
 gem 'awesome_print'

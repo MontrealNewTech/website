@@ -1,13 +1,57 @@
 <div class="content">
   <h1>Events</h1>
 
-  <% @events.each do |event| %>
-    <article class='event'>
-      <% cache event do %>
-        <p><b><%= event.summary %></b></p>
-        <p><%= l(event.dtstart, format: :full) %></p>
-        <p><%= event.location %></p>
-      <% end %>
-    </article>
+  <ul class="accordion-tabs-minimal">
+    <% @events_by_date.each do |date, events| %>
+      <li class="tab-header-and-content">
+        <a href="#" class="tab-link">
+          <h3><%= l(date, format: :short) %></h3>
+        </a>
+        <div class="tab-content">
+          <% events.each do |event| %>
+            <article class='event'>
+              <% cache event do %>
+                <p><b><%= event.summary %></b></p>
+                <p><%= l(event.start.date_time, format: :full) %></p>
+                <p><%= event.location %></p>
+              <% end %>
+            </article>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+  <!--  -->
+  <!-- <li class="tab&#45;header&#45;and&#45;content"> -->
+  <!--   <a href="#" class="tab&#45;link">Another Tab</a> -->
+  <!--   <div class="tab&#45;content"> -->
+  <!--     <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p> -->
+  <!--   </div> -->
+  <!-- </li> -->
+  <!-- <li class="tab&#45;header&#45;and&#45;content"> -->
+  <!--   <a href="#" class="tab&#45;link">Third</a> -->
+  <!--   <div class="tab&#45;content"> -->
+  <!--     <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p> -->
+  <!--   </div> -->
+  <!-- </li> -->
+  <!-- <li class="tab&#45;header&#45;and&#45;content"> -->
+  <!--   <a href="#" class="tab&#45;link">Last Item</a> -->
+  <!--   <div class="tab&#45;content"> -->
+  <!--     <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p> -->
+  <!--   </div> -->
+  <!-- </li> -->
+
+  <% @events_by_date.each do |date, events| %>
+    <h3><%= l(date, format: :date) %></h3>
+    <% events.each do |event| %>
+      <article class='event'>
+        <% cache event do %>
+          <p><b><%= event.summary %></b></p>
+          <p><%= l(event.start.date_time, format: :full) %></p>
+          <p><%= event.location %></p>
+        <% end %>
+      </article>
+    <% end %>
   <% end %>
 </div>
