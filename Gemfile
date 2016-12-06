@@ -26,7 +26,6 @@ gem 'cloudinary'
 
 # Admin dashboard
 gem 'administrate'
-gem 'bourbon'
 
 # Authentication
 gem 'devise'
@@ -47,6 +46,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
+  gem 'refills'
 end
 
 group :development do
