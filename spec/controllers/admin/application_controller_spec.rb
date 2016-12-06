@@ -2,6 +2,16 @@ require 'rails_helper'
 
 RSpec.describe Admin::ApplicationController do
   controller do
+    def index
+      render body: nil
+    end
+  end
+
+  before do
+    @routes.draw { get :index, controller: :anonymous }
+  end
+
+  controller do
     before_action :authenticate_user!
 
     def admin_route

@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users,
-              path_names: { sign_in: 'login', sign_out: 'logout' }
-
   localized do
     root to: 'pages#home'
 
@@ -12,6 +9,9 @@ Rails.application.routes.draw do
 
     get '/about' => 'pages#about', as: :about
   end
+
+  devise_for :users,
+              path_names: { sign_in: 'login', sign_out: 'logout' }
 
   namespace :admin do
     resources :contacts

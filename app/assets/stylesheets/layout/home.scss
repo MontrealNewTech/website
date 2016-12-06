@@ -7,7 +7,6 @@
     @include flex-column-center;
     padding: $xxl-space $med-space $med-space $med-space;
     text-align: left;
-    /*text-align: center;*/
   }
 
   header {
@@ -25,11 +24,6 @@
       background-color: $background-color;
       font-size: 80%;
       padding: $little-space $med-space;
-    }
-
-    .logo,
-    .mini-logo {
-      display: none;
     }
   }
 
