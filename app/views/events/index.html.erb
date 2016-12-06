@@ -1,9 +1,11 @@
-<h1>Events</h1>
+<div class="content">
+  <h1>Events</h1>
 
-<% @events.each do |event| %>
-  <article class='event'>
-    <p><%= event.description %></p>
-    <p><%= l(event.dtstart, formt: :full) %></p>
-    <p><%= event.location %></p>
-  </article>
-<% end %>
+  <% @events.each do |event| %>
+    <article class='event'>
+      <p><b><%= event.summary %></b></p>
+      <p><%= l(event.dtstart, format: :full) %></p>
+      <p><%= event.location %></p>
+    </article>
+  <% end %>
+</div>

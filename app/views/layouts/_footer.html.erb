@@ -16,9 +16,9 @@
     <nav>
       <div class='languages'>
         <% if params[:locale] == 'fr' %>
-          <%= link_to 'English', url_for(locale: :en), class: 'localization fixed-width-icon' %>
+          <%= link_to 'English', url_for(locale: 'en'), class: 'localization fixed-width-icon' %>
         <% else %>
-          <%= link_to 'Français', url_for(locale: :fr), class: 'localization fixed-width-icon' %>
+          <%= link_to 'Français', url_for(locale: 'fr'), class: 'localization fixed-width-icon' %>
         <% end %>
       </div>
 
