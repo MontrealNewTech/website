@@ -1,5 +1,9 @@
 export default function smoothScroll() {
   (function (jQuery) {
+    let scope = $('body[data-action="home"]')
+    if (scope.length === 0) {
+      return
+    }
     jQuery.mark = {
       jump: function (options) {
         let defaults = {
@@ -12,7 +16,7 @@ export default function smoothScroll() {
         options = jQuery.extend(defaults, options);
         return jQuery(options.selector).click(function (e) {
           let jumpobj = jQuery(this);
-          if (jumpobj.attr('href') === '/') {
+          if (jumpobj.attr('href') === '/' || jumpobj.attr('href') === '/fr') {
             var target = "#"
             var offset = 0
             if ($('#toggle_menu').is(':visible') && $('.menu-toggle').is(':visible')) {
