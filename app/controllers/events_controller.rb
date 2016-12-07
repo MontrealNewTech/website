@@ -1,6 +1,8 @@
+
 class EventsController < ApplicationController
   def index
-    @events_by_date ||= group_by_date calendar_events
+    @week_of_date = from_param_or_today
+    @events_by_date = group_by_date calendar_events
   end
 
   private
@@ -10,7 +12,11 @@ class EventsController < ApplicationController
   end
 
   def calendar_events
-    GoogleCalendarEventFetcher.new.all_events
+    GoogleCalendarEventFetcher.new(@week_of_date).all_events
+  end
+
+  def from_param_or_today
+    params[:date] ? Date.parse(params[:date]) : Date.current
   end
 end
 
