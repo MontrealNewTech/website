@@ -48,6 +48,10 @@ export default function smoothScroll() {
   })(jQuery);
 
   jQuery(function(){
+    let scope = $('body[data-action="home"]')
+    if (scope.length === 0) {
+      return
+    }
     jQuery.mark.jump();
   });
 }
