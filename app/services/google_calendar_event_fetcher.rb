@@ -31,7 +31,13 @@ class GoogleCalendarEventFetcher
   end
 
   def extract_events_from(calendar)
-    calendar.items
+    wrap_with_stable_fields calendar.items
+    # add_null_days_for calendar.items
+  end
+
+  def wrap_with_stable_fields(google_calendar_events)
+    google_calendar_events.map { |e| }
+    Google::EventWrapper.new
   end
 
   def from

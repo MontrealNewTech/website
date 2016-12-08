@@ -2,6 +2,7 @@
   <h1>Events</h1>
 
   <ul class="accordion-tabs">
+    <!-- <li><%= link_to 'Previous', date: @date.last_week(:sunday) %></li> -->
     <% @events_by_date.each do |date, events| %>
       <li class="tab-header-and-content">
         <a href="#" class="tab-link">
@@ -21,5 +22,6 @@
         </div>
       </li>
     <% end %>
+    <!-- <li> <%= link_to 'Next', date: @date.next_week(:sunday) %></li> -->
   </ul>
 </div>

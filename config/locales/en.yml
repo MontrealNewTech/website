@@ -43,6 +43,8 @@ en:
       button: Keep me posted
     create:
       thanks: Thanks for signing up!
+  events:
+    empty_day: There are no events happening on this day
   forms:
     email: Email
     new_password: Password (min %{count} characters)
@@ -108,7 +110,7 @@ en:
   date:
     formats:
       date: "%B %-e, %Y"
-      short: "%a, %b %-e"
+      short: "%b %-e"
   time:
     formats:
       date: "%B %-e, %Y"

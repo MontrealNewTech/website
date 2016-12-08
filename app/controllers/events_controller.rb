@@ -1,8 +1,7 @@
-
 class EventsController < ApplicationController
   def index
-    @week_of_date = from_param_or_today
-    @events_by_date = group_by_date calendar_events
+    @date = from_param_or_today
+    @events_by_date = group_by_date(calendar_events).merge(empty_day)
   end
 
   private
@@ -12,15 +11,18 @@ class EventsController < ApplicationController
   end
 
   def calendar_events
-    GoogleCalendarEventFetcher.new(@week_of_date).all_events
+    GoogleCalendarEventFetcher.new(@date).all_events
   end
 
   def from_param_or_today
     params[:date] ? Date.parse(params[:date]) : Date.current
   end
+
+  def empty_day
+    { Date.parse("Sat, 10 Dec 2016") => [EventForEmptyDay.new] }
+  end
 end
 
-#
 # [
 #     [0] :@access_role,
 #     [1] :@default_reminders,
