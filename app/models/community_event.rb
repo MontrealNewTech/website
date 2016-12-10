@@ -1,5 +1,1 @@
-CommunityEvent = KeywordStruct.new(:title,
-                                   :start_at,
-                                   :description,
-                                   :location,
-                                   :link)
+CommunityEvent = KeywordStruct.new(*Event::ATTRIBUTES)

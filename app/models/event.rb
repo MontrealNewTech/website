@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  ATTRIBUTES = [:title, :start_at, :description, :location, :link].freeze
+
   extend FriendlyId
 
   friendly_id :slug_candidates, use: :slugged
