@@ -1,6 +1,7 @@
 class KeywordStruct < Struct
   def initialize(**keyword_arguments)
-    super(keyword_arguments.keys)
+    keys = keyword_arguments.keys.empty? ? nil : keyword_arguments.keys
+    super(keys)
     keyword_arguments.each { |key, value| self[key] = value }
   end
 end

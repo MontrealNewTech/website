@@ -1,30 +1,6 @@
 # frozen_string_literal: true
-class EmptyCalendarDayEvent
-  def self.on(date)
-    new(date)
-  end
-
-  def initialize(date)
-    @date = date
-  end
-
+EmptyCalendarDayEvent = KeywordStruct.new(*(Event::ATTRIBUTES - [:start_at])) do
   def start_at
-    @date
-  end
-
-  def title
-    I18n.t('events.empty_day')
-  end
-
-  def description
-    nil
-  end
-
-  def location
-    nil
-  end
-
-  def link
-    nil
+    NullDate.new('events')
   end
 end

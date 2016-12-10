@@ -43,8 +43,9 @@ en:
       button: Keep me posted
     create:
       thanks: Thanks for signing up!
-  events:
-    empty_day: There are no events happening on this day
+  models:
+    null_date:
+      strftime: No %{nullable} on this date
   forms:
     email: Email
     new_password: Password (min %{count} characters)

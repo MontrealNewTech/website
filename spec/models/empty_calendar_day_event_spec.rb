@@ -2,21 +2,19 @@
 require 'rails_helper'
 
 RSpec.describe EmptyCalendarDayEvent do
-  let(:date) { Date.current }
-
-  subject { described_class.on(date) }
-
   it { is_expected.to respond_to(*Event::ATTRIBUTES) }
 
-  describe '#title' do
-    it 'returns a friendly message about there being no events' do
-      expect(subject.title).to eq I18n.t('events.empty_day')
+  describe 'default methods' do
+    it 'defaults everything except start_at to nil' do
+      (Event::ATTRIBUTES - [:start_at]).each do |method|
+        expect(described_class.new.send(method)).to eq nil
+      end
     end
   end
 
-  describe 'start_at' do
-    it 'returns the given date' do
-      expect(subject.start_at).to eq date
+  describe '#start_at' do
+    it 'returns a null date that can be passed into a localization helper' do
+      expect(subject.start_at).to be_a NullDate
     end
   end
 end

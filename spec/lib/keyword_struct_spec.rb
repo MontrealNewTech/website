@@ -37,4 +37,13 @@ RSpec.describe KeywordStruct do
       expect{ subject }.to raise_error NameError
     end
   end
+
+  context 'given no arguments' do
+    subject { TestClass.new }
+
+    it 'defaults all arguments to nil' do
+      expect(subject.first).to eq nil
+      expect(subject.second).to eq nil
+    end
+  end
 end
