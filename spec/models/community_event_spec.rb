@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe CommunityEvent do
-  it { is_expected.to respond_to :title, :start_at, :description, :location, :link }
+  it { is_expected.to respond_to(*Event::ATTRIBUTES) }
 
   describe 'accessors' do
     let(:params) do
@@ -15,7 +16,7 @@ RSpec.describe CommunityEvent do
     end
 
     it 'exposes getters for all of the initialization params' do
-      [:title, :start_at, :description, :location, :link].each do |method|
+      Event::ATTRIBUTES.each do |method|
         expect(described_class.new(**params).send(method)).to eq params[method]
       end
     end
