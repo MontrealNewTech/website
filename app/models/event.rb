@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Event < ApplicationRecord
   ATTRIBUTES = [:title, :start_at, :description, :location, :link].freeze
 
