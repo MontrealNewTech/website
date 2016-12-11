@@ -12,7 +12,7 @@ class EventsCalendar
   private
 
   def events_grouped_by_date
-    @events.group_by(&:start_at)
+    @events.group_by { |event| event.start_at.to_date }
   end
 
   def fill_in(_events_by_date)
