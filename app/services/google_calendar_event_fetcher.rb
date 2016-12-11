@@ -5,7 +5,7 @@ class GoogleCalendarEventFetcher
     @date = date
   end
 
-  def all_events
+  def events_calendar
     extract_events_from fetched_calendar
   end
 
@@ -15,9 +15,16 @@ class GoogleCalendarEventFetcher
     authorized_service.list_events(APP_CONFIG[:community_cal_id],
                                    single_events: true,
                                    order_by: 'startTime',
-                                   time_min: from, #1.week.ago.iso8601,
-                                   time_max: to #2.weeks.from_now.iso8601,)
-                                  )
+                                   time_min: from.beginning_of_day.iso8601,
+                                   time_max: to.end_of_day.iso8601)
+  end
+
+  def from
+    @date.beginning_of_week(:sunday)
+  end
+
+  def to
+    @date.end_of_week(:sunday)
   end
 
   def authorized_service
@@ -31,20 +38,23 @@ class GoogleCalendarEventFetcher
   end
 
   def extract_events_from(calendar)
-    wrap_with_stable_fields calendar.items
-    # add_null_days_for calendar.items
+    build_calendar_for cleaned_up_events_from(calendar.items)
   end
 
-  def wrap_with_stable_fields(google_calendar_events)
-    google_calendar_events.map { |e| }
-    Google::EventWrapper.new
+  def cleaned_up_events_from(google_calendar_events)
+    google_calendar_events.map { |event| CommunityEvent.new(**params_for(event)) }
   end
 
-  def from
-    @date.beginning_of_week(:sunday).beginning_of_day.iso8601
+  def params_for(event)
+    {
+      title: event.summary,
+      start_at: event.start.date_time,
+      description: event.description,
+      location: event.location
+    }
   end
 
-  def to
-    @date.end_of_week(:sunday).end_of_day.iso8601
+  def build_calendar_for(events)
+    EventsCalendar.new(events, from..to).build
   end
 end

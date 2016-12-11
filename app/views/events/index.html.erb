@@ -2,7 +2,7 @@
   <h1>Events</h1>
 
   <ul class="accordion-tabs">
-    <!-- <li><%= link_to 'Previous', date: @date.last_week(:sunday) %></li> -->
+    <li><%= link_to 'Previous', date: @date.last_week(:sunday) %></li>
     <% @events_by_date.each do |date, events| %>
       <li class="tab-header-and-content">
         <a href="#" class="tab-link">
@@ -13,15 +13,16 @@
           <% events.each do |event| %>
             <article class='event'>
               <% cache event do %>
-                <p><b><%= event.summary %></b></p>
-                <p><%= l(event.start.date_time, format: :full) %></p>
+                <p><b><%= event.title%></b></p>
+                <p><%= l(event.start_at, format: :long) %></p>
                 <p><%= event.location %></p>
+                <p><%= event.description %></p>
               <% end %>
             </article>
           <% end %>
         </div>
       </li>
     <% end %>
-    <!-- <li> <%= link_to 'Next', date: @date.next_week(:sunday) %></li> -->
+    <li> <%= link_to 'Next', date: @date.next_week(:sunday) %></li>
   </ul>
 </div>
