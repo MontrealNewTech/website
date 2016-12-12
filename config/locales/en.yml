@@ -37,35 +37,15 @@ en:
       github: View source and contribute on Github!
   nav:
     what_we_do: What we do
-  errors:
-    count:
-      one: "1 problem"
-      other: "%{count} problems"
-    message: kept this form from being submitted
   contacts:
     new:
       email: Your email address
       button: Keep me posted
     create:
       thanks: Thanks for signing up!
-  activerecord:
-    attributes:
-      contact:
-        email: ''
-    errors:
-      models:
-        contact:
-          attributes:
-            email:
-              invalid: Looks like that's not a valid email address. Could you double check it?
-              taken: Looks like you're already signed up! We have that email already.
-
-              # active record tries to find error messages in this order:
-              # activerecord.errors.models.user.attributes.name.blank
-              # activerecord.errors.models.user.blank
-              # activerecord.errors.messages.blank
-              # errors.attributes.name.blank
-              # errors.messages.blank
+  models:
+    null_date:
+      strftime: No %{nullable} on this date
   forms:
     email: Email
     new_password: Password (min %{count} characters)
@@ -92,15 +72,46 @@ en:
       not_saved:
         one: 'There is one problem:'
         other: 'There are %{count} problems:'
+    count:
+      one: "1 problem"
+      other: "%{count} problems"
+    message: kept this form from being submitted
+  activerecord:
+    attributes:
+      contact:
+        email: ''
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              invalid: Looks like that's not a valid email address. Could you double check it?
+              taken: Looks like you're already signed up! We have that email already.
+
+              # active record tries to find error messages in this order:
+              # activerecord.errors.models.user.attributes.name.blank
+              # activerecord.errors.models.user.blank
+              # activerecord.errors.messages.blank
+              # errors.attributes.name.blank
+              # errors.messages.blank
   admin:
     application:
       sidebar:
         view_website: View Website
 
+  weekdays:
+    '0': Sunday
+    '1': Monday
+    '2': Tuesday
+    '3': Wednesday
+    '4': Thursday
+    '5': Friday
+    '6': Saturday
+
   date:
     formats:
       date: "%B %-e, %Y"
-      short: "%a, %b %-e"
+      short: "%b %-e"
   time:
     formats:
       date: "%B %-e, %Y"

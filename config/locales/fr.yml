@@ -2,8 +2,8 @@ fr:
   pages:
     home:
       mtlnewtech:
-        main: En Francais ici
-        sub: Francais
+        main: Fueling Montreal's Startup Community
+        sub: Dedicated to the success of Montreal startup entrepreneurs
       what_we_do: What we do
       description: MTL NewTech is a non-profit organization dedicated to the success of the Montreal startup entrepreneurs. Every first Tuesday of the month 4-6 startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students etc. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
       latest: Latest from MTL NewTech
@@ -25,7 +25,7 @@ fr:
       sign_up: Sign Up
       log_out: Log Out
       latest: Latest News
-      events: Evenements
+      events: Events
       contact: Contact
     footer:
       about: About us
@@ -37,35 +37,12 @@ fr:
       github: View source and contribute on Github!
   nav:
     what_we_do: What we do
-  errors:
-    count:
-      one: "1 problem"
-      other: "%{count} problems"
-    message: kept this form from being submitted
   contacts:
     new:
       email: Your email address
       button: Keep me posted
     create:
       thanks: Thanks for signing up!
-  activerecord:
-    attributes:
-      contact:
-        email: ''
-    errors:
-      models:
-        contact:
-          attributes:
-            email:
-              invalid: Looks like that's not a valid email address. Could you double check it?
-              taken: Looks like you're already signed up! We have that email already.
-
-              # active record tries to find error messages in this order:
-              # activerecord.errors.models.user.attributes.name.blank
-              # activerecord.errors.models.user.blank
-              # activerecord.errors.messages.blank
-              # errors.attributes.name.blank
-              # errors.messages.blank
   forms:
     email: Email
     new_password: Password (min %{count} characters)
@@ -92,11 +69,46 @@ fr:
       not_saved:
         one: 'There is one problem:'
         other: 'There are %{count} problems:'
+    count:
+      one: "1 problem"
+      other: "%{count} problems"
+    message: kept this form from being submitted
+  activerecord:
+    attributes:
+      contact:
+        email: ''
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              invalid: Looks like that's not a valid email address. Could you double check it?
+              taken: Looks like you're already signed up! We have that email already.
+
+              # active record tries to find error messages in this order:
+              # activerecord.errors.models.user.attributes.name.blank
+              # activerecord.errors.models.user.blank
+              # activerecord.errors.messages.blank
+              # errors.attributes.name.blank
+              # errors.messages.blank
   admin:
     application:
       sidebar:
         view_website: View Website
 
+  weekdays:
+    '0': Sunday
+    '1': Monday
+    '2': Tuesday
+    '3': Wednesday
+    '4': Thursday
+    '5': Friday
+    '6': Saturday
+
+  date:
+    formats:
+      date: "%B %-e, %Y"
+      short: "%b %-e"
   time:
     formats:
       date: "%B %-e, %Y"

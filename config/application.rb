@@ -17,8 +17,6 @@ module Mtlnewtech
     config.i18n.enforce_available_locales = true
     config.i18n.available_locales = :en, :fr
 
-    config.assets.quiet = true
-
     config.generators do |generate|
       generate.test_framework :rspec
       generate.helper false
@@ -29,5 +27,7 @@ module Mtlnewtech
     end
 
     config.action_controller.action_on_unpermitted_parameters = :raise
+    config.assets.quiet = true
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

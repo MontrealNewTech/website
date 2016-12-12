@@ -1,0 +1,523 @@
+{
+  "kind": "calendar#events",
+  "etag": "\"p334frbcok7ld00g\"",
+  "summary": "Montreal New Tech & Startups Events",
+  "description": "All Montreal's new technology and startups events curated by the community for the community.\n\nFor a list of developers and startups events: http://mtlnewtech.tumblr.com/post/88580307785/list-of-montr%C3%A9al-startup-and-developer-events and of communities: https://www.facebook.com/notes/montr%C3%A9al-startups/startup-organizations-in-montreal/778027748875645 \n",
+  "updated": "2016-12-10T18:31:09.453Z",
+  "timeZone": "America/New_York",
+  "accessRole": "reader",
+  "defaultReminders": [],
+  "items": [
+    {
+      "kind": "calendar#event",
+      "etag": "\"2961954042870000\"",
+      "id": "bfpgpmuetkq7hl35dojd3etaf8_20161212T230000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=YmZwZ3BtdWV0a3E3aGwzNWRvamQzZXRhZjhfMjAxNjEyMTJUMjMwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2016-09-09T14:04:43.000Z",
+      "updated": "2016-12-05T22:30:21.435Z",
+      "summary": "Zumba with Adelaide",
+      "location": "Notman House, 51 Rue Sherbrooke O, Montréal, QC H2X 1X2, Canada",
+      "creator": {
+        "email": "emma@notman.org",
+        "displayName": "Emma Williams"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-12T18:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "end": {
+        "dateTime": "2016-12-12T19:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "recurringEventId": "bfpgpmuetkq7hl35dojd3etaf8",
+      "originalStartTime": {
+        "dateTime": "2016-12-12T18:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "iCalUID": "bfpgpmuetkq7hl35dojd3etaf8@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.bfpgpmuetkq7hl35dojd3etaf8"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962070245450000\"",
+      "id": "7qiff3po2jmo12rqt8gfeknnmc_20161213T140000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=N3FpZmYzcG8yam1vMTJycXQ4Z2Zla25ubWNfMjAxNjEyMTNUMTQwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2016-09-09T14:03:18.000Z",
+      "updated": "2016-12-06T14:38:42.725Z",
+      "summary": "Les Pitonneux - Coffee & Code",
+      "location": "Cafe OSMO",
+      "creator": {
+        "email": "emma@notman.org",
+        "displayName": "Emma Williams"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T09:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "end": {
+        "dateTime": "2016-12-13T13:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "recurringEventId": "7qiff3po2jmo12rqt8gfeknnmc",
+      "originalStartTime": {
+        "dateTime": "2016-12-13T09:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "iCalUID": "7qiff3po2jmo12rqt8gfeknnmc@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.7qiff3po2jmo12rqt8gfeknnmc"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962143244536000\"",
+      "id": "daqdjbsd29cogpdn4g76a450o0",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=ZGFxZGpic2QyOWNvZ3BkbjRnNzZhNDUwbzAgNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-12-07T00:47:02.000Z",
+      "updated": "2016-12-07T00:47:02.268Z",
+      "summary": "DesjardinsLab | Le financement participatif : Réaliser ses idées autrement",
+      "description": "For details, link here: https://www.eventbrite.ca/e/le-financement-participatif-realiser-ses-idees-autrement-tickets-30045287263\n\nMieux comprendre le financement participatif avec la ruche\nApprenez-en plus sur les principes du financement participatif! Le financement participatif est un concept selon lequel un projet bénéficiant de l’appui d’une communauté peut voir le jour grâce à une quantité appréciable d’apports financiers individuels, si minimes soient-ils, en échange d’une contribution. La Ruche est un organisme à but non lucratif ayant pour mission de favoriser l’émergence de projets stimulant le rayonnement et la vitalité d’une région. Par l’entremise de sa plateforme de financement participatif de proximité, elle contribue concrètement au développement de nouveaux projets au Québec.\n\nLes conférenciers\nÀ propos de Jean-Sébastien Noël, responsable et cofondateur de La Ruche\n\nJean-Sébastien Noël est détenteur d’une maîtrise (M. Sc) en marketing de HEC Montréal (2003), et il est bachelier en administration des affaires de Clayton College and State University d'Atlanta (2000). Ce créateur possédant plus de 20 ans d’expérience en gestion et marketing, ayant mené entre autres la marque Ozone (hôtel, resto & bar) pendant plusieurs années, croit que le comportement corporatif de demain doit s’inspirer des gênes intrinsèques et s’appuyer sur des concepts authentiques, qui améliorent réellement l’expérience et la vie des usagers-citoyens.\nConférencier accrédité du Projet Réalité Climatique d’Al Gore, et formé au CAS (Collège des Administrateurs de Sociétés), donc la gouvernance, le développement durable, bref la prise de conscience sociale et environnementale sont au cœur de ses implications.\nÀ propos de Sophie Reis, directrice et cofondatrice de La Ruche Montréal\n\nÀ la direction de la marque et des alliances stratégiques de Vidéotron (Québecor) pendant les 8 dernières années, Sophie Reis cumule plus de 15 ans d’expérience en direction de marque, commandites et partenariats, relations publiques et publicité pour de grandes marques d’envergure autant du côté client qu’en agence. Elle s’est jointe à l’équipe et a cofondé l’implantation de la plateforme de financement participatif La Ruche à Montréal, officiellement lancée en juin 2016. Elle en assure depuis la direction.\n\nÀ propos de La Ruche\nLa Ruche est un organisme à but non lucratif ayant pour mission de favoriser l’émergence de projets stimulant le rayonnement et la vitalité d’une région. Par l’entremise de sa plateforme de financement participatif de proximité, elle contribue concrètement au développement de nouveaux projets au Québec. La Ruche innove par sa structure, par son accompagnement humain, ses ambassadeurs et par son concept de proximité régional. Depuis son lancement en 2013, 1 310 734$ ont été amassés par 11 539 contributeurs, permettant à 131 nouveaux projets de se réaliser. La Ruche est active dans 4 régions au Québec soit Québec, Montréal, Mauricie et Bas-Saint-Laurent. La Ruche est heureuse de compter sur l’appui de partenaires privilégiés qui partagent sa mission et sa vision de l’entreprenariat soit la Ville de Montréal, le Gouvernement du Québec et la Ville de Québec et le Mouvement Desjardins",
+      "location": "Desjardins Lab - 175 Boulevard René-Lévesque Ouest - Promenade - Tour Sud - Montréal, QC H2X 3Y2 - Canada",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T12:00:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-13T13:00:00-05:00"
+      },
+      "iCalUID": "daqdjbsd29cogpdn4g76a450o0@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.daqdjbsd29cogpdn4g76a450o0"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2958495948316000\"",
+      "id": "uanck5dj5vh490v3htal7d4n6o",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=dWFuY2s1ZGo1dmg0OTB2M2h0YWw3ZDRuNm8gNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-11-15T22:12:52.000Z",
+      "updated": "2016-11-15T22:12:54.158Z",
+      "summary": "My Landing Page in 2 hours !",
+      "description": "http://bit.ly/2gdMTg7\n\nNotman House 51 Sherbrooke West, Montréal, QC, H2X 3V8 (corner Clark, northwest corner) Montréal, QC\n\nLe Wagon Montréal invites you to this workshop to learn how to build your landing page.\n\nCode and design your landing page in only 2 hours! A very satisfying workshop where students will code and design their own landing page using HTML/CSS & the Twitter Bootstrap CSS library. We will also cover lots of design pro-tips to find icons, fonts, colors.\n\nThis workshop is free et open to all.\n\n\n0\n\n________________________________________\n// Montreal Tech Calendar maintained by MTLNewTech.com and Notman.org \n// To add your event automatically => http://mtlnewtech.com/calendar and click on the bottom-right button\nps: please double check that it shows up as we are just trying this stuff for now\n________________________________________\n\n",
+      "location": "Notman House 51 Sherbrooke West, Montréal, QC, H2X 3V8 (corner Clark, northwest corner) Montréal, QC",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T17:12:52-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-13T17:12:52-05:00"
+      },
+      "iCalUID": "uanck5dj5vh490v3htal7d4n6o@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.uanck5dj5vh490v3htal7d4n6o"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962071376940000\"",
+      "id": "u3m0g2l5vl8p6nd20nbopq95nk",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=dTNtMGcybDV2bDhwNm5kMjBuYm9wcTk1bmsgNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-11-22T16:05:57.000Z",
+      "updated": "2016-12-06T14:48:08.470Z",
+      "summary": "Le Wagon Montréal: 2-hour Landing Page [Glass Door Room]",
+      "description": "RSVP - https://www.meetup.com/Le-Wagon-Montreal/events/235602667/ ",
+      "location": "Notman House",
+      "creator": {
+        "email": "emma@notman.org",
+        "displayName": "Emma Williams"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T17:30:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-13T19:30:00-05:00"
+      },
+      "iCalUID": "u3m0g2l5vl8p6nd20nbopq95nk@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/reservations?hceid=NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.u3m0g2l5vl8p6nd20nbopq95nk"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962319906884000\"",
+      "id": "e4ju8ikc3ttj47uiigsfanrh6o",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=ZTRqdThpa2MzdHRqNDd1aWlnc2ZhbnJoNm8gNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-11-29T19:36:58.000Z",
+      "updated": "2016-12-08T01:19:13.442Z",
+      "summary": "Fireside Chat: Hardware Startups and Manufacturing Challenges",
+      "description": "http://bit.ly/D3Firesidechathardwarestartups \n\n1250 Rue Guy Suite 600\n\nAre you building or thinking of building a hardware startup? District 3 will be hosting a Q&A panel with the founders of our most successful hardware startups. \n\n\nRyan Desgroseilliers from Apisen, Tuyet Minh Truong from Ktrl-P, and Daniel Blumer from Revols know better than anyone what goes into founding and building a hardware startup. Get the opportunity to pick their brains, understand what tricks they've learned along the way, and the challenges they faced\n\n\nMoreover, Wurth Electronics will be joining the panel to touch on the different manufacturing avenues and challenges you will face, as well as how  to position yourself successfully.\n\n\nAbout the Speakers: (they are send these to me later today) \n\n\nApisen  a company specializing in the production of specialized equipment for emergency services- Ryan Desgroseilliers: Is a Concordia alumnus and one of the founders of Apisen, which originally launched as part of the Startup Programs at District 3. Ryan has been a speaker at several startup events across Montreal, where he discussed the hardware development process, government subsidy and support programs, corporate structures, and incorporation, and the unique challenges faced by hardware-based businesses in the startup ecosystem. \n\n\nRevols a wearable technology company who created the world's first custom-fit earphones - Daniel Blumer:  Daniel earned his MBA from Queens University and has an extensive background in finance and sales.Daniel’s passion and enthusiasm serve as the driving force behind the entire Revols team. \n\n\n\nFree\n\n________________________________________\n// Montreal Tech Calendar maintained by MTLNewTech.com and Notman.org \n// To add your event automatically => http://mtlnewtech.com/calendar and click on the bottom-right button\nps: please double check that it shows up as we are just trying this stuff for now\n________________________________________\n\n",
+      "location": "1250 Rue Guy Suite 600",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T18:00:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-13T20:00:00-05:00"
+      },
+      "iCalUID": "e4ju8ikc3ttj47uiigsfanrh6o@google.com",
+      "sequence": 1,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.e4ju8ikc3ttj47uiigsfanrh6o"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2952450019388000\"",
+      "id": "4145qsjqvlpmvrkvim3pjiv7dc_20161214T000000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NDE0NXFzanF2bHBtdnJrdmltM3BqaXY3ZGNfMjAxNjEyMTRUMDAwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2016-08-02T17:22:23.000Z",
+      "updated": "2016-10-11T22:30:09.694Z",
+      "summary": "js-montreal monthly meetup",
+      "description": "For full details, including the address, and to RSVP see:\nhttp://www.meetup.com/js-montreal/\njs-montreal - montreal's javascript user group",
+      "location": "La Gare, 5333 Avenue Casgrain #102, Montréal, QC H2T 1X6, Canada",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal Newtech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T19:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "end": {
+        "dateTime": "2016-12-13T22:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "recurringEventId": "4145qsjqvlpmvrkvim3pjiv7dc_R20160913T230000",
+      "originalStartTime": {
+        "dateTime": "2016-12-13T19:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "iCalUID": "4145qsjqvlpmvrkvim3pjiv7dc_R20160913T230000@google.com",
+      "sequence": 1,
+      "hangoutLink": "https://plus.google.com/hangouts/_/ili.as/js-montreal?hceid=NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.4145qsjqvlpmvrkvim3pjiv7dc"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962141282544000\"",
+      "id": "ljp8qtfb884qqg4cqr4483j0ds_20161214T010000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=bGpwOHF0ZmI4ODRxcWc0Y3FyNDQ4M2owZHNfMjAxNjEyMTRUMDEwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2011-12-05T15:43:17.000Z",
+      "updated": "2016-12-07T00:30:41.272Z",
+      "summary": "Foulab open doors",
+      "description": "\nMontreal tech calendar maintained by http://mtlnewtech.com and http://notman.org",
+      "location": "Foulab.org Suite 33B, 999 du Collège",
+      "creator": {
+        "email": "heri@madmedia.ca",
+        "displayName": "Heri Rakotomalala"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal Tech Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-13T20:00:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-13T22:00:00-05:00"
+      },
+      "recurringEventId": "ljp8qtfb884qqg4cqr4483j0ds",
+      "originalStartTime": {
+        "dateTime": "2016-12-13T20:00:00-05:00"
+      },
+      "iCalUID": "ljp8qtfb884qqg4cqr4483j0ds@google.com",
+      "sequence": 1
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2959661466174000\"",
+      "id": "9uqol3cn4j0capng6q28eh5no8",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=OXVxb2wzY240ajBjYXBuZzZxMjhlaDVubzggNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-11-22T16:05:33.000Z",
+      "updated": "2016-11-22T16:05:33.087Z",
+      "summary": "Agile MTL",
+      "location": "Notman House, Montreal, QC H2X, Canada",
+      "creator": {
+        "email": "emma@notman.org",
+        "displayName": "Emma Williams"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-14T17:00:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-14T21:00:00-05:00"
+      },
+      "iCalUID": "9uqol3cn4j0capng6q28eh5no8@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/j2tp04gen46s0e0?hceid=NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.9uqol3cn4j0capng6q28eh5no8"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962458794086000\"",
+      "id": "_6p2k2hhm64pj2ba584sj8b9k84p3iba28l1j8b9n8h33ccpo6gp34c1h70_20161215T210000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=XzZwMmsyaGhtNjRwajJiYTU4NHNqOGI5azg0cDNpYmEyOGwxajhiOW44aDMzY2NwbzZncDM0YzFoNzBfMjAxNjEyMTVUMjEwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2015-08-06T16:17:18.000Z",
+      "updated": "2016-12-08T20:36:37.043Z",
+      "summary": "Helios Makerspace Free Access",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal Tech Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-15T16:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "end": {
+        "dateTime": "2016-12-15T21:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "recurringEventId": "_6p2k2hhm64pj2ba584sj8b9k84p3iba28l1j8b9n8h33ccpo6gp34c1h70",
+      "originalStartTime": {
+        "dateTime": "2016-12-15T16:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "iCalUID": "6EAF6131-EA94-4A29-BEC4-7DF638422018",
+      "sequence": 3,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ._6p2k2hhm64pj2ba584sj8b9k84p3iba28l1j8b9n8h33ccpo6gp34c1h70"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2957634449496000\"",
+      "id": "7re11tdiqg165i87nmhopt7qn4",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=N3JlMTF0ZGlxZzE2NWk4N25taG9wdDdxbjQgNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-11-10T22:33:44.000Z",
+      "updated": "2016-11-10T22:33:44.748Z",
+      "summary": "Startup Journey Programs Information Session",
+      "description": "http://bit.ly/Supinfo2017 \n\nFaubourg Tower Suite 600, 1250 Rue Guy \n\nYOUR STARTUP JOURNEY STARTS HERE!\n\nAs an entrepreneur, you need a springboard and a base of support from experienced coaches, mentors and experts to succeed at every stage of your startup journey. Whether it’s:\n\n- Validating your idea\n- Developing your first marketable prototype\n\nOR\n\n- Creating a product that satisfies the market you’re going after\n\nThe information session will be a perfect opportunity for you to learn more on how we can help you develop your idea or startup, as well as gain insights on what we look for in our applications. \n\nA Q&A will follow each information session where you can ask your questions and meet some of our coaches, as well as some of our startups that completed our programs.\n\n**\n\nAbout Our Programs:\n\n\nThe Business Model Validation Program (BMV) will allow you to recognize the viability of your idea. By the end of the program, you will have an operating startup with potential early adopters.\n\n\nThe Business Model Validation Program (BMV) for Social Entrepreneurs is designed for social enterprises, nonprofits and cooperatives who wish to be mindful of the social and economic impact of their product or service. The program combines the expertise needed from the technology and social economy sector.\n\n\nFintech Program is aimed towards startups looking to tackle the financial sector using disruptive and innovative technology or those looking to develop new tech-driven solutions specific for finance. The program combines experters from both the financial and technology sector.\n\n\nThe Minimum Viable Product Program (MVP) will help you develop the first iteration of your marketable prototype. By the end of the program, you will have developed the first version of your product with sufficient features to satisfy early adopters.\n\n\nThe Product Market Fit Program (PMF) will help you become a star product manager and marketer in order to overcome one of the toughest times in any startup’s journey: having a good product that can satisfy the market you’re going after.\n\n\nThe Science and Deeptech Program is tailored for startups and researchers who are developing a product or idea derived from academic research and based on tangible scientific discoveries or engineering innovations. The specialized one-one coaching will help you accelerate your research into a viable business.\n\n**\n\nSchedule:\n\nNovember 24: Info Session #1 \n\n11:30: Check-ins & Networking\n\n12:00: General Info-Session\n\n12:30: Directing to Program-Specific Sessions\n\n12:45-1:30: \n\nBMV Info-Session\n\nPMF Info-Session\n\nSocial Info-Session\n\nFintech Info-Session\n\nScience & Deep Tech\n\n\nNovember 24: Info Session #2\n\n5:30: Check-ins & Networking\n\n6:00: General Info-Session\n\n6:30: Directing to Program-Specific Sessions\n\n6:45-7:30: \n\nBMV Info-Session\n\nPMF Info-Session\n\nSocial Info-Session\n\nFintech Info-Session\n\nScience & Deep Tech\n\n**\n\nDecember 15: Info Session #1 \n\n11:30: Check-ins & Networking\n\n12:00: General Info-Session\n\n12:30: Directing to Program-Specific Sessions\n\n12:45-1:30: \n\nBMV Info-Session\n\nPMF Info-Session\n\nSocial Info-Session\n\nFintech Info-Session\n\nScience & Deep Tech\n\n\nDecember 15: Info Session #2\n\n5:30: Check-ins & Networking\n\n6:00: General Info-Session\n\n6:30: Directing to Program-Specific Sessions\n\n6:45-7:30: \n\nBMV Info-Session\n\nPMF Info-Session\n\nSocial Info-Session\n\nFintech Info-Session\n\nScience & Deep Tech\n\n\nFree\n\n________________________________________\n// Montreal Tech Calendar maintained by MTLNewTech.com and Notman.org \n// To add your event automatically => http://mtlnewtech.com/calendar and click on the bottom-right button\nps: please double check that it shows up as we are just trying this stuff for now\n________________________________________\n\n",
+      "location": "Faubourg Tower Suite 600, 1250 Rue Guy ",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-15T17:33:43-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-15T17:33:43-05:00"
+      },
+      "iCalUID": "7re11tdiqg165i87nmhopt7qn4@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.7re11tdiqg165i87nmhopt7qn4"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2961909855374000\"",
+      "id": "qkcf26k0i0d0bqu0pprs7ut158",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=cWtjZjI2azBpMGQwYnF1MHBwcnM3dXQxNTggNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-12-05T16:22:07.000Z",
+      "updated": "2016-12-05T16:22:07.687Z",
+      "summary": "MTL NewTech DemoNight | Technoel Edition",
+      "description": "Like every year, it's celebration time!!! And like every year we offer you an easy to follow 3 step process for happy holidays:\n1. Get your MTL NewTech DemoNight & Technoel.ca ticket\n2. Come enjoy the 5 startup demos, the free food and pré-drink, before going to...\n3. Technoel! Don't miss our startup community holidays party!!!\n\nMore info to come soon, but you can already go grab your ticket for the post demos holiday party! Technoel.ca, and feel good about it as all proceeds go to keep our awesome friends at MTLinTech going strong! And if you're a starving startup, use the code \"mtlnewtech\" to get the early birds price back ;)\n\nhttps://www.facebook.com/events/124192968063254/",
+      "location": "MTL Newtech",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-15T17:45:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-15T20:45:00-05:00"
+      },
+      "iCalUID": "qkcf26k0i0d0bqu0pprs7ut158@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.qkcf26k0i0d0bqu0pprs7ut158"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2961909980136000\"",
+      "id": "65b1bjjl03bqnaning895psigo",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=NjViMWJqamwwM2JxbmFuaW5nODk1cHNpZ28gNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-12-05T16:23:10.000Z",
+      "updated": "2016-12-05T16:23:10.068Z",
+      "summary": "TechNoël 2016 | Startup Community Holidays Party",
+      "description": "TechNoël is Montreal's tech community holiday party.&nbsp;This year all proceeds go to MTLinTECH, the voice of startups in the city.Come celebrate and be merry with Startup DJs Mark MacLeod, Conor Clark, David Dufresne, Ian Jeffrey.&nbsp;Early Bird tickets are already sold out so hurry!\n\nUse the code \"mtlnewtech\" for a special pricing startup pockets pricing ;)\n http://technoel.ca/\n",
+      "location": "LE DRINK - 3565 ST-LAURENT (MÉTRO ST-LAURENT)",
+      "creator": {
+        "email": "bonjour@ili.as"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-15T20:00:00-05:00",
+        "timeZone": "America/New_York"
+      },
+      "end": {
+        "dateTime": "2016-12-15T23:55:00-05:00",
+        "timeZone": "America/New_York"
+      },
+      "iCalUID": "65b1bjjl03bqnaning895psigo@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.65b1bjjl03bqnaning895psigo"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962600663966000\"",
+      "id": "rrfbi2599l26ge4r6iq6aektdo_20161216T140000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=cnJmYmkyNTk5bDI2Z2U0cjZpcTZhZWt0ZG9fMjAxNjEyMTZUMTQwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2016-09-09T14:04:25.000Z",
+      "updated": "2016-12-09T16:18:51.983Z",
+      "summary": "Les Pitonneux - Coffee & Code",
+      "location": "Cafe OSMO",
+      "creator": {
+        "email": "emma@notman.org",
+        "displayName": "Emma Williams"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-16T09:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "end": {
+        "dateTime": "2016-12-16T13:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "recurringEventId": "rrfbi2599l26ge4r6iq6aektdo",
+      "originalStartTime": {
+        "dateTime": "2016-12-16T09:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "iCalUID": "rrfbi2599l26ge4r6iq6aektdo@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.rrfbi2599l26ge4r6iq6aektdo"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2962610538008000\"",
+      "id": "i7hhmel9vgkhcm0i1ta6r3up3o_20161216T170000Z",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=aTdoaG1lbDl2Z2toY20waTF0YTZyM3VwM29fMjAxNjEyMTZUMTcwMDAwWiA0YjN2bXM2aTh2bTI2bHZnNjlkN25jb2JlY0Bn",
+      "created": "2016-08-11T12:53:26.000Z",
+      "updated": "2016-12-09T17:41:09.004Z",
+      "summary": "Cafe OSMO Terrace BBQ",
+      "location": "Café OSMO, 51 Rue Sherbrooke O, Montréal, QC H2X 1X2, Canada",
+      "creator": {
+        "email": "emma@notman.org",
+        "displayName": "Emma Williams"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-16T12:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "end": {
+        "dateTime": "2016-12-16T14:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "recurringEventId": "i7hhmel9vgkhcm0i1ta6r3up3o",
+      "originalStartTime": {
+        "dateTime": "2016-12-16T12:00:00-05:00",
+        "timeZone": "America/Toronto"
+      },
+      "iCalUID": "i7hhmel9vgkhcm0i1ta6r3up3o@google.com",
+      "sequence": 0,
+      "hangoutLink": "https://plus.google.com/hangouts/_/cafe-osmo?hceid=NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.i7hhmel9vgkhcm0i1ta6r3up3o"
+    },
+    {
+      "kind": "calendar#event",
+      "etag": "\"2961082182842000\"",
+      "id": "kn01hqlcm72v0am7aejs0rciuc",
+      "status": "confirmed",
+      "htmlLink": "https://www.google.com/calendar/event?eid=a24wMWhxbGNtNzJ2MGFtN2FlanMwcmNpdWMgNGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZw",
+      "created": "2016-11-30T21:23:06.000Z",
+      "updated": "2016-11-30T21:24:51.421Z",
+      "summary": "StartupSki - Mont Sutton",
+      "description": "Our price (lift ticket + roundtrip transportation): $40\n\nIntroducing Startup Ski & Board Trips. The snow has fallen, it’s time to grab your coat, get your boots on, and hit the slopes. Round trip rides to and from mountains every other week. Oh, and this includes your lift ticket too.\n\nMont Sutton\nSaturday Dec. 17th, 2016\nDeparture*: 7:30am\nReturn**: 4:30pm\nRegular lift ticket price: $64\nOur price (lift ticket + roundtrip transportation): $40\nOptional equipment rental***: $40",
+      "creator": {
+        "email": "gabriel@sundaram.ca"
+      },
+      "organizer": {
+        "email": "4b3vms6i8vm26lvg69d7ncobec@group.calendar.google.com",
+        "displayName": "Montreal New Tech & Startups Events",
+        "self": true
+      },
+      "start": {
+        "dateTime": "2016-12-17T07:30:00-05:00"
+      },
+      "end": {
+        "dateTime": "2016-12-17T16:30:00-05:00"
+      },
+      "transparency": "transparent",
+      "iCalUID": "kn01hqlcm72v0am7aejs0rciuc@google.com",
+      "sequence": 1,
+      "hangoutLink": "https://plus.google.com/hangouts/_/calendar/NGIzdm1zNmk4dm0yNmx2ZzY5ZDduY29iZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ.kn01hqlcm72v0am7aejs0rciuc"
+    }
+  ]
+}

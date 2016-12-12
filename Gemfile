@@ -26,7 +26,6 @@ gem 'cloudinary'
 
 # Admin dashboard
 gem 'administrate'
-gem 'bourbon'
 
 # Authentication
 gem 'devise'
@@ -41,12 +40,15 @@ gem 'google-api-client'
 gem 'awesome_print'
 gem 'pry-rails'
 
+gem 'sinatra', '~> 2.0.0.beta2'
+
 group :development, :test do
   gem 'bullet'
   gem 'bundler-audit', '>= 0.5.0', require: false
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
+  gem 'refills'
 end
 
 group :development do

@@ -1,7 +1,5 @@
 require 'simplecov'
-SimpleCov.start 'rails' do
-  add_filter '/spec/'
-end
+SimpleCov.start 'rails'
 
 require 'codecov'
 SimpleCov.formatter = SimpleCov::Formatter::Codecov
@@ -11,7 +9,7 @@ if ENV['CIRCLE_ARTIFACTS']
   SimpleCov.coverage_dir(dir)
 end
 
-require 'webmock'
+require 'webmock/rspec'
 WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
