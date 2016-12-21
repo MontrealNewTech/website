@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Rails.application.configure do
   config.action_controller.perform_caching = false
   config.action_mailer.default charset: 'utf-8'

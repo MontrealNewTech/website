@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe GoogleCalendarEventFetcher do
   describe '#all_events' do
-    let(:date) { Date.parse('2016-12-12')}
+    let(:date) { Date.parse('2016-12-12') }
 
     subject { described_class.new(date).events_calendar }
 
@@ -25,11 +26,16 @@ RSpec.describe GoogleCalendarEventFetcher do
       GoogleDate = Struct.new :date_time
 
       before do
-        allow(EventsCalendar).to receive(:new).with(an_instance_of(Array), an_instance_of(Range)).and_return new_calendar
-        allow(GoogleCalendarLoad).to receive(:new).and_return calendar_load
+        allow(EventsCalendar).
+          to receive(:new).
+          with(an_instance_of(Array), an_instance_of(Range)).
+          and_return new_calendar
+        allow(GoogleCalendarLoad).
+          to receive(:new).
+          and_return calendar_load
       end
 
-      let(:time) { Time.parse("2016-12-12-12:22") }
+      let(:time) { Time.parse('2016-12-12-12:22') }
       let(:fake_calendar_items) do
         (1..3).map do |n|
           GoogleCalendarEvent.new 'Whoo summary', GoogleDate.new(time), "Event ##{n}", 'An address'
@@ -57,7 +63,8 @@ RSpec.describe GoogleCalendarEventFetcher do
 
     describe 'actually calling the google api' do
       before do
-        stub_request(:get, /https:\/\/www.googleapis.com\/calendar\/v3\/calendars/).to_rack(FakeGoogleCalendars)
+        stub_request(:get, %r{https:\/\/www.googleapis.com\/calendar\/v3\/calendars}).
+          to_rack(FakeGoogleCalendars)
       end
 
       it 'makes an http request to the actual google api and returns an expected response' do

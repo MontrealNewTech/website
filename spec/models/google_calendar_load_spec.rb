@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe GoogleCalendarLoad do
@@ -8,7 +9,11 @@ RSpec.describe GoogleCalendarLoad do
 
   describe '#response' do
     let(:events) { double 'events', items: [] }
-    let(:calendar_service) { instance_double Google::Apis::CalendarV3::CalendarService, :key= => true, list_events: events }
+    let(:calendar_service) do
+      instance_double Google::Apis::CalendarV3::CalendarService,
+                      :key= => true,
+                      list_events: events
+    end
 
     before do
       allow(Google::Apis::CalendarV3::CalendarService).to receive(:new).and_return calendar_service
@@ -45,7 +50,8 @@ RSpec.describe GoogleCalendarLoad do
 
   describe 'actually calling the google api' do
     before do
-      stub_request(:get, /https:\/\/www.googleapis.com\/calendar\/v3\/calendars/).to_rack(FakeGoogleCalendars)
+      stub_request(:get, %r{ /https:\/\/www.googleapis.com\/calendar\/v3\/calendars/ }).
+        to_rack(FakeGoogleCalendars)
     end
 
     it 'makes an http request to the actual google api' do

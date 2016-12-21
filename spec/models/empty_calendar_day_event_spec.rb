@@ -7,7 +7,7 @@ RSpec.describe EmptyCalendarDayEvent do
   describe 'default methods' do
     it 'defaults everything except start_at to nil' do
       (Event::ATTRIBUTES - [:start_at]).each do |method|
-        expect(described_class.new.send(method)).to eq nil
+        expect(described_class.new.public_send(method)).to eq nil
       end
     end
   end

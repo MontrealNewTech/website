@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
   localized do
     root to: 'pages#home'
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users,
-              path_names: { sign_in: 'login', sign_out: 'logout' }
+             path_names: { sign_in: 'login', sign_out: 'logout' }
 
   namespace :admin do
     resources :contacts

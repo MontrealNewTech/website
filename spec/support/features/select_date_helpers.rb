@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module SelectDateHelpers
   def select_date(date, from:)
     field = from

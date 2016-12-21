@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :routing do
@@ -7,7 +8,7 @@ RSpec.describe PagesController, type: :routing do
         expect(get: '/').to route_to('pages#home', locale: 'en')
       end
 
-      it "routes to #about" do
+      it 'routes to #about' do
         expect(get: '/about').to route_to('pages#about', locale: 'en')
       end
     end
@@ -17,7 +18,7 @@ RSpec.describe PagesController, type: :routing do
         expect(get: '/fr').to route_to('pages#home', locale: 'fr')
       end
 
-      it "routes to #about" do
+      it 'routes to #about' do
         expect(get: '/fr/about').to route_to('pages#about', locale: 'fr')
       end
     end
