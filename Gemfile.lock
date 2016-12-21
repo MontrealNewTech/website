@@ -94,6 +94,7 @@ GEM
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    dalli (2.7.6)
     database_cleaner (1.5.3)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
@@ -176,6 +177,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    memcachier (0.0.2)
     memoist (0.15.0)
     method_source (0.8.2)
     mime-types (3.1)
@@ -372,6 +374,7 @@ DEPENDENCIES
   carrierwave
   cloudinary
   codecov
+  dalli
   database_cleaner
   devise
   dotenv-rails
@@ -382,6 +385,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen
+  memcachier
   neat
   pg
   pry-rails
