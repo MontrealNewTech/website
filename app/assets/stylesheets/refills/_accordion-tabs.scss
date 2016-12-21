@@ -1,22 +1,14 @@
 .accordion-tabs {
-  $base-border-color: #dcdcdc !default;
-  $base-border-radius: 3px !default;
-  $base-background-color: #fff !default;
-  $base-spacing: 1.5em !default;
-  $action-color: #477dca !default;
-  $dark-gray: #333 !default;
-  $light-gray: #ddd !default;
-  $medium-screen: 40em !default;
-  $tab-border: 1px solid $base-border-color;
-  $tab-content-background: lighten($light-gray, 10);
+  $tab-border: $base-border;
+  $tab-content-background: $very-light-grey;
   $tab-active-background: $tab-content-background;
-  $tab-inactive-color: $base-background-color;
-  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-inactive-color: $background-color;
+  $tab-inactive-hover-color: $very-light-grey;
   $tab-mode: $medium-screen;
 
   @include clearfix;
   line-height: 1.5;
-  margin-bottom: $base-spacing;
+  margin-bottom: $med-space;
   padding: 0;
 
   @include media(max-width $tab-mode) {
@@ -51,10 +43,11 @@
   .tab-link {
     background-color: $tab-inactive-color;
     border-top: $tab-border;
-    color: $dark-gray;
+    color: $text;
     display: block;
     font-weight: bold;
-    padding: ($base-spacing / 2) ($gutter / 2);
+    padding: $med-space;
+    text-align: center;
     text-decoration: none;
 
     @include media($tab-mode) {
@@ -64,7 +57,7 @@
     }
 
     &:hover {
-      color: $action-color;
+      color: $main-color;
     }
 
     &:focus {
@@ -73,6 +66,7 @@
 
     &.is-active {
       background-color: $tab-active-background;
+      color: $main-color;
 
       @include media($tab-mode) {
         background-color: $tab-active-background;
@@ -86,7 +80,7 @@
   .tab-content {
     background: $tab-content-background;
     display: none;
-    padding: $base-spacing $gutter;
+    padding: $med-space;
     width: 100%;
 
     @include media($tab-mode) {

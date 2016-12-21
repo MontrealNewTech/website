@@ -3,8 +3,9 @@ $grey: #333;
 $light-grey: lighten($grey, 20%);
 $lighter-grey: lighten($grey, 40%);
 $lightest-grey: lighten($grey, 70%);
-$white: #FEFEFE;
-$orange: #EF4723;
+$very-light-grey: lighten($grey, 76%);
+$white: #fefefe;
+$orange: #ef4723;
 
 $links: $light-grey;
 $text: $grey;
@@ -22,8 +23,10 @@ $flashes: (
   'success': #e6efc2,
 );
 
+$base-border: 1px solid $very-light-grey;
+
 // FONTS
-$main-font: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
+$main-font: 'Lato', Helvetica, 'Lucida Grande', sans-serif;
 $headers: 'Montserrat', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
 $base-font-size: 16px;
 $small-font-size: 0.7rem;

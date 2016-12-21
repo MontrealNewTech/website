@@ -48,6 +48,20 @@
   justify-content: center;
 }
 
+@mixin flex-column-then-row {
+  @include flex-column-center;
+  @include above($small-screen) {
+    flex-direction: row;
+  }
+}
+
+@mixin flex-row-then-column {
+  @include flex-row-center;
+  @include above($small-screen) {
+    flex-direction: column;
+  }
+}
+
 @mixin squairy-light-background {
   background-image: image-url('squairy_light.png');
   background-repeat: repeat;

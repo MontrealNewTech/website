@@ -11,7 +11,7 @@ footer {
   }
 
   ul {
-    @include size-reset
+    @include size-reset;
   }
 
   li {
@@ -23,7 +23,7 @@ footer {
   }
 
   nav {
-    padding-top: $med-space;
+    padding-top: $large-space;
 
     @include above($small-screen) {
       text-align: right;
@@ -36,6 +36,12 @@ footer {
         color: $lighter-grey;
         text-transform: uppercase;
       }
+    }
+  }
+
+  .contact {
+    @include on($small-screen) {
+      font-size: $small-font-size;
     }
   }
 

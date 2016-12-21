@@ -21,6 +21,7 @@
   content: '\f041';
   font-family: 'FontAwesome';
   font-style: normal;;
+  padding-right: $little-space;
 }
 
 .phone::before {
@@ -71,6 +72,39 @@
   cursor: pointer;
   font-family: 'FontAwesome';
   font-style: normal;
+  padding-right: $little-space;
+}
+
+.calendar::before {
+  content: '\f073';
+  cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  padding-right: $little-space;
+}
+
+.calendar-add::before {
+  content: '\f271';
+  cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  padding-right: $little-space;
+}
+
+.previous::before {
+  content: '\f053';
+  cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  padding-right: $little-space;
+}
+
+.next::after {
+  content: '\f054';
+  cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  padding-left: $little-space;
 }
 
 .fixed-width-icon {

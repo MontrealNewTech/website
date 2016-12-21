@@ -1,28 +1,45 @@
-<div class="content">
-  <h1>Events</h1>
+<div class='content'>
+  <h1><%= t('.community_events') %></h1>
+  <p><%= t('.community_events_description') %></p>
 
-  <ul class="accordion-tabs">
-    <li><%= link_to 'Previous', date: @date.last_week(:sunday) %></li>
+  <div class='date-nav'>
+    <%= link_to url_for(date: @date.last_week(:sunday)), class: 'previous' do %>
+      <span class='text'>Previous</span>
+    <% end %>
+
+    <% from = l(@events_by_date.keys.first, format: :short) %>
+    <% to = l(@events_by_date.keys.last, format: :short) %>
+    <h2><%= from %> - <%= to %></h2>
+
+    <%= link_to  url_for(date: @date.next_week(:sunday)), class: 'next' do %>
+      <span class='text'>Next</span>
+    <% end %>
+  </div>
+
+  <ul class='accordion-tabs'>
     <% @events_by_date.each do |date, events| %>
-      <li class="tab-header-and-content">
-        <a href="#" class="tab-link">
-          <p><%= t("weekdays.#{date.wday}") %></p>
-          <%= l(date, format: :short) %>
+      <li class='tab-header-and-content'>
+        <a href='#' class='tab-link'>
+          <span class='weekday'><%= t("weekdays.#{date.wday}") %></span>
+          <%= date.day %>
         </a>
-        <div class="tab-content">
+        <div class='tab-content'>
           <% events.each do |event| %>
             <article class='event'>
               <% cache event do %>
                 <p><b><%= event.title%></b></p>
-                <p><%= l(event.start_at, format: :long) %></p>
-                <p><%= event.location %></p>
-                <p><%= event.description %></p>
+                <p class='map'><%= event.location %></p>
+                <p class='description'><%= event.description %></p>
               <% end %>
             </article>
           <% end %>
         </div>
       </li>
     <% end %>
-    <li> <%= link_to 'Next', date: @date.next_week(:sunday) %></li>
   </ul>
+
+  <div class='calendar-buttons'>
+    <a href=<%= APP_CONFIG[:community_cal_link] %> target='_blank' class='button calendar'><%= t('.get_the_calendar') %></a>
+    <a href=<%= APP_CONFIG[:community_cal_add_link] %> target='_blank' class='button calendar-add'><%= t('.add_your_event') %></a>
+  </div>
 </div>
