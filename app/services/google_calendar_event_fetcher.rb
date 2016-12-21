@@ -35,7 +35,7 @@ class GoogleCalendarEventFetcher
   def params_for(event)
     {
       title: event.summary,
-      start_at: event.start.date_time,
+      start_at: event.start.date_time || event.start.date.to_date,
       description: event.description,
       location: event.location
     }
