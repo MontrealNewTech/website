@@ -1,7 +1,73 @@
-.event {
-  background-color: $lightest-grey;
-  border-radius: 3px;
-  padding: 5px 10px;
-  margin: 10px 0;
-}
+[data-controller=events][data-action=index] {
+  .event {
+    background-color: $lightest-grey;
+    border-radius: $base-border-radius;
+    padding: $little-space $med-space;
 
+    &:not(:last-child) {
+      margin-bottom: $large-space;
+    }
+  }
+
+  ul.accordion-tabs {
+    margin-top: 0;
+  }
+
+  .calendar-buttons {
+    @include flex-column-then-row;
+    padding: $xl-space 0;
+
+    a {
+      flex: 1;
+      text-align: center;
+
+      @include above($small-screen) {
+        &:not(:first-child) {
+          margin-left: $med-space;
+        }
+
+        &:not(:last-child) {
+          margin-right: $med-space;
+        }
+      }
+    }
+  }
+
+  .date-nav {
+    @include flex-center-between;
+    background-color: $very-light-grey;
+    padding: $little-space $med-space;
+    margin-top: $xl-space;
+
+    h2 {
+      padding: 0;
+      text-align: center;
+    }
+
+    a {
+      text-transform: uppercase;
+
+      .text {
+        @include on($small-screen) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .weekday {
+    display: block;
+    font-size: $small-font-size;
+    text-transform: uppercase;
+  }
+
+  .tab-link {
+    @include above($medium-screen) {
+      width: 14.04%;
+    }
+  }
+
+  .map, .description {
+    font-size: $subtext-font-size;
+  }
+}

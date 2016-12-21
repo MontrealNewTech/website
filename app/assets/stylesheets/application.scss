@@ -1,10 +1,11 @@
 @charset "utf-8";
 
+@import 'variables';
+
 @import 'bourbon';
 @import 'neat';
 @import 'refills/*';
 
-@import 'variables';
 @import 'mixins';
 @import 'icons';
 @import 'buttons';
@@ -42,6 +43,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headers;
   font-weight: normal;
   padding-bottom: $med-space;
+}
+
+h1 {
+  font-size: 2rem;
+
+  @include above($small-screen) {
+    font-size: 3rem;
+  }
 }
 
 p {

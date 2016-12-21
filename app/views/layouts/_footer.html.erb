@@ -1,6 +1,6 @@
 <footer>
   <div class='links'>
-    <ul>
+    <ul class='contact'>
       <li class='map fixed-width-icon'>
         <span><%= t('.address') %></span>
       </li>
@@ -9,16 +9,15 @@
       </li>
       <li class='mail fixed-width-icon'>
         <%= mail_to t('.email'), t('.email') %>
-        <%= link_to t('.about'), about_path %>
       </li>
     </ul>
 
     <nav>
       <div class='languages'>
         <% if params[:locale] == 'fr' %>
-          <%= link_to 'English', url_for(locale: 'en'), class: 'localization fixed-width-icon' %>
+          <%= link_to 'English', url_for(locale: 'en'), class: 'localization' %>
         <% else %>
-          <%= link_to 'Français', url_for(locale: 'fr'), class: 'localization fixed-width-icon' %>
+          <%= link_to 'Français', url_for(locale: 'fr'), class: 'localization' %>
         <% end %>
       </div>
 
