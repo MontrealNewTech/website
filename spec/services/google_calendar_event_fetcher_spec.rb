@@ -9,7 +9,7 @@ RSpec.describe GoogleCalendarEventFetcher do
 
     describe 'setting up and fetching events from googles api' do
       before do
-        allow(GoogleCalendarLoad).to receive(:new).and_return calendar_load
+        allow(GoogleCalendarLoad).to receive(:new).exactly(:once).and_return calendar_load
       end
 
       let(:calendar_load) { instance_double GoogleCalendarLoad, response: events }
@@ -17,7 +17,7 @@ RSpec.describe GoogleCalendarEventFetcher do
 
       it 'gets the response from a google calendar load' do
         subject
-        expect(calendar_load).to have_received :response
+        expect(calendar_load).to have_received(:response).exactly :once
       end
     end
 

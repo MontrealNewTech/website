@@ -21,12 +21,12 @@ RSpec.describe GoogleCalendarLoad do
 
     it 'creates a google api client' do
       subject
-      expect(Google::Apis::CalendarV3::CalendarService).to have_received :new
+      expect(Google::Apis::CalendarV3::CalendarService).to have_received(:new).exactly :once
     end
 
     it 'sets the api key on the google calendar service' do
       subject
-      expect(calendar_service).to have_received(:key=).with ENV['GOOGLE_CALENDAR_API_KEY']
+      expect(calendar_service).to have_received(:key=).with(ENV['GOOGLE_CALENDAR_API_KEY']).exactly :once
     end
 
     it 'sends the expected params to the calendar service' do
@@ -39,7 +39,7 @@ RSpec.describe GoogleCalendarLoad do
       ]
 
       subject
-      expect(calendar_service).to have_received(:list_events).with(*calendar_params)
+      expect(calendar_service).to have_received(:list_events).with(*calendar_params).exactly :once
     end
 
     it 'caches the response with rails cache' do
@@ -50,7 +50,7 @@ RSpec.describe GoogleCalendarLoad do
 
   describe 'actually calling the google api' do
     before do
-      stub_request(:get, %r{ /https:\/\/www.googleapis.com\/calendar\/v3\/calendars/ }).
+      stub_request(:get, %r{https:\/\/www.googleapis.com\/calendar\/v3\/calendars}).
         to_rack(FakeGoogleCalendars)
     end
 

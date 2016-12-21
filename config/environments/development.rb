@@ -14,7 +14,7 @@ Rails.application.configure do
   config.assets.quiet = true
   config.assets.raise_runtime_errors = true
   config.cache_classes = false
-  config.cache_store = :null_store
+  config.cache_store = :dalli_store
   config.consider_all_requests_local = true
   config.eager_load = false
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
