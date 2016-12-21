@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe KeywordStruct do
@@ -21,7 +22,7 @@ RSpec.describe KeywordStruct do
     subject { TestClass.new first: 'only first arg is here' }
 
     it 'does not require any of the keyword arguments' do
-      expect{ subject }.not_to raise_error
+      expect { subject }.not_to raise_error
     end
 
     it 'defaults any missing keyword arguments to nil' do
@@ -34,7 +35,7 @@ RSpec.describe KeywordStruct do
     subject { TestClass.new first: 'a value', not_in_here: 'bad_key' }
 
     it 'gives you a nice and meaningful error message' do
-      expect{ subject }.to raise_error NameError
+      expect { subject }.to raise_error NameError
     end
   end
 

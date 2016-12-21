@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.feature 'collecting email addresses from the home page', js: true do
@@ -27,4 +28,3 @@ RSpec.feature 'collecting email addresses from the home page', js: true do
     expect(page).to have_content "Looks like you're already signed up! We have that email already."
   end
 end
-

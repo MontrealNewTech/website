@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class NullDate
   def initialize(nullable)
     @nullable = nullable

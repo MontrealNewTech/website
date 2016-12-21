@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      render js: "$('#email_sign_up_box').html('<h3>#{ t('.thanks') }</h3>')"
+      render js: "$('#email_sign_up_box').html('<h3>#{t('.thanks')}</h3>')"
     else
       render 'fail'
     end

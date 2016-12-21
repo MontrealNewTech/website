@@ -17,7 +17,7 @@ RSpec.describe CommunityEvent do
 
     it 'exposes getters for all of the initialization params' do
       Event::ATTRIBUTES.each do |method|
-        expect(described_class.new(**params).send(method)).to eq params[method]
+        expect(described_class.new(**params).public_send(method)).to eq params[method]
       end
     end
   end

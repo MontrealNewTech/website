@@ -1,4 +1,5 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+require 'administrate/base_dashboard'
 
 class TeamMemberDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
