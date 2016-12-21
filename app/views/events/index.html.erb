@@ -28,7 +28,8 @@
             <article class='event'>
               <% cache event do %>
                 <p><b><%= event.title%></b></p>
-                <p class='map'><%= event.location %></p>
+                <p><%= l(event.start_at, format: :time) %></p>
+                <p><%= event.location %></p>
                 <p class='description'><%= event.description %></p>
               <% end %>
             </article>

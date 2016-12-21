@@ -121,6 +121,7 @@ en:
       date: "%B %-e, %Y"
       short: "%b %-e"
       short_with_year: "%b %-e, %Y"
+      time: "%-l:%M %P"
   time:
     formats:
       date: "%B %-e, %Y"
