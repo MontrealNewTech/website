@@ -6,7 +6,7 @@ RSpec.describe EventsController, type: :controller do
   before { allow(GoogleCalendarEventFetcher).to receive(:new).with(Date.current).and_return calendar }
 
   describe "GET #index" do
-    subject { get :index, params: { locale: 'en' } }
+    subject { get :index, params: { locale: I18n.locale.to_param } }
 
     it_behaves_like 'action that is allowed for guests'
 

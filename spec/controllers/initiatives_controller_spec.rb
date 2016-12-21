@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe InitiativesController, type: :controller do
   describe "GET #index" do
-    subject { get :index }
+    subject { get :index, params: { locale: I18n.locale.to_param } }
 
     it_behaves_like 'action that is allowed for guests'
 
@@ -14,7 +14,7 @@ RSpec.describe InitiativesController, type: :controller do
   describe "GET #show" do
     let(:initiative) { build_stubbed :initiative }
 
-    subject { get :show, params: { id: initiative.to_param } }
+    subject { get :show, params: { id: initiative.to_param, locale: I18n.locale.to_param } }
 
     it_behaves_like 'action that is allowed for guests'
 

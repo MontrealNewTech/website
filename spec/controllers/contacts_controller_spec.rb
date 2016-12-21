@@ -4,7 +4,7 @@ RSpec.describe ContactsController, type: :controller do
   describe 'POST #create' do
     let(:http_params) { attributes_for :contact }
 
-    subject { post :create, params: { contact: http_params }, format: :js }
+    subject { post :create, params: { contact: http_params, locale: I18n.locale.to_param }, format: :js }
 
     it_behaves_like 'successful request'
     it_behaves_like 'action that is allowed for guests'
