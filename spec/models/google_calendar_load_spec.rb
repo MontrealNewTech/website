@@ -36,6 +36,11 @@ RSpec.describe GoogleCalendarLoad do
       subject
       expect(calendar_service).to have_received(:list_events).with(*calendar_params)
     end
+
+    it 'caches the response with rails cache' do
+      expect(Rails.cache).to receive :fetch
+      subject
+    end
   end
 
   describe 'actually calling the google api' do
