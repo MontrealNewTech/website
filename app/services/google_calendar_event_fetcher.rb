@@ -12,11 +12,7 @@ class GoogleCalendarEventFetcher
   private
 
   def fetched_calendar
-    authorized_service.list_events(APP_CONFIG[:community_cal_id],
-                                   single_events: true,
-                                   order_by: 'startTime',
-                                   time_min: from.beginning_of_day.iso8601,
-                                   time_max: to.end_of_day.iso8601)
+    GoogleCalendarLoad.new(from, to).response
   end
 
   def from
@@ -25,16 +21,6 @@ class GoogleCalendarEventFetcher
 
   def to
     @date.end_of_week(:sunday)
-  end
-
-  def authorized_service
-    client.tap do |service|
-      service.key = ENV['GOOGLE_CALENDAR_API_KEY']
-    end
-  end
-
-  def client
-    Google::Apis::CalendarV3::CalendarService.new
   end
 
   def extract_events_from(calendar)
