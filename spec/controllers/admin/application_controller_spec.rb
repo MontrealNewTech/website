@@ -1,31 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe Admin::ApplicationController do
-  controller do
-    def index
-      render body: nil
-    end
-  end
-
-  before do
-    @routes.draw { get :index, controller: :anonymous }
-  end
-
-  controller do
-    before_action :authenticate_user!
-
+RSpec.describe Admin::ApplicationController, type: :controller do
+  controller(Admin::ApplicationController) do
     def admin_route
       render body: nil
     end
   end
 
   before do
-    @routes.draw { get :admin_route, controller: :anonymous }
+    @routes.draw { get :admin_route, controller: 'admin/application' }
   end
 
   describe 'authenticate_admin' do
     context 'user is an admin' do
-      xit 'lets the user in' do
+      it 'lets the user in' do
         admin = build_stubbed :user, :admin
         allow(controller).to receive(:current_user).and_return admin
         get :admin_route
@@ -35,9 +23,7 @@ RSpec.describe Admin::ApplicationController do
 
     context 'user is not an admin' do
       it 'does not let the user in' do
-        # allow(controller).to receive(:current_user).and_return user
         user = build_stubbed :user
-        # allow(request.env['warden']).to receive(:authenticate!).and_return(user)
         allow(controller).to receive(:current_user).and_return user
         get :admin_route
         expect(response).to redirect_to new_user_session_path
