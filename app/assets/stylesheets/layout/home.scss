@@ -40,18 +40,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /*color: $light-text;*/
     min-height: 100vh;
     text-align: center;
 
     h2 {
       font-size: $xl-font-size;
       text-align: left;
-   /*   position: absolute;
-      top: 18rem;*/
-      font-size: $xl-font-size;
-      position: relative;
-      top: -4rem;
     }
   }
 
