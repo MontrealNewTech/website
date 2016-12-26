@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe EventsController, type: :controller do
+RSpec.describe CommunityEventsController, type: :controller do
   let(:calendar) { instance_double GoogleCalendarEventFetcher, events_calendar: true }
 
   before { allow(GoogleCalendarEventFetcher).to receive(:new).with(Date.current).and_return calendar }

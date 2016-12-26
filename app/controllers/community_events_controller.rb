@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class EventsController < ApplicationController
+class CommunityEventsController < ApplicationController
   def index
     @date = from_param_or_today
     @events_by_date = GoogleCalendarEventFetcher.new(@date).events_calendar

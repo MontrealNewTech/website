@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe EventsController, type: :routing do
+RSpec.describe CommunityEventsController, type: :routing do
   describe 'routing' do
     it 'routes to #index' do
-      expect(get: '/events').to route_to('events#index', locale: 'en')
+      expect(get: '/community_events').to route_to('community_events#index', locale: 'en')
     end
   end
 end

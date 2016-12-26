@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe EventsCalendar do
   describe '#build' do
-    let(:dates) { Date.current.all_week }
+    let(:dates) { Date.parse('2017-01-25').all_week }
 
     subject { described_class.new(events, dates).build }
 

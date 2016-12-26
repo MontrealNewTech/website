@@ -12,8 +12,8 @@ RSpec.feature 'restricting access to admin section' do
     admin = create :user, :admin
     login_as admin
 
-    visit admin_events_path
+    visit admin_initiatives_path
 
-    expect(current_path).to eq admin_events_path
+    expect(current_path).to eq admin_initiatives_path
   end
 end
