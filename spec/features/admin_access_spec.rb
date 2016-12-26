@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.feature 'restricting access to admin section' do
   scenario 'redirecting a user who is not an admin' do
-    visit admin_events_path
+    visit admin_initiatives_path
 
     expect(current_path).to eq new_user_session_path
   end
