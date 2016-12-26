@@ -1,3 +1,7 @@
 test:
   post:
     - bash <(curl -s https://codecov.io/bash)
+dependencies:
+  pre:
+    - npm install babel-helpers babel-generator babel-types
+    - sudo apt-get geckodriver
