@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   localized do
     root to: 'pages#home'
 
-    resources :team_members, only: :index
     resources :community_events, only: :index
     resources :contacts, only: [:new, :create]
+    resources :events, only: :index
     resources :initiatives, only: [:index, :show]
+    resources :team_members, only: :index
 
     get '/about' => 'pages#about', as: :about
   end
@@ -18,8 +19,8 @@ Rails.application.routes.draw do
     root to: 'initiatives#index'
 
     resources :contacts
+    resources :initiatives
     resources :organizations
     resources :team_members
-    resources :initiatives
   end
 end

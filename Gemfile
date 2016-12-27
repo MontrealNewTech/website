@@ -34,7 +34,7 @@ gem 'devise'
 # Nice urls
 gem 'friendly_id'
 
-# Google calendar import
+# Event import
 gem 'google-api-client'
 
 # Caching
