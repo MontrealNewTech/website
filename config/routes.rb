@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
     resources :community_events, only: :index
     resources :contacts, only: [:new, :create]
-    resources :events, only: :index
     resources :initiatives, only: [:index, :show]
+    resources :our_events, only: :index
     resources :team_members, only: :index
 
     get '/about' => 'pages#about', as: :about

@@ -16,7 +16,7 @@ class GoogleCalendarLoad
   private
 
   def fetch_google_calendar
-    authorized_service.list_events(APP_CONFIG[:community_cal_id],
+    authorized_service.list_events(COMMUNITY_CALENDAR[:id],
                                    single_events: true,
                                    order_by: 'startTime',
                                    time_min: @from,

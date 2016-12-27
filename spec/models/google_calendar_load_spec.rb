@@ -31,7 +31,7 @@ RSpec.describe GoogleCalendarLoad do
 
     it 'sends the expected params to the calendar service' do
       calendar_params = [
-        APP_CONFIG[:community_cal_id],
+        COMMUNITY_CALENDAR[:id],
         single_events: true,
         order_by: 'startTime',
         time_min: from.beginning_of_day.iso8601,

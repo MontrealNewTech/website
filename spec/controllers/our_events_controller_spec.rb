@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe EventsController do
+RSpec.describe OurEventsController do
   describe '#index' do
-    before { allow(Event).to receive(:all).and_return [] }
+    before { allow(OurEvent).to receive(:all).and_return [] }
 
     subject { get :index, params: { locale: I18n.locale.to_param } }
 
@@ -15,7 +15,7 @@ RSpec.describe EventsController do
 
     it 'loads all the events' do
       subject
-      expect(Event).to have_received(:all)
+      expect(OurEvent).to have_received(:all)
     end
   end
 end

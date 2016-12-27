@@ -51,7 +51,7 @@ RSpec.describe GoogleCalendarEventFetcher do
                             start_at: time,
                             description: /Event #/,
                             location: 'An address' }
-        expect(CommunityEvent).to receive(:new).with(expected_params).exactly(3).times
+        expect(Event).to receive(:new).with(expected_params).exactly(3).times
         subject
       end
 
@@ -69,7 +69,7 @@ RSpec.describe GoogleCalendarEventFetcher do
 
       it 'makes an http request to the actual google api and returns an expected response' do
         expect(subject.keys).to eq Date.parse('2016-12-12').all_week(:sunday).to_a
-        expect(subject.values.flatten.map(&:class).uniq).to match_array [EmptyCalendarDayEvent, CommunityEvent]
+        expect(subject.values.flatten.map(&:class).uniq).to match_array [EmptyCalendarDayEvent, Event]
         expect(subject.size).to eq 7
       end
     end

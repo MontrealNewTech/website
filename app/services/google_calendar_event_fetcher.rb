@@ -29,7 +29,7 @@ class GoogleCalendarEventFetcher
   end
 
   def cleaned_up_events_from(google_calendar_events)
-    google_calendar_events.map { |event| CommunityEvent.new(**params_for(event)) }
+    google_calendar_events.map { |event| Event.new(**params_for(event)) }
   end
 
   def params_for(event)
