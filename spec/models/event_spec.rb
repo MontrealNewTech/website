@@ -7,11 +7,12 @@ RSpec.describe Event, type: :model do
   describe 'accessors' do
     let(:params) do
       {
-        title: 'A nice event title',
-        start_at: 1.day.from_now,
         description: 'This is really going to be a great event',
+        end_at: 5.days.from_now,
+        link: 'http://123.com',
         location: 'Notman House',
-        link: 'http://123.com'
+        start_at: 1.day.from_now,
+        title: 'A nice event title',
       }
     end
 

@@ -3,6 +3,8 @@
     <article class='event'>
       <p><b><%= event.title%></b></p>
       <p><%= l(event.start_at, format: :time) %></p>
+      <p><%= l(event.end_at, format: :time) %></p>
+      <%= link_to event.link, event.link, target: '_blank' %>
       <p><%= event.location %></p>
       <p class='description'><%= event.description %></p>
     </article>
