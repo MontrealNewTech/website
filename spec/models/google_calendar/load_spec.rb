@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe GoogleCalendarLoad do
-  let(:from) { Date.current.beginning_of_week(:sunday) }
-  let(:to) { Date.current.end_of_week(:sunday) }
+RSpec.describe GoogleCalendar::Load do
+  let(:dates) { Date.current.all_week(:sunday) }
 
-  subject { described_class.new(from, to).response }
+  subject { described_class.new(dates).events }
 
   describe '#response' do
     let(:events) { double 'events', items: [] }
@@ -34,8 +33,8 @@ RSpec.describe GoogleCalendarLoad do
         COMMUNITY_CALENDAR[:id],
         single_events: true,
         order_by: 'startTime',
-        time_min: from.beginning_of_day.iso8601,
-        time_max: to.end_of_day.iso8601
+        time_min: dates.begin.beginning_of_day.iso8601,
+        time_max: dates.end.end_of_day.iso8601
       ]
 
       subject
@@ -55,8 +54,8 @@ RSpec.describe GoogleCalendarLoad do
     end
 
     it 'makes an http request to the actual google api' do
-      expect(subject.items).to all be_a Google::Apis::CalendarV3::Event
-      expect(subject.items.size).to eq 16
+      expect(subject).to all be_a Google::Apis::CalendarV3::Event
+      expect(subject.size).to eq 16
     end
   end
 end
