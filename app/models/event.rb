@@ -1,4 +1,11 @@
-# frozen_string_literal: true
-EVENT_ATTRIBUTES = [:title, :start_at, :end_at, :description, :location, :link].freeze
+class Event < BaseEvent
+  ATTRIBUTES = BaseEvent.members
 
-Event = KeywordStruct.new(*EVENT_ATTRIBUTES)
+  def self.ours
+    Eventbrite::Event.all
+  end
+
+  def self.community(for_dates:)
+    GoogleCalendar::Event.within(for_dates)
+  end
+end

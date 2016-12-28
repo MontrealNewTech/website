@@ -1,25 +1,25 @@
-# frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe Event, type: :model do
-  it { is_expected.to respond_to(*EVENT_ATTRIBUTES) }
+RSpec.describe Event do
+  describe '.ours' do
+    subject { described_class.ours }
 
-  describe 'accessors' do
-    let(:params) do
-      {
-        description: 'This is really going to be a great event',
-        end_at: 5.days.from_now,
-        link: 'http://123.com',
-        location: 'Notman House',
-        start_at: 1.day.from_now,
-        title: 'A nice event title',
-      }
+    it 'fetches all our events from eventbrite' do
+      allow(Eventbrite::Event).to receive(:all).and_return []
+      subject
+      expect(Eventbrite::Event).to have_received(:all)
     end
+  end
 
-    it 'exposes getters for all of the initialization params' do
-      EVENT_ATTRIBUTES.each do |method|
-        expect(described_class.new(**params).public_send(method)).to eq params[method]
-      end
+  describe '.community' do
+    let(:range) { Date.current.all_week }
+
+    subject { described_class.community(for_dates: range) }
+
+    it 'fetches all our events from google' do
+      allow(GoogleCalendar::Event).to receive(:within).with(range).and_return []
+      subject
+      expect(GoogleCalendar::Event).to have_received(:within).with(range)
     end
   end
 end
