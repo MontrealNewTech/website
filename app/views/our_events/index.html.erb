@@ -1,9 +1,8 @@
 <div class='content'>
-  <h1><%= t('.our_events') %></h1>
-
   <% @events.each do |event| %>
     <article class='event'>
-      <p><b><%= event.title%></b></p>
+      <h2><%= event.title%></h2>
+      <%= image_tag event.cover_image_url %>
       <p><%= event.display_time %></p>
       <%= external_link_for(event) %>
       <p><%= event.location %></p>

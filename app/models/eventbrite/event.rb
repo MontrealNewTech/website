@@ -27,6 +27,7 @@ module Eventbrite
         location: Venue.find(event.venue_id.to_i),
         start_at: Time.parse(event.start.local),
         title: event.name.text,
+        cover_image_url: event.logo.original.url
       }
     end
   end
