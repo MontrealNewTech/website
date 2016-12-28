@@ -1,2 +1,2 @@
 # frozen_string_literal: true
-BaseEvent = KeywordStruct.new(*Event::ATTRIBUTES)
+BaseEvent = KeywordStruct.new(:title, :start_at, :end_at, :description, :location, :link)

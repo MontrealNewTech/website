@@ -26,6 +26,9 @@ en:
         This is a curated list of startup and developer events happening in Montreal.
       get_the_calendar: Get the MTLNewTech calendar
       add_your_event: Add your event to the calendar
+  our_events:
+    index:
+      our_events: Montréal New Tech Events
   layouts:
     header:
       about: About
@@ -54,6 +57,7 @@ en:
   models:
     null_date:
       strftime: No %{nullable} on this date
+  no_events: There are no events happening on this date
   forms:
     email: Email
     new_password: Password (min %{count} characters)

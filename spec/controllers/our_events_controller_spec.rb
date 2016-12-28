@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe OurEventsController do
   describe '#index' do
-    before { allow(OurEvent).to receive(:all).and_return [] }
+    before { allow(Event).to receive(:ours).and_return [] }
 
     subject { get :index, params: { locale: I18n.locale.to_param } }
 
@@ -15,7 +15,7 @@ RSpec.describe OurEventsController do
 
     it 'loads all the events' do
       subject
-      expect(OurEvent).to have_received(:all)
+      expect(Event).to have_received(:ours)
     end
   end
 end

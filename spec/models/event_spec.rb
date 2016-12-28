@@ -22,4 +22,15 @@ RSpec.describe Event do
       expect(GoogleCalendar::Event).to have_received(:within).with(range)
     end
   end
+
+  describe '#display_time' do
+    subject do
+      described_class.new(start_at: Time.current.change(hour: 17),
+                          end_at: Time.current.change(hour: 21))
+    end
+
+    it 'returns a formatted time range' do
+      expect(subject.display_time).to eq "5:00 pm - 9:00 pm"
+    end
+  end
 end
