@@ -24,7 +24,7 @@ module Eventbrite
         description: event.description.html.html_safe,
         end_at: Time.parse(event.end.local),
         link: event.url,
-        location: 'will get this later', #Venue.find(event.venue_id.to_i),
+        location: Venue.find(event.venue_id.to_i),
         start_at: Time.parse(event.start.local),
         title: event.name.text,
       }
