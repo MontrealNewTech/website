@@ -8,10 +8,13 @@
 
   <nav id='toggle_menu'>
     <ul>
-      <% if controller.controller_name == "pages" && controller.action_name == "home" %>
-        <li>
-          <a href='#events' class='scroll-on-page featured'><%= t('.events') %></a>
-        </li>
+      <li>
+        <%= events_nav_link %>
+      </li>
+      <li>
+        <%= link_to t('.community_events'), community_events_path %>
+      </li>
+      <% if home_page? %>
         <li>
           <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
         </li>
@@ -19,12 +22,6 @@
           <a href='#what_we_do' class='scroll-on-page'><%= t('.about') %></a>
         </li>
       <% else %>
-        <li>
-          <%= link_to t('.events'), our_events_path, class: 'button' %>
-        </li>
-        <li>
-          <%= link_to t('.community_events'), community_events_path %>
-        </li>
         <li>
           <%= link_to t('.about'), about_path %>
         </li>
