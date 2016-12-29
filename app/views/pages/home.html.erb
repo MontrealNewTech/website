@@ -50,16 +50,13 @@
   </div>
 </section>
 
-<section id='latest'>
-  <h2><%= t('.latest') %></h2>
-  <h2><%= t('.hashtag') %></h2>
-</section>
-
 <section id='sponsors'>
-  <h2><%= t('.sponsors') %></h2>
-  <div class='logos'>
-    <% @sponsors.each do |sponsor| %>
-      <div class='logo'><img src="<%= sponsor.logo %>"></div>
-    <% end %>
+  <div class='content'>
+    <h3><%= t('.sponsors') %></h3>
+    <div class='logos'>
+      <% @sponsors.each do |sponsor| %>
+        <div class='logo'><img src="<%= sponsor.logo %>"></div>
+      <% end %>
+    </div>
   </div>
 </section>

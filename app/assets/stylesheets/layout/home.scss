@@ -7,6 +7,14 @@
     }
   }
 
+  @mixin big-h3 {
+    h3 {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
   main {
     padding: 0;
   }
@@ -190,6 +198,10 @@
         padding: $xl-space;
       }
     }
+  }
+
+  #sponsors {
+    @include big-h3;
   }
 
   .logos {
