@@ -8,3 +8,7 @@ EVENTBRITE = {
   api: 'https://www.eventbriteapi.com/v3/',
   organizer_id: '6805731961'
 }
+
+DEMO = {
+  apply: 'https://docs.google.com/forms/d/e/1FAIpQLSe7IhyOF5gPgsfddZ0kLyIQrlot-baVVh1h8wEcXlXPhElwRg/viewform'
+}

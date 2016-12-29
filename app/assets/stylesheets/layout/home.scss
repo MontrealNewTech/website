@@ -123,23 +123,39 @@
   }
 
   #sign_up {
-    @include flex-column-center;
+    @include flex-column-then-row;
 
     background-color: $main-color;
     color: $background-color;
+    padding: $xxl-space $large-space $xl-space $large-space;
 
+    .mailing-list,
+    .apply-to-demo {
+      flex: 1;
 
-    @include above($small-screen) {
-      @include flex-row-center;
-
-      h2 {
-        font-size: $xl-font-size;
-        padding-bottom: $med-space;
+      @include above($small-screen) {
+        padding: $med-space $xl-space;
       }
+    }
+
+    h2 {
+      font-size: $large-font-size;
+    }
+
+    h3 {
+      font-size: $normal-font-size;
+    }
+
+    .apply-to-demo {
+      background-color: $background-color;
+      border-radius: $base-border-radius;
+      border: 10px solid $darker-background;
+      color: $text;
     }
 
     input[type='submit'] {
       @include button($color: $darker-background);
+      width: auto;
     }
 
     input[type="text"] {
@@ -176,27 +192,8 @@
 
     .field-error {
       color: $background-color;
-    }
-
-    .email-collection {
-      flex: 2;
-
-      @include above($medium-screen) {
-        padding: $xl-space;
-      }
-    }
-
-    #email_sign_up_box {
-      flex: 1;
-
-      h2 {
-        font-size: $large-font-size;
-      }
-
-      @include above($small-screen) {
-        text-align: left;
-        padding: $xl-space;
-      }
+      padding: 0 $little-space;
+      width: 100%;
     }
   }
 

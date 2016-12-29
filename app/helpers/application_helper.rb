@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 module ApplicationHelper
   def full_title(page_title = '')
-    base_title = 'MTL New Tech'
+    base_title = 'Montreal Newtech'
     if page_title.blank?
       base_title
     else

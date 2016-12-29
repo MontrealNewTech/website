@@ -1,3 +1,5 @@
+<%= provide :title, t('.title') %>
+
 <section id='mtlnewtech'>
   <div class='headers'>
     <h1><%= t('.mtlnewtech.main') %></h1>
@@ -21,7 +23,7 @@
           <p class='map fixed-width-icon'><%= event.location %></p>
           <div class='links'>
             <%= link_to t('.get_tickets'), eventbrite_ticket_link(event), target: '_blank', rel: 'nofollow', class: 'button' %>
-            <%= link_to t('.more'), our_events_path, class: 'more' %>
+            <%= link_to t('.more'), event.link, target: '_blank', class: 'more' %>
           </div>
         </div>
         <div class='image'>
@@ -33,12 +35,18 @@
 </section>
 
 <section id='sign_up'>
-  <div class='email-collection'>
-    <h2><%= t('.sign_up.header') %></h2>
-    <h3><%= t('.sign_up.sub') %></h3>
+  <div class='mailing-list'>
+    <div class='email-collection'>
+      <h2><%= t('.sign_up.header') %></h2>
+      <h3><%= t('.sign_up.sub') %></h3>
+    </div>
+    <div id='email_sign_up_box'>
+      <%= render 'contacts/new' %>
+    </div>
   </div>
-  <div id='email_sign_up_box'>
-    <%= render 'contacts/new' %>
+  <div class='apply-to-demo'>
+    <h2><%= t('.apply_to_demo') %></h2>
+    <%= link_to t('.apply_link'), DEMO[:apply], target: '_blank', class: 'button' %>
   </div>
 </section>
 
