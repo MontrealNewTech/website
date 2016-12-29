@@ -12,9 +12,9 @@ RSpec.describe EmptyCalendarDayEvent do
     end
   end
 
-  describe '#start_at' do
-    it 'returns a null date that can be passed into a localization helper' do
-      expect(subject.start_at).to be_a NullDate
+  describe '#display_time' do
+    it 'returns a friendly message that there are not events on this date' do
+      expect(subject.display_time).to eq I18n.t('no_events')
     end
   end
 end

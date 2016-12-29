@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-EmptyCalendarDayEvent = KeywordStruct.new(*(Event::ATTRIBUTES - [:start_at])) do
-  def start_at
-    NullDate.new('events')
+class EmptyCalendarDayEvent < BaseEvent
+  def display_time
+    I18n.t('no_events')
   end
 end

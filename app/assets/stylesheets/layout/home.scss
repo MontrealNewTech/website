@@ -4,7 +4,6 @@
   }
 
   section {
-    @include flex-column-center;
     padding: $xxl-space $med-space $med-space $med-space;
     text-align: left;
   }
@@ -17,6 +16,10 @@
     &.transparent {
       a {
         color: $grey;
+      }
+
+      .featured {
+        color: $background-color;
       }
     }
 
@@ -43,22 +46,32 @@
     min-height: 100vh;
     text-align: center;
 
-    h2 {
+    h1 {
       font-size: $xl-font-size;
-      text-align: left;
     }
   }
 
   #events {
     @include squairy-light-background;
+
+    @include above($small-screen) {
+      @include flex-column-center;
+
+      h2 {
+        font-size: $xl-font-size;
+      }
+    }
   }
 
   #what_we_do {
   }
 
   #sign_up {
+    @include flex-column-center;
+
     background-color: $main-color;
     color: $background-color;
+
 
     @include above($small-screen) {
       @include flex-row-center;
@@ -142,6 +155,57 @@
 
       @include above($small-screen) {
         max-height: 25vh;
+      }
+    }
+  }
+
+  .event {
+    @include flex-column-then-row;
+
+    img {
+      @include above($small-screen) {
+        padding: 0 0 $large-space $large-space;
+      }
+    }
+
+    .links {
+      @include flex-column-then-row;
+
+      a {
+        margin-bottom: $med-space;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  .image {
+    flex: 1;
+  }
+
+  .more {
+    color: $main-color;
+    font-family: $headers;
+    padding-left: $med-space;
+    text-transform: uppercase;
+  }
+
+  .featured {
+    background: $grey;
+    border-radius: $round-border;
+    color: $background-color;
+    padding: $little-space $med-space;
+
+    a {
+      color: $background-color;
+
+      &:hover {
+        background: darken($main-color, 5%);
+        transition: all $long-duration $base-timing;
       }
     }
   }

@@ -24,33 +24,12 @@ ActiveRecord::Schema.define(version: 20161130042501) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.text     "description", null: false
-    t.datetime "starts_at",   null: false
-    t.integer  "duration"
-    t.integer  "location_id"
-    t.string   "cover_image"
-    t.string   "slug"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["location_id"], name: "index_events_on_location_id", using: :btree
-  end
-
   create_table "initiatives", force: :cascade do |t|
     t.string   "title",       null: false
     t.text     "description", null: false
     t.string   "link"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "locations", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "address",    null: false
-    t.text     "directions"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -91,6 +70,5 @@ ActiveRecord::Schema.define(version: 20161130042501) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "events", "locations"
   add_foreign_key "team_members", "users"
 end

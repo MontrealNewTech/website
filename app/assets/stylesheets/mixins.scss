@@ -2,8 +2,7 @@
 @function set-text-color($background) {
   @if (lightness($background) > 55) {
     @return $light-grey;
-  }
-  @else {
+  } @else {
     @return $background-color;
   }
 }

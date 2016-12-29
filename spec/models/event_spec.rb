@@ -1,28 +1,37 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.describe Event, type: :model do
-  it { is_expected.to belong_to :location }
+RSpec.describe Event do
+  describe '.ours' do
+    subject { described_class.ours }
 
-  it { is_expected.to validate_presence_of :name        }
-  it { is_expected.to validate_presence_of :description }
-  it { is_expected.to validate_presence_of :starts_at   }
+    it 'fetches all our events from eventbrite' do
+      allow(Eventbrite::Event).to receive(:all).and_return []
+      subject
+      expect(Eventbrite::Event).to have_received(:all)
+    end
+  end
 
-  it { is_expected.to delegate_method(:name).to(:location).with_prefix }
+  describe '.community' do
+    let(:range) { Date.current.all_week }
 
-  describe 'slugging' do
-    it 'handles slugging events when slugs are taken' do
-      event = create :event, name: 'Learn Ruby on Rails'
-      expect(event.slug).to eq 'learn-ruby-on-rails'
+    subject { described_class.community(for_dates: range) }
 
-      other_event = create :event, name: 'Learn Ruby on Rails', starts_at: Time.zone.parse('2017-01-25 18:00:00')
-      expect(other_event.slug).to eq 'learn-ruby-on-rails-2017-01-25'
+    it 'fetches all our events from google' do
+      allow(GoogleCalendar::Event).to receive(:within).with(range).and_return []
+      subject
+      expect(GoogleCalendar::Event).to have_received(:within).with(range)
+    end
+  end
 
-      location = create :location, name: 'A nice location'
-      another_event = create :event, name: 'Learn Ruby on Rails',
-                                     starts_at: Time.zone.parse('2017-01-25 18:00:00'),
-                                     location: location
-      expect(another_event.slug).to eq 'learn-ruby-on-rails-2017-01-25-a-nice-location'
+  describe '#display_time' do
+    subject do
+      described_class.new(start_at: Time.current.change(hour: 17),
+                          end_at: Time.current.change(hour: 21))
+    end
+
+    it 'returns a formatted time range' do
+      expect(subject.display_time).to eq '5:00 pm - 9:00 pm'
     end
   end
 end

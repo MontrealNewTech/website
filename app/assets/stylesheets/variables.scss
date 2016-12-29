@@ -24,6 +24,7 @@ $flashes: (
 );
 
 $base-border: 1px solid $very-light-grey;
+$main-color-border: 1px solid $main-color;
 
 // FONTS
 $main-font: 'Lato', Helvetica, 'Lucida Grande', sans-serif;
@@ -43,6 +44,7 @@ $large-space: 2rem;
 $xl-space: 4rem;
 $xxl-space: 6rem;
 $base-border-radius: 2px;
+$round-border: 5rem;
 
 // MEDIA QUERIES
 $small-screen: 42rem;

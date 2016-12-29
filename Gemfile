@@ -34,7 +34,7 @@ gem 'devise'
 # Nice urls
 gem 'friendly_id'
 
-# Google calendar import
+# Event import
 gem 'google-api-client'
 
 # Caching
@@ -45,6 +45,7 @@ gem 'memcachier'
 gem 'awesome_print'
 gem 'pry-rails'
 
+# Sidekiq UI and test fakes
 gem 'sinatra', '~> 2.0.0.beta2'
 
 group :development, :test do

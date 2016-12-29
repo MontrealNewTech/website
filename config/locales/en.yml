@@ -6,11 +6,14 @@ en:
         sub: Dedicated to the success of Montreal startup entrepreneurs
       what_we_do: What we do
       description: MTL NewTech is a non-profit organization dedicated to the success of the Montreal startup entrepreneurs. Every first Tuesday of the month 4-6 startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students etc. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
+      about: Learn more about MTL New Tech
       latest: Latest from MTL NewTech
       hashtag: "#mtlnewtech"
       sponsors: Our Partners
       team: Team
-      upcoming: Upcoming Events
+      events: Events
+      get_tickets: Get Tickets
+      more: Find out more
       sign_up: Sign Up
       sign_up:
         header: Want us to notify you?
@@ -18,7 +21,7 @@ en:
     about:
       header: About Us
       about_us: MTL NewTech is a non-profit organization dedicated to the success of Montreal startup entrepreneurs. Every first Tuesday of the month, a handful of startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students and other interested parties. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
-  events:
+  community_events:
     index:
       community_events: Montréal Startup Community and Developer Events
       community_events_description: |+
@@ -26,6 +29,9 @@ en:
         This is a curated list of startup and developer events happening in Montreal.
       get_the_calendar: Get the MTLNewTech calendar
       add_your_event: Add your event to the calendar
+  our_events:
+    index:
+      our_events: Montréal New Tech Events
   layouts:
     header:
       about: About
@@ -34,6 +40,8 @@ en:
       log_out: Log Out
       latest: Latest News
       events: Events
+      our_events: Our Events
+      community_events: Community Events
       contact: Contact
     footer:
       about: About us
@@ -54,6 +62,7 @@ en:
   models:
     null_date:
       strftime: No %{nullable} on this date
+  no_events: There are no events happening on this date
   forms:
     email: Email
     new_password: Password (min %{count} characters)
@@ -125,6 +134,7 @@ en:
   time:
     formats:
       date: "%B %-e, %Y"
+      date_time: "%B %-e, %-l:%M %P"
       full: "%A, %B %-e at %-l:%M %P"
       long: "%A, %B %-e"
       time: "%-l:%M %P"

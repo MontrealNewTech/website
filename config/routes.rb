@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   localized do
     root to: 'pages#home'
 
-    resources :team_members, only: :index
-    resources :events, only: :index
+    resources :community_events, only: :index
     resources :contacts, only: [:new, :create]
     resources :initiatives, only: [:index, :show]
+    resources :our_events, only: :index
+    resources :team_members, only: :index
 
     get '/about' => 'pages#about', as: :about
   end
@@ -15,13 +16,11 @@ Rails.application.routes.draw do
              path_names: { sign_in: 'login', sign_out: 'logout' }
 
   namespace :admin do
+    root to: 'initiatives#index'
+
     resources :contacts
-    resources :events
-    resources :locations
+    resources :initiatives
     resources :organizations
     resources :team_members
-    resources :initiatives
-
-    root to: 'events#index'
   end
 end

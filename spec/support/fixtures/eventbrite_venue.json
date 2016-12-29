@@ -1,0 +1,23 @@
+{
+    "address": {
+        "address_1": "490 Rue de la Gaucheti\u00e8re O",
+        "address_2": null,
+        "city": "Montr\u00e9al",
+        "region": "Quebec",
+        "postal_code": "H2Z 0B2",
+        "country": "CA",
+        "latitude": "45.5026029",
+        "longitude": "-73.5638783",
+        "localized_address_display": "490 Rue de la Gaucheti\u00e8re O, Montr\u00e9al, Quebec H2Z 0B2",
+        "localized_area_display": "Montr\u00e9al, Quebec",
+        "localized_multi_line_address_display": [
+            "490 Rue de la Gaucheti\u00e8re O",
+            "Montr\u00e9al, Quebec H2Z 0B2"
+        ]
+    },
+    "resource_uri": "https://www.eventbriteapi.com/v3/venues/17757119/",
+    "id": "17757119",
+    "name": "Spotify",
+    "latitude": "45.5026029",
+    "longitude": "-73.5638783"
+}
