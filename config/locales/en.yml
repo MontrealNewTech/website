@@ -34,6 +34,9 @@ en:
   our_events:
     index:
       our_events: Montréal New Tech Events
+  initiatives:
+    index:
+      title: Initiatives
   layouts:
     header:
       about: About

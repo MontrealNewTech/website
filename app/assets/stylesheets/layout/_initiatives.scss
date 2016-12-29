@@ -1,0 +1,8 @@
+[data-controller=initiatives][data-action=index] {
+  .initiative {
+    background-color: $lightest-grey;
+    border-radius: $base-border-radius;
+    margin-bottom: $large-space;
+    padding: $little-space $med-space;
+  }
+}
