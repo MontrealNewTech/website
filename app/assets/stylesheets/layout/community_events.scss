@@ -9,6 +9,33 @@
     }
   }
 
+  .meta {
+    font-family: $headers;
+    font-size: $subtext-font-size;
+    padding: $little-space 0;
+
+    h3 {
+      margin: 0;
+
+      @include above($small-screen) {
+        font-size: $large-font-size;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      display: block;
+    }
+
+    .map {
+      color: $main-color;
+    }
+  }
+
  .accordion-tabs {
     margin-top: 0;
   }
@@ -67,7 +94,7 @@
     }
   }
 
-  .map, .description {
+  .description {
     font-size: $subtext-font-size;
   }
 }

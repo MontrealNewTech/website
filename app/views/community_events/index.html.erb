@@ -27,10 +27,12 @@
           <% events.each do |event| %>
             <article class='event'>
               <% cache event do %>
-                <p><b><%= event.title%></b></p>
-                <p><%= event.display_time %></p>
-                <%= external_link_for(event) %>
-                <p><%= event.location %></p>
+                <div class='meta'>
+                  <h3><%= event.title%></h3>
+                  <p class='clock fixed-width-icon'><%= event.display_time %></p>
+                  <%= google_search_link event.location %>
+                  <%= external_link_for(event) %>
+                </div>
                 <p class='description'><%= event.description %></p>
               <% end %>
             </article>

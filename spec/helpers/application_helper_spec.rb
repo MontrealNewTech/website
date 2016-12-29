@@ -32,4 +32,16 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(show_error(object, :name)).to eq nil
     end
   end
+
+  describe '#google_search_link' do
+    it 'returns a link to google maps searching for the given destination' do
+      destination = '123 Place Ville Marie'
+      expect(helper.google_search_link(destination)).
+        to match Regexp.escape('https://www.google.com/maps/search/123+Place+Ville+Marie')
+      expect(helper.google_search_link(destination)).
+        to match(/#{destination}/)
+      expect(helper.google_search_link(destination)).
+        to match(/target="_blank"/)
+    end
+  end
 end
