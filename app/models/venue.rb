@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Venue
   def self.find(id)
     new.find_from_eventbrite(id)

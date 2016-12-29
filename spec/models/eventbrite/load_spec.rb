@@ -41,7 +41,7 @@ RSpec.describe Eventbrite::Load do
     let(:id) { 12 }
     let(:expected_uri) { URI "#{EVENTBRITE[:api]}venues/#{id}/" }
 
-    subject { described_class.new.venue(id)}
+    subject { described_class.new.venue(id) }
 
     describe "calling eventbrite's api" do
       before { stub_eventbrite_venue_call }

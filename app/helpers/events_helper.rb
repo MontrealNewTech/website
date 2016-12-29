@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module EventsHelper
   def external_link_for(event)
     return if event.link.nil?
@@ -8,5 +9,3 @@ module EventsHelper
     "#{event.link}#tickets"
   end
 end
-
-

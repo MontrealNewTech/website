@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe Event do
@@ -30,7 +31,7 @@ RSpec.describe Event do
     end
 
     it 'returns a formatted time range' do
-      expect(subject.display_time).to eq "5:00 pm - 9:00 pm"
+      expect(subject.display_time).to eq '5:00 pm - 9:00 pm'
     end
   end
 end

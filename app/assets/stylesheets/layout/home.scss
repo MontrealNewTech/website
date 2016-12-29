@@ -67,10 +67,11 @@
   }
 
   #sign_up {
+    @include flex-column-center;
+
     background-color: $main-color;
     color: $background-color;
 
-    @include flex-column-center;
 
     @include above($small-screen) {
       @include flex-row-center;
@@ -171,9 +172,9 @@
       @include flex-column-then-row;
 
       a {
-        width: 100%;
-        text-align: center;
         margin-bottom: $med-space;
+        text-align: center;
+        width: 100%;
       }
     }
   }

@@ -36,11 +36,11 @@ RSpec.describe GoogleCalendar::Event do
       let(:fake_calendar_items) do
         (1..3).map do |n|
           GoogleCalendarEvent.new 'Whoo summary',
-                                   GoogleDate.new(time),
-                                   GoogleDate.new(end_time),
-                                   "Event ##{n}",
-                                   'An address',
-                                   'link'
+                                  GoogleDate.new(time),
+                                  GoogleDate.new(end_time),
+                                  "Event ##{n}",
+                                  'An address',
+                                  'link'
         end
       end
 
