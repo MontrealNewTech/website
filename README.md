@@ -74,14 +74,22 @@ The project is built with Rails, a stable and mature web framework. If you're un
 
 ### Setting environment variables
 
-We use cloudinary for image hosting. You can sign up for a [free cloudinary account](https://cloudinary.com/users/register/free) to get API keys for your local development and testing environments.
+We use cloudinary for image hosting. You can sign up for a [free cloudinary account](https://cloudinary.com/users/register/free) to get API keys for your local development and testing environments. You need to set the `CLOUDINARY_API_KEY` and `CLOUDINARY_API_SECRET` environment variables.
+
+The community events are pulled from our community google calendar. You need to set the `GOOGLE_CALENDAR_API_KEY` environment variable. To access the google calendar api you need [a google api key, which you can get here](https://console.developers.google.com/apis/credentials).
+
+Our events are pulled from eventbrite. You need to set the `EVENTBRITE_API_TOKEN` environment variable. To access eventbrite's api you need [an eventbrite api key, which you can get according to these instructions](https://www.eventbrite.com/support/articles/en_US/How_To/how-to-locate-your-eventbrite-api-user-key?lg=en_US#5).
 
 Your environment variables should be the following:
 
 ```bash
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
+GOOGLE_CALENDAR_API_KEY=
+EVENTBRITE_API_TOKEN=
 ```
+
+This project uses the `dotenv` gem, so you just put these environment variables in a `.env` file in the root of the project and they will available to the Rails environment. Be sure to add this file to your `.gitignore` and never check it in to version control.
 
 ### Launch your database server
 
