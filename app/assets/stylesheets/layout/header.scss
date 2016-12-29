@@ -4,9 +4,14 @@ header {
   height: 55px;
   width: 100%;
   z-index: 1;
+  font-size: 80%;
 
   @include above($small-screen) {
     @include flex-center-between;
+  }
+
+  @include above($medium-screen) {
+    font-size: 100%;
   }
 
   .top-bar {
@@ -86,6 +91,10 @@ header {
       @include above($medium-screen) {
         padding-left: $large-space;
       }
+    }
+
+    .button {
+      border-radius: $round-border;
     }
   }
 }

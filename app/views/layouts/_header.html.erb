@@ -8,37 +8,34 @@
 
   <nav id='toggle_menu'>
     <ul>
-      <li>
-        <%= link_to t('.about'), about_path %>
-      </li>
-      <li>
-        <%= link_to t('.initiatives'), initiatives_path %>
-      </li>
-
       <% if controller.controller_name == "pages" && controller.action_name == "home" %>
         <li>
-          <a href='#events' class='scroll-on-page'><%= t('.events') %></a>
+          <a href='#events' class='scroll-on-page featured'><%= t('.events') %></a>
         </li>
         <li>
           <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
         </li>
         <li>
-          <a href='#latest' class='scroll-on-page'><%= t('.latest') %></a>
+          <a href='#what_we_do' class='scroll-on-page'><%= t('.about') %></a>
         </li>
       <% else %>
         <li>
-          <%= link_to t('.events'), community_events_path %>
+          <%= link_to t('.events'), our_events_path, class: 'button' %>
         </li>
         <li>
-          <%= link_to t('.contact'), root_path %>
+          <%= link_to t('.community_events'), community_events_path %>
         </li>
-
-        <% if current_user.present? %>
-          <li>
-            <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
-          </li>
-        <% end %>
-
+        <li>
+          <%= link_to t('.about'), about_path %>
+        </li>
+      <% end %>
+      <li>
+        <%= link_to t('.initiatives'), initiatives_path %>
+      </li>
+      <% if current_user.present? %>
+        <li>
+          <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
+        </li>
       <% end %>
     </ul>
   </nav>

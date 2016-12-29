@@ -17,6 +17,10 @@
       a {
         color: $grey;
       }
+
+      .featured {
+        color: $background-color;
+      }
     }
 
     &.sticky {
@@ -154,19 +158,23 @@
     }
   }
 
-  .more {
-    color: $main-color;
-    font-family: $headers;
-    padding-left: $med-space;
-    text-transform: uppercase;
-  }
-
   .event {
     @include flex-column-then-row;
 
     img {
-      padding: 0 0 $large-space $large-space;
-      width: 100%;
+      @include above($small-screen) {
+        padding: 0 0 $large-space $large-space;
+      }
+    }
+
+    .links {
+      @include flex-column-then-row;
+
+      a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: $med-space;
+      }
     }
   }
 
@@ -176,5 +184,28 @@
 
   .image {
     flex: 1;
+  }
+
+  .more {
+    color: $main-color;
+    font-family: $headers;
+    padding-left: $med-space;
+    text-transform: uppercase;
+  }
+
+  .featured {
+    background: $grey;
+    border-radius: $round-border;
+    color: $background-color;
+    padding: $little-space $med-space;
+
+    a {
+      color: $background-color;
+
+      &:hover {
+        background: darken($main-color, 5%);
+        transition: all $long-duration $base-timing;
+      }
+    }
   }
 }

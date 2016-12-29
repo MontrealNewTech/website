@@ -43,3 +43,9 @@ input[type='submit'],
   @include button($color: $buttons);
 }
 
+.outline-button {
+  @include button($color: transparent);
+  border: $main-color-border;
+  color: $main-color;
+}
+
