@@ -1,4 +1,12 @@
 [data-controller=pages][data-action=home] {
+  @mixin big-h2 {
+    h2 {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
   main {
     padding: 0;
   }
@@ -38,7 +46,26 @@
     }
   }
 
+  .headers {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: $med-space;
+    text-align: left;
+
+    @include above($small-screen) {
+      padding: $xl-space;
+    }
+  }
+
+  .empty {
+    flex: 2;
+  }
+
   #mtlnewtech {
+    @include flex-column-then-row;
+
     background-image: image-url('homepage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,12 +74,28 @@
     text-align: center;
 
     h1 {
-      font-size: $xl-font-size;
+      color: $background-color;
+      font-size: $large-font-size;
+      font-weight: bold;
+      letter-spacing: 2px;
+
+      @include above($small-screen) {
+        font-size: $xl-font-size;
+      }
+    }
+
+    h2 {
+      font-size: $normal-font-size;
+
+      @include above($small-screen) {
+        font-size: $large-font-size;
+      }
     }
   }
 
   #events {
     @include squairy-light-background;
+    @include big-h2;
 
     @include above($small-screen) {
       @include flex-column-center;
@@ -64,6 +107,7 @@
   }
 
   #what_we_do {
+    @include big-h2;
   }
 
   #sign_up {
