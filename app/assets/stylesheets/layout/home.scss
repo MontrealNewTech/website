@@ -16,6 +16,10 @@
     text-align: left;
   }
 
+  nav#toggle_menu {
+    background-color: transparent;
+  }
+
   header {
     position: fixed;
     top: 0;
@@ -240,9 +244,8 @@
 
   .featured {
     background: $grey;
-    border-radius: $round-border;
     color: $background-color;
-    padding: $little-space $med-space;
+    margin: 0;
 
     a {
       color: $background-color;

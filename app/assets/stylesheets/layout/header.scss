@@ -1,6 +1,6 @@
 header {
   box-sizing: border-box;
-  padding: $large-space $med-space;
+  padding: $large-space $little-space;
   height: 55px;
   width: 100%;
   z-index: 1;
@@ -76,6 +76,7 @@ header {
 
     @include on($small-screen) {
       display: none;
+      background-color: $background-color;
     }
 
     li {
@@ -93,8 +94,10 @@ header {
       }
     }
 
-    .button {
+    .featured {
       border-radius: $round-border;
+      padding-top: $little-space;
+      font-size: inherit;
     }
   }
 }
