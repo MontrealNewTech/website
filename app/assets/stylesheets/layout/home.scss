@@ -4,7 +4,6 @@
   }
 
   section {
-    @include flex-column-center;
     padding: $xxl-space $med-space $med-space $med-space;
     text-align: left;
   }
@@ -43,14 +42,21 @@
     min-height: 100vh;
     text-align: center;
 
-    h2 {
+    h1 {
       font-size: $xl-font-size;
-      text-align: left;
     }
   }
 
   #events {
     @include squairy-light-background;
+
+    @include above($small-screen) {
+      @include flex-column-center;
+
+      h2 {
+        font-size: $xl-font-size;
+      }
+    }
   }
 
   #what_we_do {
@@ -59,6 +65,8 @@
   #sign_up {
     background-color: $main-color;
     color: $background-color;
+
+    @include flex-column-center;
 
     @include above($small-screen) {
       @include flex-row-center;
@@ -144,5 +152,29 @@
         max-height: 25vh;
       }
     }
+  }
+
+  .more {
+    color: $main-color;
+    font-family: $headers;
+    padding-left: $med-space;
+    text-transform: uppercase;
+  }
+
+  .event {
+    @include flex-column-then-row;
+
+    img {
+      padding: 0 0 $large-space $large-space;
+      width: 100%;
+    }
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  .image {
+    flex: 1;
   }
 }

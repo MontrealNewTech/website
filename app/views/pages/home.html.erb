@@ -1,10 +1,29 @@
 <section id='mtlnewtech'>
-  <h2><%= t('.mtlnewtech.main') %></h2>
-  <h3><%= t('.mtlnewtech.sub') %></h3>
+  <h1><%= t('.mtlnewtech.main') %></h1>
+  <h2><%= t('.mtlnewtech.sub') %></h2>
 </section>
 
 <section id='events'>
-  <h2><%= t('.upcoming') %></h2>
+  <div class='content'>
+    <h2><%= t('.events') %></h2>
+
+    <% @events.each do |event| %>
+      <article class='event'>
+        <div class='info'>
+          <h3><%= event.title%></h3>
+          <p class='clock'>
+            <%= "#{l(event.start_at, format: :date_time)} - #{l(event.end_at, format: :time)}" %>
+          </p>
+          <p class='map'><%= event.location %></p>
+          <%= link_to t('.get_tickets'), eventbrite_ticket_link(event), target: '_blank', rel: 'nofollow', class: 'button' %>
+          <%= link_to t('.more'), our_events_path, class: 'more' %>
+        </div>
+        <div class='image'>
+          <%= image_tag event.cover_image_url %>
+        </div>
+      </article>
+    <% end %>
+  </div>
 </section>
 
 <section id='sign_up'>

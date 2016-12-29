@@ -19,4 +19,11 @@ RSpec.describe EventsHelper do
       end
     end
   end
+
+  describe '#eventbrite_ticket_link' do
+    it 'appends #tickets to the event link' do
+      event = Event.new(link: 'link.com')
+      expect(helper.eventbrite_ticket_link(event)).to eq 'link.com#tickets'
+    end
+  end
 end

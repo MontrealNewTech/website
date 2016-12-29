@@ -107,6 +107,13 @@
   padding-left: $little-space;
 }
 
+.clock::before {
+  content: '\f017';
+  font-family: 'FontAwesome';
+  font-style: normal;;
+  padding-right: $little-space;
+}
+
 .fixed-width-icon {
   &::before {
     display: inline-block;
