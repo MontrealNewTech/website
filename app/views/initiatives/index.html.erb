@@ -1,28 +1,12 @@
+<%= provide :title, t('.title') %>
+
 <div class="content">
-  <p id="notice"><%= notice %></p>
+  <h1><%= t('.title') %></h1>
 
-  <h1>Initiatives</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Link</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @initiatives.each do |initiative| %>
-        <tr>
-          <td><%= initiative.title %></td>
-          <td><%= initiative.description %></td>
-          <td><%= initiative.link %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
+  <% @initiatives.each do |initiative| %>
+    <article class='initiative'>
+      <h2><%= initiative.title %></h2>
+      <p><%= initiative.description %></p>
+    </article>
+  <% end %>
 </div>
