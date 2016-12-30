@@ -31,7 +31,7 @@
       </li>
       <% if current_user.present? %>
         <li>
-          <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
+          <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
         </li>
       <% end %>
     </ul>

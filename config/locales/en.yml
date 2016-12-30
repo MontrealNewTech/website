@@ -38,12 +38,12 @@ en:
   initiatives:
     index:
       title: Initiatives
+  log_out: Log Out
   layouts:
     header:
       about: About
       initiatives: Initiatives
       sign_up: Sign Up
-      log_out: Log Out
       latest: Latest News
       events: Events
       our_events: Our Events
