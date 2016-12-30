@@ -36,6 +36,9 @@ en:
     new:
       button: Keep me posted
       email: Your email address
+    new_mailchimp:
+      button: Keep me posted
+      email: Your email address
   date:
     formats:
       date: "%B %-e, %Y"

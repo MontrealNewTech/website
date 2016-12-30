@@ -18,18 +18,18 @@ RSpec.describe ApplicationHelper, type: :helper do
 
   describe '#show_error' do
     it 'returns the content tag for an object that has errors' do
-      object = build :contact, email: 'invalid@email'
+      object = build :initiative, title: nil
       object.valid?
 
-      expect(show_error(object, :email)).
-        to eq '<p class="field-error">Looks like that&#39;s not a valid email address. Could you double check it?</p>'
+      expect(show_error(object, :title)).
+        to eq '<p class="field-error">Title can&#39;t be blank</p>'
     end
 
     it 'returns nothing for an object that has no errors' do
-      object = build :contact, email: 'valid@email.com'
+      object = build :initiative
       object.valid?
 
-      expect(show_error(object, :name)).to eq nil
+      expect(show_error(object, :title)).to eq nil
     end
   end
 

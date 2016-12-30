@@ -10,7 +10,7 @@ RSpec.describe PagesHelper do
       it 'returns a link to the events anchor with the right classes' do
         expect(helper.events_nav_link).to match(/#{t('layouts.header.events')}/)
         expect(helper.events_nav_link).to match(/#events/)
-        expect(helper.events_nav_link).to match(/scroll-on-page featured/)
+        expect(helper.events_nav_link).to match(/scroll-on-page button featured/)
       end
     end
 
@@ -21,7 +21,7 @@ RSpec.describe PagesHelper do
 
       it 'returns a link to the events anchor with the right classes' do
         expect(helper.events_nav_link).to match(/#{t('layouts.header.events')}/)
-        expect(helper.events_nav_link).to match(/our_events/)
+        expect(helper.events_nav_link).to match(/\/#events/)
         expect(helper.events_nav_link).to match(/button/)
       end
     end

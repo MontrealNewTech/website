@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.feature 'loggout out after being logged in as an admin' do
@@ -31,4 +32,3 @@ RSpec.feature 'loggout out after being logged in as an admin' do
     expect(current_path).to eq root_path
   end
 end
-

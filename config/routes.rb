@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     root to: 'pages#home'
 
     resources :community_events, only: :index
-    resources :contacts, only: [:new, :create]
     resources :initiatives, only: [:index, :show]
     resources :our_events, only: :index
     resources :team_members, only: :index
@@ -18,7 +17,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'initiatives#index'
 
-    resources :contacts
     resources :initiatives
     resources :organizations
     resources :team_members

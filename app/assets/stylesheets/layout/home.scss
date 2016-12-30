@@ -132,10 +132,15 @@
     .mailing-list,
     .apply-to-demo {
       flex: 1;
+      padding: $little-space;
 
       @include above($small-screen) {
         padding: $med-space $xl-space;
       }
+    }
+
+    .mailing-list {
+      margin-bottom: $large-space;
     }
 
     h2 {
@@ -158,7 +163,7 @@
       width: auto;
     }
 
-    input[type="text"] {
+    input[type="email"] {
       background: transparent;
       border-bottom: 2px solid $background-color;
       color: $background-color;
@@ -188,12 +193,6 @@
 
     .field {
       border: none;
-    }
-
-    .field-error {
-      color: $background-color;
-      padding: 0 $little-space;
-      width: 100%;
     }
   }
 
