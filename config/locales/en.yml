@@ -1,105 +1,5 @@
+---
 en:
-  pages:
-    home:
-      title: Montréal Startups
-      mtlnewtech:
-        main: Fueling Montreal's Startup Community
-        sub: Dedicated to the success of Montreal startup entrepreneurs
-      what_we_do: What we do
-      about: Learn more about MTL New Tech
-      latest: Latest from MTL NewTech
-      hashtag: "#mtlnewtech"
-      sponsors: Our Partners
-      team: Team
-      events: Events
-      get_tickets: Get Tickets
-      more: Find out more
-      sign_up: Sign Up
-      sign_up:
-        header: Want us to notify you?
-        sub: We'll send you reminders about upcoming events and updates about the community.
-      apply_to_demo: Want to demo your product to other Montréal entrepreneurs, developers, investors, and journalists?
-      apply_link: Go to application
-    about:
-      header: About Us
-      about_us: MTL NewTech is a non-profit organization dedicated to the success of Montreal startup entrepreneurs. Every first Tuesday of the month, a handful of startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students and other interested parties. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
-  community_events:
-    index:
-      title: Community Events
-      community_events: Montréal Startup Community and Developer Events
-      community_events_description: |+
-        Because of what we do at MTL NewTech, we get asked everyday about what events are happening in the city. So, a few years ago we launched the Montreal New Tech community events calendar.
-        This is a curated list of startup and developer events happening in Montreal.
-      get_the_calendar: Get the MTLNewTech calendar
-      add_your_event: Add your event to the calendar
-  our_events:
-    index:
-      our_events: Montréal New Tech Events
-  initiatives:
-    index:
-      title: Initiatives
-  layouts:
-    header:
-      about: About
-      initiatives: Initiatives
-      sign_up: Sign Up
-      log_out: Log Out
-      latest: Latest News
-      events: Events
-      our_events: Our Events
-      community_events: Community Events
-      contact: Contact
-    footer:
-      about: About us
-      address: '51 Rue Sherbrooke O, Montréal, QC, H2X 1X2'
-      phone: 514-880-4464
-      email: demo@mtlnewtech.com
-      team: Meet our team
-      made_in_mtl_html: Made with %{heart} in Montreal
-      github: View source and contribute on Github!
-  nav:
-    what_we_do: What we do
-  contacts:
-    new:
-      email: Your email address
-      button: Keep me posted
-    create:
-      thanks: Thanks for signing up!
-  models:
-    null_date:
-      strftime: No %{nullable} on this date
-  no_events: There are no events happening on this date
-  go_to_event: Go to calendar event
-  forms:
-    email: Email
-    new_password: Password (min %{count} characters)
-    password: Password
-    forgot: Forgot your password?
-    send_password: Send me reset password instructions
-    confirm: Confirm password
-    remember: Remember me
-    sign_up: Sign up
-    log_in: Log in
-  devise:
-    shared:
-      links:
-        log_in: Already have an account? Log in
-        sign_up: Don't have an account? Sign up.
-        forgot: Forgot your password?
-  errors:
-    messages:
-      already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
-      not_saved:
-        one: 'There is one problem:'
-        other: 'There are %{count} problems:'
-    count:
-      one: "1 problem"
-      other: "%{count} problems"
-    message: kept this form from being submitted
   activerecord:
     attributes:
       contact:
@@ -109,35 +9,123 @@ en:
         contact:
           attributes:
             email:
-              invalid: Looks like that's not a valid email address. Could you double check it?
+              invalid: Looks like that's not a valid email address. Could you double
+                check it?
               taken: Looks like you're already signed up! We have that email already.
-
-              # active record tries to find error messages in this order:
-              # activerecord.errors.models.user.attributes.name.blank
-              # activerecord.errors.models.user.blank
-              # activerecord.errors.messages.blank
-              # errors.attributes.name.blank
-              # errors.messages.blank
   admin:
     application:
       sidebar:
         view_website: View Website
-
-  weekdays:
-    '0': Sunday
-    '1': Monday
-    '2': Tuesday
-    '3': Wednesday
-    '4': Thursday
-    '5': Friday
-    '6': Saturday
-
+  administrate:
+    actions:
+      confirm: Confirm
+      destroy: Destroy
+      edit: Edit
+  community_events:
+    index:
+      add_your_event: Add your event to the calendar
+      community_events: Montréal Startup Community and Developer Events
+      community_events_description: |
+        Because of what we do at MTL NewTech, we get asked everyday about what events are happening in the city. So, a few years ago we launched the Montreal New Tech community events calendar.
+        This is a curated list of startup and developer events happening in Montreal.
+      get_the_calendar: Get the MTLNewTech calendar
+      title: Community Events
+  contacts:
+    create:
+      thanks: Thanks for signing up!
+    new:
+      button: Keep me posted
+      email: Your email address
   date:
     formats:
       date: "%B %-e, %Y"
       short: "%b %-e"
       short_with_year: "%b %-e, %Y"
       time: "%-l:%M %P"
+  devise:
+    shared:
+      links:
+        forgot: Forgot your password?
+        log_in: Already have an account? Log in
+        sign_up: Don't have an account? Sign up.
+  errors:
+    count:
+      one: 1 problem
+      other: "%{count} problems"
+    message: kept this form from being submitted
+    messages:
+      already_confirmed: was already confirmed, please try signing in
+      confirmation_period_expired: needs to be confirmed within %{period}, please
+        request a new one
+      expired: has expired, please request a new one
+      not_found: not found
+      not_locked: was not locked
+      not_saved:
+        one: 'There is one problem:'
+        other: 'There are %{count} problems:'
+  forms:
+    confirm: Confirm password
+    email: Email
+    forgot: Forgot your password?
+    log_in: Log in
+    new_password: Password (min %{count} characters)
+    password: Password
+    remember: Remember me
+    send_password: Send me reset password instructions
+    sign_up: Sign up
+  go_to_event: Go to calendar event
+  initiatives:
+    index:
+      title: Initiatives
+  layouts:
+    footer:
+      about: About us
+      address: 51 Rue Sherbrooke O, Montréal, QC, H2X 1X2
+      email: demo@mtlnewtech.com
+      github: View source and contribute on Github!
+      made_in_mtl_html: Made with %{heart} in Montreal
+      phone: 514-880-4464
+      team: Meet our team
+    header:
+      about: About
+      community_events: Community Events
+      events: Events
+      initiatives: Initiatives
+      sign_up: Sign Up
+  log_out: Log Out
+  models:
+    null_date:
+      strftime: No %{nullable} on this date
+  no_events: There are no events happening on this date
+  pages:
+    about:
+      about_us: MTL NewTech is a non-profit organization dedicated to the success
+        of Montreal startup entrepreneurs. Every first Tuesday of the month, a handful
+        of startups present in front of an audience of programmers, engineers, entrepreneurs,
+        investors, students and other interested parties. Our community is enthusiastic
+        about technological innovation and eager to discuss new trends, see new products
+        and services and connect with global startup ecosystems. These monthly meetups
+        feature demos which are recorded and the videos also showcased via social
+        media and press coverage after the event.
+      header: About Us
+    home:
+      about: Learn more about MTL New Tech
+      apply_link: Go to application
+      apply_to_demo: Want to demo your product to other Montréal entrepreneurs, developers,
+        investors, and journalists?
+      events: Events
+      get_tickets: Get Tickets
+      more: Find out more
+      mtlnewtech:
+        main: Fueling Montreal's Startup Community
+        sub: Dedicated to the success of Montreal startup entrepreneurs
+      sign_up:
+        header: Want us to notify you?
+        sub: We'll send you reminders about upcoming events and updates about the
+          community.
+      sponsors: Our Partners
+      title: Montréal Startups
+      what_we_do: What we do
   time:
     formats:
       date: "%B %-e, %Y"
@@ -146,3 +134,11 @@ en:
       long: "%A, %B %-e"
       time: "%-l:%M %P"
     minutes: minutes
+  weekdays:
+    '0': Sunday
+    '1': Monday
+    '2': Tuesday
+    '3': Wednesday
+    '4': Thursday
+    '5': Friday
+    '6': Saturday

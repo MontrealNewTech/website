@@ -22,11 +22,17 @@
 }
 
 .new-tab {
-  padding: $med-space 0;
-  font-size: $subtext-font-size;
   border-bottom: $base-border;
+  font-size: $subtext-font-size;
+  padding: $med-space 0;
 
   &::before {
     padding-right: $little-space;
   }
+}
+
+.logout {
+  border-top: $base-border;
+  margin: $med-space 0;
+  padding: $med-space 0;
 }
