@@ -21,4 +21,13 @@ module ApplicationHelper
     url = "https://www.google.com/maps/search/#{query}"
     link_to destination, url, target: '_blank', class: 'map fixed-width-icon'
   end
+
+  def hyperlink_urls(text, options = nil)
+    return if text.nil?
+    hyperlinked_text = Rinku.auto_link(text, :all, 'target="_blank"') do |url|
+      url.first(25) + '... '
+    end
+
+    content_tag :p, hyperlinked_text.html_safe, options
+  end
 end

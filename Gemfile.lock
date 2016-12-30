@@ -257,6 +257,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     retriable (2.1.0)
+    rinku (2.0.2)
     route_translator (5.0.4)
       actionpack (>= 5.0.0, < 5.1)
       activesupport (>= 5.0.0, < 5.1)
@@ -393,6 +394,7 @@ DEPENDENCIES
   rails (>= 5.0.0.1)
   rails_12factor
   refills
+  rinku
   route_translator
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)

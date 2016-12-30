@@ -1,3 +1,5 @@
+<%= provide :title, t('.title') %>
+
 <div class='content'>
   <h1><%= t('.community_events') %></h1>
   <p><%= t('.community_events_description') %></p>
@@ -33,7 +35,7 @@
                   <%= google_search_link event.location %>
                   <%= external_link_for(event) %>
                 </div>
-                <p class='description'><%= event.description %></p>
+                <%= hyperlink_urls(event.description, class: 'description') %>
               <% end %>
             </article>
           <% end %>

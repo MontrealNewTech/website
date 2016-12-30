@@ -37,6 +37,9 @@ gem 'friendly_id'
 # Event import
 gem 'google-api-client'
 
+# Link parsing
+gem 'rinku'
+
 # Caching
 gem 'dalli'
 gem 'memcachier'
