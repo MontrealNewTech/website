@@ -26,6 +26,13 @@
   padding: 0;
 }
 
+// FONTS
+@mixin ellipsize {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 // FLEX
 @mixin flex-center-between {
   align-items: center;

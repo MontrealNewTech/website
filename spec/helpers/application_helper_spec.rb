@@ -44,4 +44,42 @@ RSpec.describe ApplicationHelper, type: :helper do
         to match(/target="_blank"/)
     end
   end
+
+  describe '#hyperlink_urls' do
+    let(:text) { nil }
+
+    context 'the method is called with a nil argument' do
+      it 'returns nil' do
+        expect(helper.hyperlink_urls(text)).to eq nil
+      end
+    end
+
+    context 'the method is given some text with a url in it' do
+      let(:text) { 'whoo some text http://averylongurlwith.com/yesveryverylong' }
+
+      it 'turns the urls in the text into links' do
+        expect(helper.hyperlink_urls(text)).
+          to match(/<a href=/)
+        expect(helper.hyperlink_urls(text)).
+          to match(/target="_blank"/)
+      end
+
+      it 'cuts off the the url after 25 characters and ellipsizes the link text' do
+        expect(helper.hyperlink_urls(text)).
+          to match Regexp.escape('http://averylongurlwith.c... ')
+      end
+
+      it 'returns a paragraph tag' do
+        expect(helper.hyperlink_urls(text)).
+          to match %r{<p.+<\/p>}
+      end
+
+      context 'some extra options are passed along to the helper' do
+        it 'adds the options to the helper' do
+          expect(helper.hyperlink_urls(text, class: 'description')).
+            to match %r{<p class="description".+<\/p>}
+        end
+      end
+    end
+  end
 end

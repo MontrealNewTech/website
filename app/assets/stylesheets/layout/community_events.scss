@@ -96,5 +96,9 @@
 
   .description {
     font-size: $subtext-font-size;
+
+    a {
+      color: $main-color;
+    }
   }
 }
