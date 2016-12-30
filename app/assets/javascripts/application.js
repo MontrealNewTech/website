@@ -20,6 +20,7 @@ import smoothScroll from 'smoothScroll'
 import maxPictureSize from 'maxPictureSize'
 import flashHelper from 'flashHelper'
 import stickyHeader from 'stickyHeader'
+import trackGoogleAnalytics from 'trackGoogleAnalytics'
 
 $(document).on('ready page:load', function() {
   toggleMenu()
@@ -28,3 +29,8 @@ $(document).on('ready page:load', function() {
   flashHelper()
   stickyHeader()
 })
+
+$(document).on('page:change', function() {
+  trackGoogleAnalytics()
+});
+
