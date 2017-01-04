@@ -4,4 +4,4 @@ test:
 dependencies:
   pre:
     - npm install babel-helpers babel-generator babel-types
-    - sudo apt-get geckodriver
+    - sudo apt-get install geckodriver
