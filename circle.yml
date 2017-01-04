@@ -4,4 +4,10 @@ test:
 dependencies:
   pre:
     - npm install babel-helpers babel-generator babel-types
-    - sudo apt-get install geckodriver
+    - mkdir /root/bin
+    - cd /root/bin
+    - wget https://github.com/mozilla/geckodriver/releases/download/v0.12.0/geckodriver-v0.12.0-linux64.tar.gz
+    - tar -xvzf geckodriver-v0.12.0-linux64.tar.gz
+    - rm geckodriver-v0.12.0-linux64.tar.gz
+    - chmod +x geckodriver
+
