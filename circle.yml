@@ -1,6 +1,11 @@
 test:
   pre:
-    - brew install geckodriver
+    - cd ~/bin
+    - sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.12.0/geckodriver-v0.12.0-linux64.tar.gz
+    - sudo tar -xvzf geckodriver-v0.12.0-linux64.tar.gz
+    - sudo rm geckodriver-v0.12.0-linux64.tar.gz
+    - sudo chmod +x geckodriver
+    - sudo export PATH=$PATH:~/bin/geckodriver
   post:
     - bash <(curl -s https://codecov.io/bash)
 dependencies:
