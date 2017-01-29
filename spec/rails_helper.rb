@@ -11,6 +11,9 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
 
+Capybara.default_driver = :selenium
+Capybara.default_max_wait_time = 5
+
 module Features
   include Formulaic::Dsl
   include SelectDateHelpers

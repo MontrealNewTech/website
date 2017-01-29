@@ -5,6 +5,7 @@
   "author": "",
   "private": false,
   "license": "MIT",
+  "repository": "https://github.com/MontrealNewTech/website",
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-preset-es2015": "^6.9.0"
