@@ -14,7 +14,7 @@
     font-size: $subtext-font-size;
     padding: $little-space 0;
 
-    h3 {
+    .header {
       margin: 0;
 
       @include above($small-screen) {

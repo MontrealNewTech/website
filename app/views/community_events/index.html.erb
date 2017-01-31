@@ -30,7 +30,7 @@
             <article class='event'>
               <% cache event do %>
                 <div class='meta'>
-                  <h3><%= event.title%></h3>
+                  <div class='header'><%= event.title%></div>
                   <p class='clock fixed-width-icon'><%= event.display_time %></p>
                   <%= google_search_link event.location %>
                   <%= external_link_for(event) %>
