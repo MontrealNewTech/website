@@ -1,6 +1,5 @@
 header {
   box-sizing: border-box;
-  padding: $large-space $little-space;
   height: 55px;
   width: 100%;
   z-index: 1;
@@ -16,6 +15,7 @@ header {
 
   .top-bar {
     @include flex-center-between;
+    padding: $little-space/2 $med-space 0 $little-space;
   }
 
   .logo {
@@ -73,6 +73,7 @@ header {
   nav#toggle_menu {
     display: block;
     font-family: $headers;
+    padding: $little-space $med-space $little-space $little-space;
 
     @include on($small-screen) {
       display: none;

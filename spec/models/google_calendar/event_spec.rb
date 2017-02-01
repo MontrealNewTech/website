@@ -24,6 +24,9 @@ RSpec.describe GoogleCalendar::Event do
       GoogleCalendarEvent = Struct.new :summary, :start, :end, :description, :location, :html_link
       GoogleDate = Struct.new :date_time
 
+      let(:time) { Time.parse('2016-12-12-12:22') }
+      let(:calendar_load) { instance_double GoogleCalendar::Load, events: fake_calendar_items }
+
       before do
         allow(GoogleCalendar::Load).
           to receive(:new).
@@ -31,32 +34,48 @@ RSpec.describe GoogleCalendar::Event do
           and_return calendar_load
       end
 
-      let(:time) { Time.parse('2016-12-12-12:22') }
-      let(:end_time) { Time.parse('2016-12-12-16:22') }
-      let(:fake_calendar_items) do
-        (1..3).map do |n|
-          GoogleCalendarEvent.new 'Whoo summary',
-                                  GoogleDate.new(time),
-                                  GoogleDate.new(end_time),
-                                  "Event ##{n}",
-                                  'An address',
-                                  'link'
+      context 'all events are single day events' do
+        let(:fake_calendar_items) do
+          (1..3).map do |n|
+            GoogleCalendarEvent.new 'Whoo summary',
+              GoogleDate.new(time),
+              GoogleDate.new(time + 3.hours),
+              "Event ##{n}",
+              'An address',
+              'link'
+          end
+        end
+
+        it 'converts the google event format into the right one for this app exactly once per calendar item' do
+          expect_any_instance_of(GoogleCalendar::EventConversion).to receive(:call).with(an_instance_of GoogleCalendarEvent).exactly(3).times.and_call_original
+          subject
         end
       end
 
-      let(:calendar_load) { instance_double GoogleCalendar::Load, events: fake_calendar_items }
+      context 'some events are more than one day long' do
+        let(:fake_calendar_items) do
+          (1..2).map do |n|
+            GoogleCalendarEvent.new 'Whoo summary',
+              GoogleDate.new(time),
+              GoogleDate.new(time + 3.days),
+              "Event ##{n}",
+              'An address',
+              'link'
+          end
+        end
 
-      it 'converts the google event format into the right one for this app exactly once per calendar item' do
-        expected_params = {
-          title: 'Whoo summary',
-          start_at: time,
-          end_at: end_time,
-          description: /Event #/,
-          location: 'An address',
-          link: 'link'
-        }
-        expect(Event).to receive(:new).with(expected_params).exactly(3).times
-        subject
+        it 'creates one event per day of a multi-day event' do
+          expected_params = {
+            title: 'Whoo summary',
+            start_at: time,
+            end_at: time + 3.days,
+            description: /Event #/,
+            location: 'An address',
+            link: 'link'
+          }
+          expect(Event).to receive(:new).with(expected_params).exactly(4).times
+          expect(subject.count).to eq 6
+        end
       end
     end
 

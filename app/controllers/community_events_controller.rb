@@ -2,7 +2,7 @@
 class CommunityEventsController < ApplicationController
   def index
     @date = from_param_or_today
-    @events_by_date = EventsCalendar.new(community_events_this_week).build_week
+    @events_by_date = EventsCalendar.new(community_events).build_for(range)
   end
 
   private
@@ -11,7 +11,11 @@ class CommunityEventsController < ApplicationController
     params[:date] ? Date.parse(params[:date]) : Date.current
   end
 
-  def community_events_this_week
-    Event.community(for_dates: @date.all_week(:sunday))
+  def community_events
+    Event.community(for_dates: range)
+  end
+
+  def range
+    @date.all_week(:sunday)
   end
 end
