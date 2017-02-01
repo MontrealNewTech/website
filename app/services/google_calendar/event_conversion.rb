@@ -5,7 +5,7 @@ module GoogleCalendar
       events = if multi_day? google_calendar_event
                  create_one_event_per_day_from google_calendar_event
                else
-                 [::Event.new(**params_for(google_calendar_event))]
+                 [ create_with(params_for(google_calendar_event)) ]
                end
 
       errors = []
@@ -21,16 +21,14 @@ module GoogleCalendar
 
     def create_one_event_per_day_from(google_calendar_event)
       [
-        ::Event.new(**params_for_first_day_of(google_calendar_event)),
+        create_with(params_for_first_day_of(google_calendar_event)),
         *all_day_events_in_between(google_calendar_event),
-        ::Event.new(**params_for_last_day_of(google_calendar_event))
+        create_with(params_for_last_day_of(google_calendar_event))
       ]
-      # create first day event with right time
-      # create all middle-day events as full-day events
-      # create last day event with right time
     end
 
-    def create(event)
+    def create_with(arguments)
+      ::Event.new(**arguments)
     end
 
     def start_of(google_calendar_event)
@@ -64,9 +62,17 @@ module GoogleCalendar
       params_for(multi_day_event).merge start_at: end_of(multi_day_event).to_time.beginning_of_day
     end
 
-    def all_day_events_in_between(_google_calendar_event)
-      []
-      # TODO
+    def all_day_events_in_between(google_calendar_event)
+      middle_dates(google_calendar_event).map do |date|
+        ::AllDayEvent.new(**params_for(google_calendar_event))
+      end
+    end
+
+    def middle_dates(event)
+      date_range_of(event).tap do |range|
+        range.shift
+        range.pop
+      end
     end
   end
 end

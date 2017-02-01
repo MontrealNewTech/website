@@ -51,7 +51,7 @@ RSpec.describe GoogleCalendar::EventConversion do
       it_behaves_like 'service response returning', Array
 
       it 'creates one event per day of the event' do
-        expect(subject.object.size).to eq 3
+        expect(subject.object.size).to eq 4
       end
 
       it 'returns event for the first and last days' do
