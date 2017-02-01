@@ -100,6 +100,7 @@ en:
     null_date:
       strftime: No %{nullable} on this date
   no_events: There are no events happening on this date
+  all_day_event: All day (%{start} - %{finish})
   pages:
     about:
       about_us: MTL NewTech is a non-profit organization dedicated to the success
