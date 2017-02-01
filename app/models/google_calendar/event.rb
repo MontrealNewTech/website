@@ -18,18 +18,9 @@ module GoogleCalendar
     end
 
     def extract_events_from(google_calendar_events)
-      google_calendar_events.map { |event| ::Event.new(**params_for(event)) }
-    end
-
-    def params_for(event)
-      {
-        title: event.summary,
-        start_at: event.start.date_time,
-        end_at: event.end.date_time,
-        description: event.description,
-        location: event.location,
-        link: event.html_link
-      }
+      google_calendar_events.flat_map do |event|
+        EventConversion.new.call(event).object
+      end
     end
   end
 end

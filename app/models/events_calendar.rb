@@ -4,25 +4,21 @@ class EventsCalendar
     @events = events
   end
 
-  def build_week
-    events_grouped_by_date.reverse_merge empty_days
+  def build_for(range)
+    events_grouped_by_date_in(range).reverse_merge empty_days_in(range)
   end
 
   private
 
-  def events_grouped_by_date
-    @events.group_by { |event| event.start_at.to_date }
+  def events_grouped_by_date_in(range)
+    filtered_events(range).group_by { |event| event.start_at.to_date }
   end
 
-  def empty_days
-    Hash[dates.map { |date| [date, [EmptyCalendarDayEvent.new]] }]
+  def empty_days_in(range)
+    Hash[range.map { |date| [date, [EmptyCalendarDayEvent.new]] }]
   end
 
-  def dates
-    sorted_events.first.start_at.to_date.all_week :sunday
-  end
-
-  def sorted_events
-    @events.sort_by { |event| event.start_at.to_date }
+  def filtered_events(range)
+    @events.reject { |event| !range.include?(event.start_at.to_date) }
   end
 end

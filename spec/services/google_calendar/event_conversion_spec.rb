@@ -20,19 +20,23 @@ RSpec.describe GoogleCalendar::EventConversion do
                                 'link'
       end
 
-      it_behaves_like 'service response returning', Array
+      it_behaves_like 'service response returning', Event
 
-      it 'creates a single event' do
-        expect(subject.object.size).to eq 1
+      it 'converts the google calendar event to a single event' do
+        expect(subject.object).to be_a Event
       end
 
-      it 'converts the google calendar event to a domain-specific event' do
-        expect(subject.object).to all be_a Event
-      end
-
-      it 'maps the google attributes to ones for this app' do
-        expect(subject.object.first.title).to eq event.summary
-        expect(subject.object.first.start_at).to eq time
+      it 'creates an event with the right params' do
+        expected_params = {
+          title: 'Whoo summary',
+          start_at: time,
+          end_at: time + 5.hours,
+          description: 'Event',
+          location: 'An address',
+          link: 'link'
+        }
+        expect(Event).to receive(:new).with(expected_params)
+        subject
       end
     end
 
@@ -41,11 +45,11 @@ RSpec.describe GoogleCalendar::EventConversion do
 
       let(:event) do
         GoogleCalendarEvent.new 'Whoo summary',
-                                GoogleDate.new(time),
-                                GoogleDate.new(end_time),
-                                'Event',
-                                'An address',
-                                'link'
+          GoogleDate.new(time),
+          GoogleDate.new(end_time),
+          'Event',
+          'An address',
+          'link'
       end
 
       it_behaves_like 'service response returning', Array
@@ -69,6 +73,11 @@ RSpec.describe GoogleCalendar::EventConversion do
 
       it 'puts the proper end time for the event on the last day' do
         expect(subject.object.last.end_at).to eq end_time
+      end
+
+      it 'maps the google attributes to ones for this app' do
+        expect(subject.object.first.title).to eq event.summary
+        expect(subject.object.first.location).to eq event.location
       end
     end
   end
