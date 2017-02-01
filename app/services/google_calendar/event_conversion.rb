@@ -5,7 +5,7 @@ module GoogleCalendar
       events = if multi_day? google_calendar_event
                  create_one_event_per_day_from google_calendar_event
                else
-                 [ create_with(params_for(google_calendar_event)) ]
+                 create_with params_for(google_calendar_event)
                end
 
       errors = []
@@ -64,7 +64,7 @@ module GoogleCalendar
 
     def all_day_events_in_between(google_calendar_event)
       middle_dates(google_calendar_event).map do |date|
-        ::AllDayEvent.new(**params_for(google_calendar_event))
+        ::AllDayEvent.new(**params_for(google_calendar_event).merge(start_at: date.to_datetime, end_at: date.to_datetime))
       end
     end
 
