@@ -20,6 +20,6 @@ Rails.application.routes.draw do
     resources :initiatives
     resources :organizations
     resources :team_members
-    resources :accounts
+    resources :accounts, only: [:index, :show, :edit, :update]
   end
 end

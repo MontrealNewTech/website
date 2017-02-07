@@ -1,0 +1,15 @@
+<% content_for(:title) do %>
+  <%= display_resource_name(page.resource_name) %>
+<% end %>
+
+<% content_for(:search) do %>
+  <%= render "search", search_term: search_term %>
+<% end %>
+
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+</header>
+
+<%= render "collection", collection_presenter: page, resources: resources %>
+
+<%= paginate resources %>
