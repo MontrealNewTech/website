@@ -16,6 +16,10 @@ en:
     application:
       sidebar:
         view_website: View Website
+  helpers:
+    label:
+      account:
+        admin: Admin user?
   administrate:
     actions:
       confirm: Confirm

@@ -3,9 +3,7 @@ require 'administrate/base_dashboard'
 class AccountDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     user_email: Field::String,
-    admin: Field::Select.with_options(
-      collection: ["Yes", "No"]
-    )
+    admin: Field::Boolean
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
