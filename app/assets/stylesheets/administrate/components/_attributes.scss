@@ -2,12 +2,11 @@
   @include data-label;
   @include span-columns(2 of 12);
   clear: left;
-  margin-top: 0;
+  margin-top: 0.15em;
   text-align: right;
 }
 
 .preserve-whitespace {
-  white-space: pre;
   word-wrap: break-word;
 }
 
