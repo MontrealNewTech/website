@@ -3,7 +3,7 @@ require 'administrate/base_dashboard'
 class AccountDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     user_email: Field::String,
-    admin: Field::Boolean
+    admin: FriendlyBooleanField
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
