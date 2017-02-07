@@ -38,10 +38,7 @@ class InitiativeDashboard < Administrate::BaseDashboard
     :description
   ].freeze
 
-  # Overwrite this method to customize how initiatives are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(initiative)
-  #   "Initiative ##{initiative.id}"
-  # end
+  def display_resource(initiative)
+    initiative.title
+  end
 end

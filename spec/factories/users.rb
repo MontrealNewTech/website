@@ -6,5 +6,9 @@ FactoryGirl.define do
     end
 
     password 'password'
+
+    trait :admin do
+      association :account, :admin
+    end
   end
 end

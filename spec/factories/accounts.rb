@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :account do
-    role :user
+    admin false
 
     trait :admin do
-      role :admin
+      admin true
     end
   end
 end
