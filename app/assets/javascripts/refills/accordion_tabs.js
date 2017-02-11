@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $('.accordion-tabs').each(function(index) {
-    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+    $(this).children('li').first().next().children('a').addClass('is-active').next().addClass('is-open').show();
   });
   $('.accordion-tabs').on('click', 'li > a.tab-link', function(event) {
     if (!$(this).hasClass('is-active')) {
