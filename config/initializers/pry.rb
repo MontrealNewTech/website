@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # requires awesome_print in Gemfile
 Pry.config.requires = ['awesome_print']
 Pry.config.print = proc { |output, value| output.puts value.ai }

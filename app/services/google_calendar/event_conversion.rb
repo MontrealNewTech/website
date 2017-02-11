@@ -64,7 +64,9 @@ module GoogleCalendar
 
     def all_day_events_in_between(google_calendar_event)
       middle_dates(google_calendar_event).map do |date|
-        ::AllDayEvent.new(**params_for(google_calendar_event).merge(start_at: date.to_datetime, end_at: date.to_datetime))
+        ::AllDayEvent.new(**params_for(google_calendar_event).
+                          merge(start_at: date.to_datetime,
+                                end_at: date.to_datetime))
       end
     end
 
