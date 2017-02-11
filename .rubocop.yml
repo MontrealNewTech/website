@@ -2,7 +2,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'db/**/*'
-    # - 'config/initializers/*'
+    - 'config/initializers/devise.rb'
     - 'bin/spring'
   UseCache: false
   TargetRubyVersion: 2.3
