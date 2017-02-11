@@ -10,8 +10,8 @@
   </div>
 
   <div class='date-nav'>
-    <%= link_to url_for(date: @date.last_week(:sunday)), class: 'previous' do %>
-      <span class='text'>Previous</span>
+    <%= link_to url_for(date: @date.last_week.beginning_of_week(:sunday)), class: 'previous' do %>
+      <span class='text'><%= t('previous') %></span>
     <% end %>
 
     <% from = l(@events_by_date.keys.first, format: :short) %>
@@ -19,7 +19,7 @@
     <h2><%= from %> - <%= to %></h2>
 
     <%= link_to  url_for(date: @date.next_week(:sunday)), class: 'next' do %>
-      <span class='text'>Next</span>
+      <span class='text'><%= t('next') %></span>
     <% end %>
   </div>
 
