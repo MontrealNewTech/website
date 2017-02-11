@@ -38,43 +38,43 @@ RSpec.describe GoogleCalendar::Event do
         let(:fake_calendar_items) do
           (1..3).map do |n|
             GoogleCalendarEvent.new 'Whoo summary',
-              GoogleDate.new(time),
-              GoogleDate.new(time + 3.hours),
-              "Event ##{n}",
-              'An address',
-              'link'
+                                    GoogleDate.new(time),
+                                    GoogleDate.new(time + 3.hours),
+                                    "Event ##{n}",
+                                    'An address',
+                                    'link'
           end
         end
 
-        it 'converts the google event format into the right one for this app exactly once per calendar item' do
-          expect_any_instance_of(GoogleCalendar::EventConversion).to receive(:call).with(an_instance_of GoogleCalendarEvent).exactly(3).times.and_call_original
+        let(:response) { instance_double ServiceResponse, object: true }
+        let(:callable) { instance_double GoogleCalendar::EventConversion, call: response }
+
+        before { allow(GoogleCalendar::EventConversion).to receive(:new).and_return callable }
+
+        it 'creates an event conversion for each event' do
+          expect(callable).
+            to receive(:call).
+            with(an_instance_of(GoogleCalendarEvent)).
+            exactly(3).times
           subject
         end
       end
 
       context 'some events are more than one day long' do
+        let(:event_count) { 2 }
         let(:fake_calendar_items) do
-          (1..2).map do |n|
+          Array.new(event_count) do |n|
             GoogleCalendarEvent.new 'Whoo summary',
-              GoogleDate.new(time),
-              GoogleDate.new(time + 3.days),
-              "Event ##{n}",
-              'An address',
-              'link'
+                                    GoogleDate.new(time),
+                                    GoogleDate.new(time + 3.days),
+                                    "Event ##{n}",
+                                    'An address',
+                                    'link'
           end
         end
 
         it 'creates one event per day of a multi-day event' do
-          expected_params = {
-            title: 'Whoo summary',
-            start_at: time,
-            end_at: time + 3.days,
-            description: /Event #/,
-            location: 'An address',
-            link: 'link'
-          }
-          expect(Event).to receive(:new).with(expected_params).exactly(4).times
-          expect(subject.count).to eq 6
+          expect(subject.count).to eq (time.to_date..(time + 3.days).to_date).count * event_count
         end
       end
     end
