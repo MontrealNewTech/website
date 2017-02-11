@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe CommunityEventsController, type: :controller do
-  let(:calendar) { instance_double EventsCalendar, build_week: true }
+  let(:calendar) { instance_double EventsCalendar, build_for: true }
 
   before do
     events = double 'events'
@@ -21,7 +21,7 @@ RSpec.describe CommunityEventsController, type: :controller do
 
     it 'fetches the events from google' do
       subject
-      expect(calendar).to have_received(:build_week)
+      expect(calendar).to have_received(:build_for).with(an_instance_of Range)
     end
   end
 end
