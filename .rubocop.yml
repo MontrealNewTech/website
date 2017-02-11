@@ -2,7 +2,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'db/**/*'
-    - 'config/initializers/*'
+    # - 'config/initializers/*'
     - 'bin/spring'
   UseCache: false
   TargetRubyVersion: 2.3
@@ -183,6 +183,11 @@ Style/Alias:
   Description: Use alias_method instead of alias.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#alias-method
   Enabled: true
+Style/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
 Style/Documentation:
   Description: Document classes and non-namespace modules.
   Enabled: false
