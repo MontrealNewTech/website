@@ -61,7 +61,7 @@ RSpec.describe EventsCalendar do
 
     context 'there is a multi-day event that starts before the desired range but ends during it' do
       let(:events) do
-        [Event.new(start_at: dates.first.to_time , end_at: dates.first),
+        [Event.new(start_at: dates.first.to_time, end_at: dates.first),
          AllDayEvent.new(start_at: dates.first.beginning_of_day)]
       end
 

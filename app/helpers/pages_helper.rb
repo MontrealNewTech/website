@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module PagesHelper
   def events_nav_link
     return link_to t('layouts.header.events'), '#events', class: 'scroll-on-page button featured' if home_page?

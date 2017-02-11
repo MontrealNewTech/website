@@ -21,7 +21,7 @@ RSpec.describe CommunityEventsController, type: :controller do
 
     it 'fetches the events from google' do
       subject
-      expect(calendar).to have_received(:build_for).with(an_instance_of Range)
+      expect(calendar).to have_received(:build_for).with(an_instance_of(Range))
     end
   end
 end

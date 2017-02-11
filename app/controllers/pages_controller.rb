@@ -5,6 +5,5 @@ class PagesController < ApplicationController
     @sponsors = Organization.all
   end
 
-  def about
-  end
+  def about; end
 end

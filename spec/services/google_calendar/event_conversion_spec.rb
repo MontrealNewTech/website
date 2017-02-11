@@ -13,11 +13,11 @@ RSpec.describe GoogleCalendar::EventConversion do
     context 'event is only a single day' do
       let(:event) do
         FakeGoogleCalendarEvent.new 'Whoo summary',
-                                FakeGoogleDate.new(time),
-                                FakeGoogleDate.new(time + 5.hours),
-                                'Event',
-                                'An address',
-                                'link'
+                                    FakeGoogleDate.new(time),
+                                    FakeGoogleDate.new(time + 5.hours),
+                                    'Event',
+                                    'An address',
+                                    'link'
       end
 
       it_behaves_like 'service response returning', Event
@@ -45,11 +45,11 @@ RSpec.describe GoogleCalendar::EventConversion do
 
       let(:event) do
         FakeGoogleCalendarEvent.new 'Whoo summary',
-          FakeGoogleDate.new(time),
-          FakeGoogleDate.new(end_time),
-          'Event',
-          'An address',
-          'link'
+                                    FakeGoogleDate.new(time),
+                                    FakeGoogleDate.new(end_time),
+                                    'Event',
+                                    'An address',
+                                    'link'
       end
 
       it_behaves_like 'service response returning', Array

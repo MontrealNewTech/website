@@ -39,7 +39,7 @@ RSpec.describe Venue do
 
     it 'returns a nice string of the address' do
       expect(loader).to receive(:venue).with(id).and_return eventbrite_venue
-      expect(subject).to eq "Shopify, 490 Rue de la Gauchetière O, Montréal, Quebec H2Z 0B2"
+      expect(subject).to eq 'Shopify, 490 Rue de la Gauchetière O, Montréal, Quebec H2Z 0B2'
     end
   end
 end

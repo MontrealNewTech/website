@@ -4,6 +4,5 @@ class InitiativesController < ApplicationController
     @initiatives = Initiative.all
   end
 
-  def show
-  end
+  def show; end
 end
