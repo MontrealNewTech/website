@@ -5,7 +5,7 @@ module GoogleCalendar
       events = if multi_day? google_calendar_event
                  create_one_event_per_day_from google_calendar_event
                else
-                 create_with params_for(google_calendar_event)
+                 create_with params_for google_calendar_event
                end
 
       errors = []
