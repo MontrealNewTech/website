@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe GoogleCalendar::EventConversion do
   FakeGoogleCalendarEvent = Struct.new :summary, :start, :end, :description, :location, :html_link
-  GoogleDate = Struct.new :date_time
+  FakeGoogleDate = Struct.new :date_time
 
   let(:time) { Time.parse('2016-12-12-12:22') }
 
@@ -13,8 +13,8 @@ RSpec.describe GoogleCalendar::EventConversion do
     context 'event is only a single day' do
       let(:event) do
         FakeGoogleCalendarEvent.new 'Whoo summary',
-                                GoogleDate.new(time),
-                                GoogleDate.new(time + 5.hours),
+                                FakeGoogleDate.new(time),
+                                FakeGoogleDate.new(time + 5.hours),
                                 'Event',
                                 'An address',
                                 'link'
@@ -45,8 +45,8 @@ RSpec.describe GoogleCalendar::EventConversion do
 
       let(:event) do
         FakeGoogleCalendarEvent.new 'Whoo summary',
-          GoogleDate.new(time),
-          GoogleDate.new(end_time),
+          FakeGoogleDate.new(time),
+          FakeGoogleDate.new(end_time),
           'Event',
           'An address',
           'link'
