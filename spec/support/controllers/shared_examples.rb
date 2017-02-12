@@ -49,3 +49,9 @@ RSpec.shared_examples 'successful request' do
     expect(response).to have_http_status :success
   end
 end
+
+RSpec.shared_examples 'admin only controller' do
+  subject { described_class }
+
+  it { is_expected.to inherit_from Admin::ApplicationController }
+end

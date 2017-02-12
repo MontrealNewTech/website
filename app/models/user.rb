@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 class User < ApplicationRecord
-  enum role: [:user, :admin]
-  after_initialize :set_default_role, if: :new_record?
+  has_one :account
+
+  after_create :create_account
 
   validates_presence_of :email
   validates_presence_of :password
+
+  delegate :admin?, to: :account
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -13,11 +16,5 @@ class User < ApplicationRecord
 
   def name
     "#{first_name} #{last_name}".lstrip
-  end
-
-  private
-
-  def set_default_role
-    self.role ||= :user
   end
 end

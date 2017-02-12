@@ -16,11 +16,17 @@ en:
     application:
       sidebar:
         view_website: View Website
+  helpers:
+    label:
+      account:
+        admin: Admin user?
   administrate:
     actions:
       confirm: Confirm
       destroy: Destroy
       edit: Edit
+    display:
+      account: Account for %{email}
   community_events:
     index:
       add_your_event: Add your event to the calendar
@@ -148,3 +154,8 @@ en:
     '6': Saturday
   next: Next
   previous: Previous
+  flash:
+    accounts:
+      success: Account was successfully updated.
+      failure: Account could not be updated.
+

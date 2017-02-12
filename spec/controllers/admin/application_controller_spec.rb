@@ -15,7 +15,7 @@ RSpec.describe Admin::ApplicationController, type: :controller do
   describe 'authenticate_admin' do
     context 'user is an admin' do
       it 'lets the user in' do
-        admin = build_stubbed :user, :admin
+        admin = instance_double User, admin?: true
         allow(controller).to receive(:current_user).and_return admin
         get :admin_route
         expect(response).to have_http_status :ok
@@ -24,7 +24,7 @@ RSpec.describe Admin::ApplicationController, type: :controller do
 
     context 'user is not an admin' do
       it 'does not let the user in' do
-        user = build_stubbed :user
+        user = instance_double User, admin?: false
         allow(controller).to receive(:current_user).and_return user
         get :admin_route
         expect(response).to redirect_to new_user_session_path

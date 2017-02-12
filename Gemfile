@@ -52,8 +52,8 @@ gem 'pry-rails'
 gem 'sinatra', '~> 2.0.0.beta2'
 
 # Monitoring
-gem 'skylight'
 gem 'bugsnag'
+gem 'skylight'
 
 group :development, :test do
   gem 'bullet'
@@ -77,6 +77,7 @@ group :test do
   gem 'database_cleaner'
   gem 'formulaic'
   gem 'launchy'
+  gem 'rspec-its'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
