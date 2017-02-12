@@ -245,3 +245,6 @@ Lint/LiteralInCondition:
 Lint/LiteralInInterpolation:
   Description: Checks for literals used in interpolation.
   Enabled: true
+Lint/UnifiedInteger:
+  Exclude:
+    - 'spec/**/*.rb'
