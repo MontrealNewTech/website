@@ -3,10 +3,11 @@ module Admin
     def update
       account = Account.find(params[:id])
 
-      if account.update!(account_params)
-        redirect_to admin_accounts_path, notice: "Account was successfully updated."
+      if account.update(admin: from_param)
+        redirect_to admin_accounts_path, notice: t('flash.accounts.success')
       else
-        render :edit, alert: "Accout could not be updated"
+        flash[:alert] = t('flash.accounts.failure')
+        render :edit
       end
     end
 
@@ -14,6 +15,10 @@ module Admin
 
     def account_params
       params.require(:account).permit(:admin)
+    end
+
+    def from_param
+      account_params[:admin] == "true"
     end
   end
 end

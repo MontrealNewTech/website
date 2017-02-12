@@ -21,6 +21,6 @@ class AccountDashboard < Administrate::BaseDashboard
   ].freeze
 
   def display_resource(account)
-    "Account for #{account.user_email}"
+    I18n.t('administrate.display.account', email: account.user_email)
   end
 end
