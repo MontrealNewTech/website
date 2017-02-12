@@ -53,6 +53,7 @@ gem 'sinatra', '~> 2.0.0.beta2'
 
 # Monitoring
 gem 'skylight'
+gem 'bugsnag'
 
 group :development, :test do
   gem 'bullet'
