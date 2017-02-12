@@ -16,7 +16,12 @@ RSpec.describe EventsHelper do
 
       it 'returns a link to the link' do
         expect(helper.external_link_for(event)).
-          to eq '<a target="_blank" rel="nofollow" class="new-tab fixed-width-icon" href="has a link">Go to calendar event</a>'
+          to eq([
+            '<a target="_blank"',
+            'rel="nofollow"',
+            'class="new-tab fixed-width-icon"',
+            'href="has a link">Go to calendar event</a>'
+          ].join(' '))
       end
     end
   end

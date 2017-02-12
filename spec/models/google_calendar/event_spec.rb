@@ -74,7 +74,7 @@ RSpec.describe GoogleCalendar::Event do
         end
 
         it 'creates one event per day of a multi-day event' do
-          expect(subject.count).to eq (time.to_date..(time + 3.days).to_date).count * event_count
+          expect(subject.count).to eq((time.to_date..(time + 3.days).to_date).count * event_count)
         end
       end
     end
