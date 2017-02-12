@@ -51,6 +51,9 @@ gem 'pry-rails'
 # Sidekiq UI and test fakes
 gem 'sinatra', '~> 2.0.0.beta2'
 
+# Monitoring
+gem 'skylight'
+
 group :development, :test do
   gem 'bullet'
   gem 'bundler-audit', '>= 0.5.0', require: false

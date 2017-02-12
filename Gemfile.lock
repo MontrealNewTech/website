@@ -308,6 +308,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0.beta2)
       tilt (~> 2.0)
+    skylight (1.0.1)
+      activesupport (>= 3.0.0)
     slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -399,6 +401,7 @@ DEPENDENCIES
   shoulda-matchers
   simplecov
   sinatra (~> 2.0.0.beta2)
+  skylight
   spring
   spring-watcher-listen
   sprockets (>= 3.0.0)
@@ -412,4 +415,4 @@ RUBY VERSION
    ruby 2.3.2p217
 
 BUNDLED WITH
-   1.13.6
+   1.14.3
