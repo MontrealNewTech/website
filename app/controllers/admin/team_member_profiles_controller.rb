@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module Admin
-  class TeamMembersController < Admin::ApplicationController
+  class TeamMemberProfilesController < Admin::ApplicationController
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #

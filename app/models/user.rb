@@ -4,8 +4,7 @@ class User < ApplicationRecord
 
   after_create :create_account
 
-  validates_presence_of :email
-  validates_presence_of :password
+  validates_presence_of :email, :password
 
   delegate :admin?, to: :account
 
@@ -13,8 +12,4 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  def name
-    "#{first_name} #{last_name}".lstrip
-  end
 end

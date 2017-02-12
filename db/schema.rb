@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170203005418) do
+ActiveRecord::Schema.define(version: 20170212224442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,21 +39,28 @@ ActiveRecord::Schema.define(version: 20170203005418) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "team_members", force: :cascade do |t|
+  create_table "team_member_profiles", force: :cascade do |t|
     t.integer  "user_id"
-    t.text     "bio"
+    t.integer  "team_id"
+    t.string   "name"
     t.string   "position"
-    t.string   "slug"
+    t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_team_members_on_user_id", using: :btree
+    t.index ["team_id"], name: "index_team_member_profiles_on_team_id", using: :btree
+    t.index ["user_id"], name: "index_team_member_profiles_on_user_id", using: :btree
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "description", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -69,5 +76,6 @@ ActiveRecord::Schema.define(version: 20170203005418) do
   end
 
   add_foreign_key "accounts", "users"
-  add_foreign_key "team_members", "users"
+  add_foreign_key "team_member_profiles", "teams"
+  add_foreign_key "team_member_profiles", "users"
 end
