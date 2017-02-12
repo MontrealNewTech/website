@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe Admin::AccountsController do
@@ -11,7 +12,7 @@ RSpec.describe Admin::AccountsController do
         let(:params) do
           {
             id: account.id,
-            account: { admin: "true" }
+            account: { admin: 'true' }
           }
         end
 
@@ -50,7 +51,7 @@ RSpec.describe Admin::AccountsController do
         let(:params) do
           {
             id: account.id,
-            account: { admin: "No" }
+            account: { admin: 'No' }
           }
         end
 

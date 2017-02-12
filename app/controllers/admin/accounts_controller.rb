@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Admin
   class AccountsController < Admin::ApplicationController
     def update
@@ -18,7 +19,7 @@ module Admin
     end
 
     def from_param
-      account_params[:admin] == "true"
+      account_params[:admin] == 'true'
     end
   end
 end

@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
 
   it { is_expected.to validate_presence_of :email }
   it { is_expected.to validate_presence_of :password }
-  it { is_expected.to have_one :account}
+  it { is_expected.to have_one :account }
   it { is_expected.to delegate_method(:admin?).to :account }
 
   its(:account) { is_expected.to be_present }

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.feature 'managing admin users' do
@@ -11,7 +12,7 @@ RSpec.feature 'managing admin users' do
 
     find_all('.action-edit', text: t('administrate.actions.edit')).first.click
     expect(page).to have_content t('administrate.display.account', email: user.email)
-    expect(page).to have_content "No"
+    expect(page).to have_content 'No'
 
     select 'Yes', from: 'account[admin]'
     click_button 'Update Account'
