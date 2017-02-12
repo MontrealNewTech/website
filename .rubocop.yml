@@ -2,7 +2,7 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'db/**/*'
-    - 'config/initializers/*'
+    - 'config/initializers/devise.rb'
     - 'bin/spring'
   UseCache: false
   TargetRubyVersion: 2.3
@@ -124,19 +124,11 @@ Style/TrailingCommaInArguments:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   Enabled: false
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
 Style/TrailingCommaInLiteral:
   Description: 'Checks for trailing comma in array and hash literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   Enabled: false
   EnforcedStyleForMultiline: no_comma
-  SupportedStyles:
-  - comma
-  - consistent_comma
-  - no_comma
 Metrics/AbcSize:
   Description: A calculated magnitude based on number of assignments, branches, and
     conditions.
@@ -191,6 +183,11 @@ Style/Alias:
   Description: Use alias_method instead of alias.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#alias-method
   Enabled: true
+Style/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
 Style/Documentation:
   Description: Document classes and non-namespace modules.
   Enabled: false
@@ -248,3 +245,6 @@ Lint/LiteralInCondition:
 Lint/LiteralInInterpolation:
   Description: Checks for literals used in interpolation.
   Enabled: true
+Lint/UnifiedInteger:
+  Exclude:
+    - 'spec/**/*.rb'

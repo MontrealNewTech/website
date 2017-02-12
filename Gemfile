@@ -3,20 +3,20 @@ source 'https://rubygems.org'
 
 ruby '2.3.2'
 
-gem 'rails', '>= 5.0.0.1'
 gem 'pg'
 gem 'puma', '~> 3.0'
+gem 'rails', '>= 5.0.0.1'
 
 # Assets
 gem 'autoprefixer-rails'
+gem 'bourbon'
 gem 'jquery-rails'
+gem 'neat'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-commoner'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'bourbon'
-gem 'neat'
 
 # Internationalization
 gem 'route_translator'
@@ -56,8 +56,8 @@ group :development, :test do
   gem 'bundler-audit', '>= 0.5.0', require: false
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.5'
   gem 'refills'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do

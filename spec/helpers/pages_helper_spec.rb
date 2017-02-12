@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe PagesHelper do
@@ -21,7 +22,7 @@ RSpec.describe PagesHelper do
 
       it 'returns a link to the events anchor with the right classes' do
         expect(helper.events_nav_link).to match(/#{t('layouts.header.events')}/)
-        expect(helper.events_nav_link).to match(/\/#events/)
+        expect(helper.events_nav_link).to match %r{/#events}
         expect(helper.events_nav_link).to match(/button/)
       end
     end
