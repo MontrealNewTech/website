@@ -8,7 +8,9 @@ FactoryGirl.define do
     password 'password'
 
     trait :admin do
-      association :account, :admin
+      after :create do |user|
+        user.account.update(admin: true)
+      end
     end
   end
 end
