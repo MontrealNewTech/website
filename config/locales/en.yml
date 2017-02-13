@@ -27,6 +27,7 @@ en:
       edit: Edit
     display:
       account: Account for %{email}
+      member_profile: "%{name}'s profile"
   community_events:
     index:
       add_your_event: Add your event to the calendar

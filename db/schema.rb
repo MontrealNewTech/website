@@ -31,15 +31,7 @@ ActiveRecord::Schema.define(version: 20170212224442) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "organizations", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.text     "description"
-    t.string   "logo"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "team_member_profiles", force: :cascade do |t|
+  create_table "member_profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "team_id"
     t.string   "name"
@@ -47,8 +39,16 @@ ActiveRecord::Schema.define(version: 20170212224442) do
     t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["team_id"], name: "index_team_member_profiles_on_team_id", using: :btree
-    t.index ["user_id"], name: "index_team_member_profiles_on_user_id", using: :btree
+    t.index ["team_id"], name: "index_member_profiles_on_team_id", using: :btree
+    t.index ["user_id"], name: "index_member_profiles_on_user_id", using: :btree
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "description"
+    t.string   "logo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "teams", force: :cascade do |t|
@@ -76,6 +76,6 @@ ActiveRecord::Schema.define(version: 20170212224442) do
   end
 
   add_foreign_key "accounts", "users"
-  add_foreign_key "team_member_profiles", "teams"
-  add_foreign_key "team_member_profiles", "users"
+  add_foreign_key "member_profiles", "teams"
+  add_foreign_key "member_profiles", "users"
 end

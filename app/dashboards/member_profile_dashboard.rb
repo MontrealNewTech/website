@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'administrate/base_dashboard'
 
-class TeamMemberProfileDashboard < Administrate::BaseDashboard
+class MemberProfileDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,7 +9,7 @@ class TeamMemberProfileDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    user: Field::Number,
+    user_email: Field::Text,
     team: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
@@ -33,7 +33,7 @@ class TeamMemberProfileDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :user,
+    :user_email,
     :name,
     :position,
     :bio,
@@ -43,17 +43,17 @@ class TeamMemberProfileDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :user,
     :team,
     :bio,
     :name,
     :position,
   ].freeze
 
-  # Overwrite this method to customize how team members are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(team_member)
-  #   "TeamMember ##{team_member.id}"
-  # end
+  def display_resource(member)
+    I18n.t('administrate.display.member_profile', name: member.name)
+  end
+
+  def permitted_attributes
+    super.concat [:user_id]
+  end
 end
