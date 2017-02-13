@@ -44,9 +44,9 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :team,
-    :bio,
     :name,
     :position,
+    :bio,
   ].freeze
 
   def display_resource(member)
