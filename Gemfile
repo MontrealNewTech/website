@@ -77,6 +77,7 @@ group :test do
   gem 'database_cleaner'
   gem 'formulaic'
   gem 'launchy'
+  gem 'poltergeist'
   gem 'rspec-its'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'

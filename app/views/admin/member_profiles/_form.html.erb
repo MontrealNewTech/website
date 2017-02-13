@@ -36,7 +36,7 @@ and renders all form fields for a resource's editable attributes.
     </div>
     <div class="field-unit__field">
       <%= f.select :user_id do %>
-        <%= options_for_select(User.all.map { |u| [u.email, u.id] }, page.resource.user_email) %>
+        <%= options_for_select(user_selection, page.resource.user_email) %>
       <% end %>
     </div>
   </div>
