@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.feature 'loggout out after being logged in as an admin' do
+RSpec.feature 'logout out after being logged in as an admin' do
   include Stubs
 
   scenario 'logging out from the admin sidebar' do
