@@ -18,18 +18,45 @@ RSpec.feature 'managing teams' do
     expect(page).to have_css '.flash', text: 'Team was successfully created.'
   end
 
-  scenario 'adding member profiles that already exist to a team' do
+  scenario 'creating a new member profile' do
     team = create :team
+    user = create :user
 
     visit admin_member_profiles_path
     expect(page).to have_content 'Member Profiles'
 
     click_on 'New member profile'
 
+    find(:xpath, "//input[@id='member_profile_user_id-selectized']/..").click
+    find(:xpath, "//div[@class='option']/..", text: user.email).click
 
+    find(:xpath, "//input[@id='member_profile_team_id-selectized']/..").click
+    find(:xpath, "//div[@class='selectize-dropdown-content']/..", text: team.name).click
+
+    fill_form_and_submit :member_profile, name: "This User's Name",
+      position: 'Website Coordinator',
+      bio: 'Bio for this user'
+
+    expect(page).to have_content 'MemberProfile was successfully created.'
   end
 
-  # scenario 'creating a new member profile' do
+  scenario 'adding member profiles that already exist to a team' do
+    team = create :team
+    member_profile = create :member_profile, name: 'Joe'
 
-  # end
+    visit admin_teams_path
+    expect(page).to have_content 'Teams'
+
+    first('.action-edit', text: 'Edit').click
+
+    find(:xpath, "//input[@id='team_member_profile_ids-selectized']/..").click
+    find(:xpath, "//div[@class='selectize-dropdown-content']/..").click
+
+    click_on 'Update Team'
+
+    expect(page).to have_content 'Team was successfully updated.'
+    expect(page).to have_link team.name
+    expect(page).to have_content member_profile.name
+    expect(page).to have_content member_profile.position
+  end
 end

@@ -35,6 +35,7 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :user_email,
     :name,
+    :team,
     :position,
     :bio,
   ].freeze
