@@ -55,8 +55,4 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   def display_resource(member)
     I18n.t('administrate.display.member_profile', name: member.name)
   end
-
-  # def permitted_attributes
-  #   super.concat [:user_id]
-  # end
 end
