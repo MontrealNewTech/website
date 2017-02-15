@@ -1,19 +1,20 @@
 module Admin
   class TeamsController < Admin::ApplicationController
-    # To customize the behavior of this controller,
-    # simply overwrite any of the RESTful actions. For example:
-    #
-    # def index
-    #   super
-    #   @resources = Team.all.paginate(10, params[:page])
-    # end
+    def destroy
+      team = Team.find(params[:id])
+      return could_not_delete(team) if still_has_member_profiles?(team)
+      super
+    end
 
-    # Define a custom finder by overriding the `find_resource` method:
-    # def find_resource(param)
-    #   Team.find_by!(slug: param)
-    # end
+    private
 
-    # See https://administrate-docs.herokuapp.com/customizing_controller_actions
-    # for more information
+    def could_not_delete(team)
+      flash[:alert] = 'Team still has members. Please remove all the team members before deleting a team.'
+      redirect_to admin_teams_path
+    end
+
+    def still_has_member_profiles?(team)
+      !team.member_profiles.empty?
+    end
   end
 end
