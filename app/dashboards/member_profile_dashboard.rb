@@ -10,6 +10,7 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     user_email: Field::Text,
+    user: NoLinkBelongsToField,
     team: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
@@ -44,6 +45,7 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :user,
     :team,
     :name,
     :position,
@@ -54,7 +56,7 @@ class MemberProfileDashboard < Administrate::BaseDashboard
     I18n.t('administrate.display.member_profile', name: member.name)
   end
 
-  def permitted_attributes
-    super.concat [:user_id]
-  end
+  # def permitted_attributes
+  #   super.concat [:user_id]
+  # end
 end
