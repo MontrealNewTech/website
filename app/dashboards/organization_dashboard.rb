@@ -49,10 +49,7 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :logo,
   ].freeze
 
-  # Overwrite this method to customize how organizations are displayed
-  # across all pages of the admin dashboard.
-  #
-  # def display_resource(organization)
-  #   "Organization ##{organization.id}"
-  # end
+  def permitted_attributes
+    super.concat [:logo_cache]
+  end
 end
