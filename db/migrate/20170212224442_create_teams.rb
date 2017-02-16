@@ -12,9 +12,9 @@ class CreateTeams < ActiveRecord::Migration[5.0]
     remove_column :users, :last_name
 
     create_table :member_profiles do |t|
-      t.references :user, foreign_key: true
-      t.references :team, foreign_key: true
-      t.string :name
+      t.references :user, foreign_key: true, null: false
+      t.references :team, foreign_key: true, null: false
+      t.string :name, null: false
       t.string :position
       t.text :bio
 
