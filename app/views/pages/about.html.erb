@@ -18,7 +18,7 @@
     <% if team.member_profiles.present? %>
       <% team.member_profiles.each do |profile| %>
         <h3><%= profile.name %></h3>
-        <em><%= profile.position %></em>
+        <h4><%= profile.position %></h4>
         <p><%= profile.bio %></p>
       <% end %>
     <% end %>
