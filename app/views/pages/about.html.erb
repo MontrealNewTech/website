@@ -12,4 +12,15 @@
     <%= image_tag 'mtl_new_tech_group_7', alt: 'Montreal New Tech and Montreal Startups' %>
     <%= image_tag 'mtl_new_tech_group_8', alt: 'Montreal New Tech and Montreal Startups' %>
   </section>
+
+  <h2><%= t('.meet_the_team') %></h2>
+  <% @teams.each do |team| %>
+    <% if team.member_profiles.present? %>
+      <% team.member_profiles.each do |profile| %>
+        <h3><%= profile.name %></h3>
+        <em><%= profile.position %></em>
+        <p><%= profile.bio %></p>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>
