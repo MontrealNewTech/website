@@ -5,5 +5,7 @@ class PagesController < ApplicationController
     @sponsors = Organization.all
   end
 
-  def about; end
+  def about
+    @teams = Team.includes(:member_profiles)
+  end
 end

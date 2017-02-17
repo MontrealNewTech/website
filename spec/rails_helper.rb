@@ -6,13 +6,14 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 require 'spec_helper'
 require 'capybara/rspec'
+require 'capybara/poltergeist'
 require 'rspec/its'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
 
-Capybara.default_driver = :selenium
+Capybara.default_driver = ENV.fetch('CAPYBARA_DRIVER', 'poltergeist').to_sym
 Capybara.default_max_wait_time = 5
 
 module Features

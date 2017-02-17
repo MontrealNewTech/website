@@ -30,5 +30,9 @@ module Mtlnewtech
     config.action_controller.action_on_unpermitted_parameters = :raise
     config.assets.quiet = true
     config.autoload_paths << Rails.root.join('lib')
+
+    config.to_prepare do
+      Administrate::ApplicationController.helper Mtlnewtech::Application.helpers
+    end
   end
 end

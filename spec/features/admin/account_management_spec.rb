@@ -10,9 +10,9 @@ RSpec.feature 'managing admin users' do
     visit admin_accounts_path
     expect(page).to have_content user.email
 
-    find_all('.action-edit', text: t('administrate.actions.edit')).first.click
+    first('.action-edit', text: t('administrate.actions.edit')).click
     expect(page).to have_content t('administrate.display.account', email: user.email)
-    expect(page).to have_content 'No'
+    expect(page).to have_select 'account[admin]', selected: 'No'
 
     select 'Yes', from: 'account[admin]'
     click_button 'Update Account'
