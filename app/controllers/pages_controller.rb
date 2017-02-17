@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def about
-    @teams = Team.includes(:member_profiles).all
+    @teams = Team.includes(:member_profiles)
   end
 end
