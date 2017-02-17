@@ -60,6 +60,7 @@ group :development, :test do
   gem 'bundler-audit', '>= 0.5.0', require: false
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'refills'
   gem 'rspec-rails', '~> 3.5'
 end
