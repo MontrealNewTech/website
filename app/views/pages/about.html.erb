@@ -15,11 +15,18 @@
 
   <h2><%= t('.meet_the_team') %></h2>
   <% @teams.each do |team| %>
+    <h3><%= team.name %></h3>
+    <p><%= team.description %></p>
     <% if team.member_profiles.present? %>
       <% team.member_profiles.each do |profile| %>
-        <h3><%= profile.name %></h3>
-        <h4><%= profile.position %></h4>
-        <p><%= profile.bio %></p>
+        <article class='profile'>
+          <%= cl_image_tag profile.image, width: 350, height: 300, crop: :fill %>
+          <div class='info'>
+            <h4><%= profile.name %></h4>
+            <h5><%= profile.position %></h5>
+            <p><%= profile.bio %></p>
+          </div>
+        </article>
       <% end %>
     <% end %>
   <% end %>
