@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.feature 'managing teams' do
@@ -34,8 +35,8 @@ RSpec.feature 'managing teams' do
     find(:xpath, "//div[@class='selectize-dropdown-content']/..", text: team.name).click
 
     fill_form_and_submit :member_profile, name: "This User's Name",
-      position: 'Website Coordinator',
-      bio: 'Bio for this user'
+                                          position: 'Website Coordinator',
+                                          bio: 'Bio for this user'
 
     expect(page).to have_content 'MemberProfile was successfully created.'
   end

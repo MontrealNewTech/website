@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Team < ApplicationRecord
   validates_presence_of :name, :description
 

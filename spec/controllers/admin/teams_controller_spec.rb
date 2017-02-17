@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe Admin::TeamsController do
@@ -20,8 +21,8 @@ RSpec.describe Admin::TeamsController do
         end
 
         it 'redirects to the admin teams index' do
-          expect(delete :destroy, params: { id: team.id })
-            .to redirect_to admin_teams_path
+          expect(delete(:destroy, params: { id: team.id })).
+            to redirect_to admin_teams_path
         end
       end
 
@@ -32,7 +33,7 @@ RSpec.describe Admin::TeamsController do
         it 'does not raise an invalid key error' do
           expect do
             delete :destroy, params: { id: team.id }
-          end.not_to raise_error ActiveRecord::InvalidForeignKey
+          end.not_to raise_error
         end
 
         it 'does not delete the team' do
@@ -43,12 +44,13 @@ RSpec.describe Admin::TeamsController do
 
         it 'sets a warning message' do
           delete :destroy, params: { id: team.id }
-          expect(controller).to set_flash[:alert].to 'Team still has members. Please remove all the team members before deleting a team.'
+          expect(controller).to set_flash[:alert].
+            to 'Team still has members. Please remove all the team members before deleting a team.'
         end
 
         it 'redirects to the teams index' do
-          expect(delete :destroy, params: { id: team.id })
-            .to redirect_to admin_teams_path
+          expect(delete(:destroy, params: { id: team.id })).
+            to redirect_to admin_teams_path
         end
       end
     end
