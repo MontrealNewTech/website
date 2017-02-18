@@ -72,3 +72,15 @@
   background-image: image-url('squairy_light.png');
   background-repeat: repeat;
 }
+
+// COMPONENTS
+@mixin card {
+  background-color: $lightest-grey;
+  border-radius: $base-border-radius;
+  margin-bottom: $large-space;
+  padding: $little-space $med-space;
+}
+
+@mixin alternate_photo_position {
+
+}

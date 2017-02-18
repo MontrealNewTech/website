@@ -16,7 +16,7 @@
   <h2><%= t('.meet_the_team') %></h2>
   <% @teams.each do |team| %>
     <h3><%= team.name %></h3>
-    <p><%= team.description %></p>
+    <p><%= simple_format team.description %></p>
     <% if team.member_profiles.present? %>
       <% team.member_profiles.each do |profile| %>
         <article class='profile'>

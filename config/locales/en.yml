@@ -160,4 +160,6 @@ en:
     accounts:
       success: Account was successfully updated.
       failure: Account could not be updated.
-
+  partnerships:
+    index:
+      header: Our Partners
