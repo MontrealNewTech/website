@@ -11,7 +11,7 @@ RSpec.describe PagesController do
     end
 
     it 'loads all the sponsors' do
-      expect(Organization).to receive :all
+      expect(Partnership).to receive :all
       get :home, params: { locale: I18n.locale.to_param }
     end
   end

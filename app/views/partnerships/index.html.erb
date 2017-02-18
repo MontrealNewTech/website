@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Partners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Logo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sponsors.each do |partner| %>
+      <tr>
+        <td><%= partner.name %></td>
+        <td><%= partner.description %></td>
+        <td><%= partner.logo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

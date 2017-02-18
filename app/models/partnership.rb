@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class Organization < ApplicationRecord
+class Partnership < ApplicationRecord
   mount_uploader :logo, ImageUploader
 
   validates :name, presence: true, uniqueness: true

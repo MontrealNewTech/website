@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     root to: 'initiatives#index'
 
     resources :initiatives
-    resources :organizations
+    resources :partnerships
     resources :teams
     resources :member_profiles
     resources :accounts, only: [:index, :show, :edit, :update]
