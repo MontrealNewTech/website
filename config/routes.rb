@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :community_events, only: :index
     resources :initiatives, only: [:index, :show]
     resources :our_events, only: :index
+    resources :partnerships, only: :index
 
     get '/about' => 'pages#about', as: :about
   end
