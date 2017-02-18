@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root to: 'pages#home'
 
     resources :community_events, only: :index
-    resources :initiatives, only: [:index, :show]
+    resources :initiatives, only: :index
     resources :our_events, only: :index
     resources :partnerships, only: :index
 
