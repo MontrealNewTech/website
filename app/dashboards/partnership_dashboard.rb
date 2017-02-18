@@ -49,6 +49,10 @@ class PartnershipDashboard < Administrate::BaseDashboard
     :logo,
   ].freeze
 
+  def display_resource(partner)
+    partner.name
+  end
+
   def permitted_attributes
     super.concat [:logo_cache]
   end
