@@ -106,7 +106,7 @@ en:
   models:
     null_date:
       strftime: No %{nullable} on this date
-  no_events: There are no events happening on this date
+  no_events: There are no events scheduled for this date yet
   all_day_event: All day
   pages:
     about:
