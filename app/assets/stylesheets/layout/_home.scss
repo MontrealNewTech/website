@@ -28,6 +28,7 @@
     position: fixed;
     top: 0;
     transition: all 0.6s ease;
+    z-index: 2;
 
     &.transparent {
       a {
@@ -122,9 +123,11 @@
   #sign_up {
     @include flex-column-then-row;
 
-    background-color: $main-color;
+    background-color: $secondary-color;
     color: $background-color;
     padding: $xxl-space $large-space $xl-space $large-space;
+    position: relative;
+    z-index: 1;
 
     .mailing-list,
     .apply-to-demo {
@@ -138,21 +141,40 @@
 
     .mailing-list {
       margin-bottom: $large-space;
-    }
 
-    h2 {
-      font-size: $large-font-size;
+      h2 {
+        font-size: $xl-font-size;
+        color: $main-color-dark;
+      }
     }
 
     h3 {
       font-size: $normal-font-size;
+      color: $text;
     }
 
     .apply-to-demo {
       background-color: $background-color;
       border-radius: $base-border-radius;
-      border: 10px solid $darker-background;
-      color: $text;
+      position: relative;
+
+      &:before {
+        background-color: $main-color;
+        border-radius: $base-border-radius;
+        content: '';
+        height: 100%;
+        right: -5px;
+        position: absolute;
+        top: 0;
+        transform: rotate(2deg);
+        width: 101%;
+        z-index: -1;
+      }
+
+      h2 {
+        font-size: $large-font-size;
+        color: $text;
+      }
     }
 
     input[type='submit'] {

@@ -4,6 +4,7 @@ footer {
   font-family: $headers;
   font-size: $subtext-font-size;
   line-height: $base-line-height;
+  margin-top: $xl-space;
   padding: $little-space;
 
   @include above($small-screen) {

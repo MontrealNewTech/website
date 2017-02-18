@@ -6,6 +6,7 @@ $lightest-grey: lighten($grey, 70%);
 $very-light-grey: lighten($grey, 76%);
 $white: #fefefe;
 $orange: #ef4723;
+$light-orange: #fba960;
 
 $links: $light-grey;
 $text: $grey;
@@ -13,6 +14,8 @@ $light-text: $white;
 $background-color: $white;
 $darker-background: $lightest-grey;
 $main-color: $orange;
+$main-color-dark: darken($main-color, 7%);
+$secondary-color: $light-orange;
 $buttons: $main-color;
 $error: $main-color;
 
