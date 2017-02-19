@@ -2,16 +2,16 @@
   @mixin big-h2 {
     h2 {
       font-weight: bold;
-      text-transform: uppercase;
       letter-spacing: 3px;
+      text-transform: uppercase;
     }
   }
 
   @mixin big-h3 {
     h3 {
       font-weight: bold;
-      text-transform: uppercase;
       letter-spacing: 3px;
+      text-transform: uppercase;
     }
   }
 
@@ -20,7 +20,7 @@
   }
 
   section {
-    padding: $xxl-space $med-space $med-space $med-space;
+    padding: $xxl-space $med-space $med-space;
     text-align: left;
   }
 
