@@ -215,25 +215,6 @@
     }
   }
 
-  #sponsors {
-    @include big-h3;
-  }
-
-  .logos {
-    @include flex-row-center;
-    flex-flow: wrap;
-
-    img {
-      display: inline-block;
-      padding: $large-space;
-      max-height: 18vh;
-
-      @include above($small-screen) {
-        max-height: 25vh;
-      }
-    }
-  }
-
   .event {
     @include flex-column-then-row;
 

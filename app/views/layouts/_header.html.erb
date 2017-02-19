@@ -11,9 +11,6 @@
       <li>
         <%= events_nav_link %>
       </li>
-      <li>
-        <%= link_to t('.community_events'), community_events_path %>
-      </li>
       <% if home_page? %>
         <li>
           <a href='#sign_up' class='scroll-on-page'><%= t('.sign_up') %></a>
@@ -26,6 +23,9 @@
           <%= link_to t('.about'), about_path %>
         </li>
       <% end %>
+      <li>
+        <%= link_to t('.community_events'), community_events_path %>
+      </li>
       <li>
         <%= link_to t('.initiatives'), initiatives_path %>
       </li>

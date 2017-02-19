@@ -28,12 +28,14 @@
   content: '\f095';
   font-family: 'FontAwesome';
   font-style: normal;
+  padding-right: $little-space;
 }
 
 .mail::before {
   content: '\f0e0';
   font-family: 'FontAwesome';
   font-style: normal;
+  padding-right: $little-space;
 }
 
 .facebook::before {

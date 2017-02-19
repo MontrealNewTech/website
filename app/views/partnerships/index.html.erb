@@ -1,5 +1,10 @@
 <div class='content'>
   <h1><%= t('.header') %></h1>
+  <p><%= t('.about_partnerships') %></p>
+  <h3><%= t('.interested') %></h3>
+  <div class='reach-out'>
+      <%= mail_to PARTNERSHIPS[:email], t('.reach_out'), class: 'button mail' %>
+  </div>
 
   <% @sponsors.each do |partner| %>
     <article class='partner'>

@@ -3,4 +3,15 @@
     @include card;
     @include alternate_info_and_photo_position;
   }
+
+  .reach-out {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $large-space;
+
+    a {
+      width: $small-screen;
+      text-align: center;
+    }
+  }
 }

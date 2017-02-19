@@ -2,7 +2,6 @@
 class PagesController < ApplicationController
   def home
     @events = Event.ours
-    @sponsors = Partnership.all
   end
 
   def about

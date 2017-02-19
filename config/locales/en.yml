@@ -134,7 +134,6 @@ en:
         header: Want us to notify you?
         sub: We'll send you reminders about upcoming events and updates about the
           community.
-      sponsors: Our Partners
       title: Montréal Startups
       what_we_do: What we do
   time:
@@ -162,3 +161,6 @@ en:
   partnerships:
     index:
       header: Our Partners
+      about_partnerships: Montreal New Tech partners with local organizations who are dedicated to helping us support the startup ecosytem.
+      interested: Interested in partnering with Montreal New Tech? Our partnerships coordinator would love to hear from you!
+      reach_out: Reach out

@@ -104,19 +104,29 @@
     width: 100%;
   }
 
-  &:nth-child(odd) {
-    .info {
-      padding-left: $large-space;
-    }
+  img {
+    margin-bottom: $med-space;
   }
 
-  &:nth-child(even) {
+  @include above($small-screen) {
     img {
-      order: 2;
+      margin-bottom: 0;
     }
 
-    .info {
-      padding-right: $large-space;
+    &:nth-child(odd) {
+      .info {
+        padding-left: $large-space;
+      }
+    }
+
+    &:nth-child(even) {
+      img {
+        order: 2;
+      }
+
+      .info {
+        padding-right: $large-space;
+      }
     }
   }
 }
