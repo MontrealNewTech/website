@@ -1,7 +1,7 @@
 [data-controller=partnerships][data-action=index] {
   .partner {
     @include card;
-    @include alternate_info_and_photo_position;
+    @include alternate-info-and-photo-position;
   }
 
   .reach-out {
@@ -10,8 +10,8 @@
     margin-bottom: $large-space;
 
     a {
-      width: $small-screen;
       text-align: center;
+      width: $small-screen;
     }
   }
 }

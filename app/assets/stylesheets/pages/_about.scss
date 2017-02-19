@@ -5,6 +5,6 @@
 
   .profile {
     @include card;
-    @include alternate_info_and_photo_position;
+    @include alternate-info-and-photo-position;
   }
 }

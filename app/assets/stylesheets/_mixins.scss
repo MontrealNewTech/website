@@ -97,7 +97,7 @@
   }
 }
 
-@mixin alternate_info_and_photo_position {
+@mixin alternate-info-and-photo-position {
   @include flex-column-then-row;
 
   .info {
