@@ -5,7 +5,7 @@ class MemberProfile < ApplicationRecord
   belongs_to :user
   belongs_to :team
 
-  validates_presence_of :user, :team, :name
+  validates_presence_of :team, :name
   validate :image_size
 
   delegate :email, to: :user, prefix: true
