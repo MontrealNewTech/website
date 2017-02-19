@@ -4,14 +4,6 @@ fr:
     attributes:
       contact:
         email: ''
-    errors:
-      models:
-        contact:
-          attributes:
-            email:
-              invalid: Looks like that's not a valid email address. Could you double
-                check it?
-              taken: Looks like you're already signed up! We have that email already.
   admin:
     application:
       sidebar:
@@ -21,6 +13,9 @@ fr:
       confirm: Confirm
       destroy: Destroy
       edit: Edit
+    display:
+      account: Account for %{email}
+  all_day_event: All day
   community_events:
     index:
       add_your_event: Add your event to the calendar
@@ -31,11 +26,6 @@ fr:
       get_the_calendar: Get the MTLNewTech calendar
       title: Community Events
   contacts:
-    create:
-      thanks: Thanks for signing up!
-    new:
-      button: Keep me posted
-      email: Your email address
     new_mailchimp:
       button: Keep me posted
       email: Your email address
@@ -58,14 +48,17 @@ fr:
     message: kept this form from being submitted
     messages:
       already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please
-        request a new one
+      confirmation_period_expired: needs to be confirmed within %{period}, please request a new one
       expired: has expired, please request a new one
       not_found: not found
       not_locked: was not locked
       not_saved:
         one: 'There is one problem:'
         other: 'There are %{count} problems:'
+  flash:
+    accounts:
+      failure: Account could not be updated.
+      success: Account was successfully updated.
   forms:
     confirm: Confirm password
     email: Email
@@ -77,6 +70,10 @@ fr:
     send_password: Send me reset password instructions
     sign_up: Sign up
   go_to_event: Go to calendar event
+  helpers:
+    label:
+      account:
+        admin: Admin user?
   initiatives:
     index:
       title: Initiatives
@@ -87,8 +84,8 @@ fr:
       email: demo@mtlnewtech.com
       github: View source and contribute on Github!
       made_in_mtl_html: Made with %{heart} in Montreal
+      partners: Our Partners
       phone: 514-880-4464
-      team: Meet our team
     header:
       about: About
       community_events: Community Events
@@ -99,23 +96,17 @@ fr:
   models:
     null_date:
       strftime: No %{nullable} on this date
+  next: Next
   no_events: There are no events happening on this date
   pages:
     about:
-      about_us: MTL NewTech is a non-profit organization dedicated to the success
-        of Montreal startup entrepreneurs. Every first Tuesday of the month, a handful
-        of startups present in front of an audience of programmers, engineers, entrepreneurs,
-        investors, students and other interested parties. Our community is enthusiastic
-        about technological innovation and eager to discuss new trends, see new products
-        and services and connect with global startup ecosystems. These monthly meetups
-        feature demos which are recorded and the videos also showcased via social
-        media and press coverage after the event.
+      about_us: MTL NewTech is a non-profit organization dedicated to the success of Montreal startup entrepreneurs. Every first Tuesday of the month, a handful of startups present in front of an audience of programmers, engineers, entrepreneurs, investors, students and other interested parties. Our community is enthusiastic about technological innovation and eager to discuss new trends, see new products and services and connect with global startup ecosystems. These monthly meetups feature demos which are recorded and the videos also showcased via social media and press coverage after the event.
       header: About Us
+      meet_the_team: Meet the Teams
     home:
       about: Learn more about MTL New Tech
       apply_link: Go to application
-      apply_to_demo: Want to demo your product to other Montréal entrepreneurs, developers,
-        investors, and journalists?
+      apply_to_demo: Want to demo your product to other Montréal entrepreneurs, developers, investors, and journalists?
       events: Events
       get_tickets: Get Tickets
       more: Find out more
@@ -124,11 +115,16 @@ fr:
         sub: Dedicated to the success of Montreal startup entrepreneurs
       sign_up:
         header: Want us to notify you?
-        sub: We'll send you reminders about upcoming events and updates about the
-          community.
-      sponsors: Our Partners
+        sub: We'll send you reminders about upcoming events and updates about the community.
       title: Montréal Startups
       what_we_do: What we do
+  partnerships:
+    index:
+      about_partnerships: Montreal New Tech partners with local organizations who are dedicated to helping us support the startup ecosytem.
+      header: Our Partners
+      interested: Interested in partnering with Montreal New Tech? Our partnerships coordinator would love to hear from you!
+      reach_out: Reach out
+  previous: Previous
   time:
     formats:
       date: "%B %-e, %Y"
@@ -136,7 +132,6 @@ fr:
       full: "%A, %B %-e at %-l:%M %P"
       long: "%A, %B %-e"
       time: "%-l:%M %P"
-    minutes: minutes
   weekdays:
     '0': Sunday
     '1': Monday

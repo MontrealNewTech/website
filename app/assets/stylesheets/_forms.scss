@@ -1,6 +1,6 @@
 form {
   .field-error {
-    border: none;
+    border: 0;
     font-size: $small-font-size;
     line-height: 1rem;
     margin-top: $little-space;
@@ -20,13 +20,13 @@ form {
   }
 
   .checkbox {
-    border: none;
+    border: 0;
     flex-direction: row;
     font-size: $subtext-font-size;
   }
 
   input, textarea {
-    border: none;
+    border: 0;
     font-family: $main-font;
     font-size: inherit;
     line-height: $base-line-height;
@@ -40,11 +40,11 @@ form {
 
   input[type=checkbox] {
     margin-right: $little-space;
-    border: none;
+    border: 0;
     width: auto;
 
-    & + label {
-      border: none;
+    + label {
+      border: 0;
     }
   }
 
@@ -69,7 +69,7 @@ form {
   }
 }
 
-#error_explanation {
+#error-explanation {
   color: $error;
   padding: $little-space 0;
 

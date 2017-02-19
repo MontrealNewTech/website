@@ -134,6 +134,11 @@ Metrics/AbcSize:
     conditions.
   Enabled: true
   Max: 15
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
 Metrics/ClassLength:
   Description: Avoid classes longer than 100 lines of code.
   Enabled: true
@@ -183,11 +188,6 @@ Style/Alias:
   Description: Use alias_method instead of alias.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#alias-method
   Enabled: true
-Style/BlockLength:
-  Exclude:
-    - 'Rakefile'
-    - '**/*.rake'
-    - 'spec/**/*.rb'
 Style/Documentation:
   Description: Document classes and non-namespace modules.
   Enabled: false

@@ -72,3 +72,61 @@
   background-image: image-url('squairy_light.png');
   background-repeat: repeat;
 }
+
+// COMPONENTS
+@mixin card {
+  background-color: $darker-background;
+  border-radius: $base-border-radius;
+  margin-bottom: $large-space;
+  padding: $med-space;
+
+  @include above($small-screen) {
+    padding: $large-space;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+@mixin alternate-info-and-photo-position {
+  @include flex-column-then-row;
+
+  .info {
+    width: 100%;
+  }
+
+  img {
+    margin-bottom: $med-space;
+  }
+
+  @include above($small-screen) {
+    img {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      .info {
+        padding-left: $large-space;
+      }
+    }
+
+    &:nth-child(even) {
+      img {
+        order: 2;
+      }
+
+      .info {
+        padding-right: $large-space;
+      }
+    }
+  }
+}

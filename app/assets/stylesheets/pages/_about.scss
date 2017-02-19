@@ -1,0 +1,10 @@
+[data-controller=pages][data-action=about] {
+  h5 {
+    color: $main-color;
+  }
+
+  .profile {
+    @include card;
+    @include alternate-info-and-photo-position;
+  }
+}

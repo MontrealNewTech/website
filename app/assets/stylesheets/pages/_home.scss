@@ -2,16 +2,16 @@
   @mixin big-h2 {
     h2 {
       font-weight: bold;
-      text-transform: uppercase;
       letter-spacing: 3px;
+      text-transform: uppercase;
     }
   }
 
   @mixin big-h3 {
     h3 {
       font-weight: bold;
-      text-transform: uppercase;
       letter-spacing: 3px;
+      text-transform: uppercase;
     }
   }
 
@@ -20,7 +20,7 @@
   }
 
   section {
-    padding: $xxl-space $med-space $med-space $med-space;
+    padding: $xxl-space $med-space $med-space;
     text-align: left;
   }
 
@@ -28,6 +28,7 @@
     position: fixed;
     top: 0;
     transition: all 0.6s ease;
+    z-index: 2;
 
     &.transparent {
       a {
@@ -122,38 +123,11 @@
   #sign_up {
     @include flex-column-then-row;
 
-    background-color: $main-color;
+    background-color: $secondary-color;
     color: $background-color;
     padding: $xxl-space $large-space $xl-space $large-space;
-
-    .mailing-list,
-    .apply-to-demo {
-      flex: 1;
-      padding: $little-space;
-
-      @include above($small-screen) {
-        padding: $med-space $xl-space;
-      }
-    }
-
-    .mailing-list {
-      margin-bottom: $large-space;
-    }
-
-    h2 {
-      font-size: $large-font-size;
-    }
-
-    h3 {
-      font-size: $normal-font-size;
-    }
-
-    .apply-to-demo {
-      background-color: $background-color;
-      border-radius: $base-border-radius;
-      border: 10px solid $darker-background;
-      color: $text;
-    }
+    position: relative;
+    z-index: 1;
 
     input[type='submit'] {
       @include button($color: $darker-background);
@@ -193,24 +167,54 @@
     }
   }
 
-  #sponsors {
-    @include big-h3;
-  }
+  .mailing-list,
+  .apply-to-demo {
+    flex: 1;
+    padding: $little-space;
 
-  .logos {
-    @include flex-row-center;
-    flex-flow: wrap;
-
-    img {
-      display: inline-block;
-      padding: $large-space;
-      max-height: 18vh;
-
-      @include above($small-screen) {
-        max-height: 25vh;
-      }
+    @include above($small-screen) {
+      padding: $med-space $xl-space;
     }
   }
+
+  .mailing-list {
+    margin-bottom: $large-space;
+
+    h2 {
+      color: $main-color-dark;
+      font-size: $xl-font-size;
+    }
+  }
+
+  h3 {
+    color: $text;
+    font-size: $normal-font-size;
+  }
+
+  .apply-to-demo {
+    background-color: $background-color;
+    border-radius: $base-border-radius;
+    position: relative;
+
+    &::before {
+      background-color: $main-color;
+      border-radius: $base-border-radius;
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: -5px;
+      top: 0;
+      transform: rotate(2deg);
+      width: 101%;
+      z-index: -1;
+    }
+
+    h2 {
+      color: $text;
+      font-size: $large-font-size;
+    }
+  }
+
 
   .event {
     @include flex-column-then-row;

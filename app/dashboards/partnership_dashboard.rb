@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'administrate/base_dashboard'
 
-class OrganizationDashboard < Administrate::BaseDashboard
+class PartnershipDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -48,6 +48,10 @@ class OrganizationDashboard < Administrate::BaseDashboard
     :description,
     :logo,
   ].freeze
+
+  def display_resource(partner)
+    partner.name
+  end
 
   def permitted_attributes
     super.concat [:logo_cache]

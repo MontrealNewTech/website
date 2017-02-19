@@ -4,8 +4,9 @@ Rails.application.routes.draw do
     root to: 'pages#home'
 
     resources :community_events, only: :index
-    resources :initiatives, only: [:index, :show]
+    resources :initiatives, only: :index
     resources :our_events, only: :index
+    resources :partnerships, only: :index
 
     get '/about' => 'pages#about', as: :about
   end
@@ -17,9 +18,9 @@ Rails.application.routes.draw do
     root to: 'initiatives#index'
 
     resources :initiatives
-    resources :organizations
-    resources :member_profiles
+    resources :partnerships
     resources :teams
+    resources :member_profiles
     resources :accounts, only: [:index, :show, :edit, :update]
   end
 end

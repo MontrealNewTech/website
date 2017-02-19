@@ -5,14 +5,9 @@ RSpec.describe PagesController do
   describe 'GET #home' do
     before { allow(Event).to receive :ours }
 
-    it 'loads out events' do
+    it 'loads our events' do
       get :home, params: { locale: I18n.locale.to_param }
       expect(Event).to have_received :ours
-    end
-
-    it 'loads all the sponsors' do
-      expect(Organization).to receive :all
-      get :home, params: { locale: I18n.locale.to_param }
     end
   end
 

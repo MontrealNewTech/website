@@ -1,0 +1,5 @@
+[data-controller=initiatives][data-action=index] {
+  .initiative {
+    @include card;
+  }
+}

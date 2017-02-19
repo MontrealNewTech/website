@@ -57,14 +57,3 @@
     <%= link_to t('.about'), about_path, class: 'outline-button' %>
   </div>
 </section>
-
-<section id='sponsors'>
-  <div class='content'>
-    <h3><%= t('.sponsors') %></h3>
-    <div class='logos'>
-      <% @sponsors.each do |sponsor| %>
-        <div class='logo'><img src="<%= sponsor.logo %>"></div>
-      <% end %>
-    </div>
-  </div>
-</section>

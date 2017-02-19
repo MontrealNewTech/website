@@ -13,3 +13,7 @@ EVENTBRITE = {
 DEMO = {
   apply: 'https://docs.google.com/forms/d/e/1FAIpQLSe7IhyOF5gPgsfddZ0kLyIQrlot-baVVh1h8wEcXlXPhElwRg/viewform'
 }.freeze
+
+PARTNERSHIPS = {
+  email: 'marc@mtlnewtech.com'
+}.freeze

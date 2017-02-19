@@ -6,7 +6,7 @@
   <% @initiatives.each do |initiative| %>
     <article class='initiative'>
       <h2><%= initiative.title %></h2>
-      <p><%= initiative.description %></p>
+      <p><%= simple_format initiative.description %></p>
     </article>
   <% end %>
 </div>

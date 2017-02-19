@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 @import 'variables';
 
@@ -11,6 +11,7 @@
 @import 'buttons';
 @import 'forms';
 @import 'layout/*';
+@import 'pages/*';
 
 *,
 *::before,
