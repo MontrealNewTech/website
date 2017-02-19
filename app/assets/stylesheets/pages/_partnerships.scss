@@ -1,6 +1,6 @@
 [data-controller=partnerships][data-action=index] {
-  .partnership {
+  .partner {
     @include card;
-    @include alternate_photo_position;
+    @include alternate_info_and_photo_position;
   }
 }
