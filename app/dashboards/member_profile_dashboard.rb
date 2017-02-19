@@ -57,7 +57,7 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   ].freeze
 
   def display_resource(member)
-    I18n.t('administrate.display.member_profile', name: member.name)
+    member.name
   end
 
   def permitted_attributes
