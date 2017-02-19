@@ -17,7 +17,7 @@ RSpec.describe Eventbrite::Event do
     describe 'calling the eventbrite api' do
       before do
         stub_eventbrite_events_call
-        allow(Venue).to receive(:find).with(an_instance_of(Fixnum)).and_return true
+        allow(Venue).to receive(:find).with(an_instance_of(Integer)).and_return true
       end
 
       it "creates an 'our event' for each event" do
