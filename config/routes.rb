@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   localized do
     root to: 'pages#home'
 
-    resources :community_events, only: :index
+    resources :community_events, only: []
     resources :initiatives, only: :index
     resources :our_events, only: :index
     resources :partnerships, only: :index
 
     get '/about' => 'pages#about', as: :about
+    get '/calendar' => 'community_events#index'
   end
 
   devise_for :users,

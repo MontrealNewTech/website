@@ -11,6 +11,6 @@ class Venue
   private
 
   def parse(eventbrite_venue)
-    "#{eventbrite_venue.name}, #{eventbrite_venue.address.localized_address_display}"
+    "#{eventbrite_venue.name}, #{eventbrite_venue.address&.localized_address_display}"
   end
 end
