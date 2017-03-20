@@ -11,6 +11,7 @@ class Venue
   private
 
   def parse(eventbrite_venue)
-    "#{eventbrite_venue.name}, #{eventbrite_venue.address.localized_address_display}"
+    return I18n.t('events.no_venue') if eventbrite_venue.name.nil?
+    "#{eventbrite_venue.name}, #{eventbrite_venue.address&.localized_address_display}"
   end
 end

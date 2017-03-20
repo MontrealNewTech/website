@@ -30,7 +30,7 @@ module Eventbrite
         description: event.description.html.html_safe,
         link: event.url,
         title: event.name.text,
-        cover_image_url: event.logo.original.url
+        cover_image_url: event.logo&.original&.url
       }
     end
 
