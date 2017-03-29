@@ -1,5 +1,5 @@
 ---
-fr:
+en:
   activerecord:
     attributes:
       contact:
@@ -55,6 +55,8 @@ fr:
       not_saved:
         one: 'There is one problem:'
         other: 'There are %{count} problems:'
+  events:
+    no_venue: Venue is still undecided
   flash:
     accounts:
       failure: Account could not be updated.
