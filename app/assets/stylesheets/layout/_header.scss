@@ -10,7 +10,7 @@ header {
   }
 
   @include above($medium-screen) {
-    font-size: 100%;
+    font-size: 90%;
   }
 
   .top-bar {
@@ -23,10 +23,10 @@ header {
     background-image: image-url('logo.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 230px;
+    background-size: 300px;
     height: 65px;
     transition: background-size 0.5s;
-    width: 250px;
+    width: 300px;
     display: none;
 
     @include above($medium-screen) {
