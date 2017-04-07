@@ -57,4 +57,13 @@ footer {
     padding-top: $large-space;
     font-size: $small-font-size;
   }
+
+  .social_icons {
+    padding-top: 15px;
+
+    img {
+      max-width: 35px;
+      padding-right: 10px;
+    }
+  }
 }

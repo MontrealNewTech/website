@@ -50,7 +50,7 @@ header {
   }
 
   .logo:hover {
-    background-size: 235px;
+    background-size: 290px;
     background-color: transparent;
   }
 
@@ -97,7 +97,7 @@ header {
 
     .featured {
       border-radius: $round-border;
-      padding-top: $little-space;
+/*      padding-top: $little-space; */ /* take out*/
       font-size: inherit;
     }
   }
