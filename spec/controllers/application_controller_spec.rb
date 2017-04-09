@@ -24,7 +24,7 @@ RSpec.describe ApplicationController do
           user = instance_double User, admin?: false
           allow(controller).to receive(:current_user).and_return user
           expect(controller.after_sign_in_path_for(user)).to eq community_events_fr_path
-          I18n.locale = :en
+          I18n.locale = I18n.default_locale
         end
       end
     end
