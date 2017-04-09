@@ -81,6 +81,11 @@ en:
         description_en: English description
         name_fr: French name
         description_fr: French description
+      initiative:
+        title_en: English title
+        description_en: English description
+        title_fr: French title
+        description_fr: French description
   initiatives:
     index:
       title: Initiatives

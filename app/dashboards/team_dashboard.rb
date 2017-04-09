@@ -17,8 +17,6 @@ class TeamDashboard < Administrate::BaseDashboard
     description_en: Field::Text,
     name_fr: Field::String,
     description_fr: Field::Text,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
