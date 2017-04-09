@@ -13,7 +13,5 @@ RSpec.describe Partnership, type: :model do
     I18n.locale = :fr
     expect(partnership.name).to be_nil
     expect(partnership.description).to be_nil
-
-    I18n.locale = I18n.default_locale
   end
 end

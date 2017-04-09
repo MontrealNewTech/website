@@ -12,7 +12,5 @@ RSpec.describe Team, type: :model do
     I18n.locale = :fr
     expect(team.name).to be_nil
     expect(team.description).to be_nil
-
-    I18n.locale = I18n.default_locale
   end
 end

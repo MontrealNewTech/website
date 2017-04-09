@@ -11,7 +11,5 @@ RSpec.describe Initiative, type: :model do
     I18n.locale = :fr
     expect(initiative.title).to be_nil
     expect(initiative.description).to be_nil
-
-    I18n.locale = I18n.default_locale
   end
 end

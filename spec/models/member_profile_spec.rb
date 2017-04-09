@@ -14,10 +14,7 @@ RSpec.describe MemberProfile, type: :model do
     member_profile = create :member_profile
 
     I18n.locale = :fr
-    expect(member_profile.name).to be_nil
     expect(member_profile.position).to be_nil
     expect(member_profile.bio).to be_nil
-
-    I18n.locale = I18n.default_locale
   end
 end
