@@ -55,6 +55,8 @@ fr:
       not_saved:
         one: 'Il y a un problème:'
         other: 'Il y a %{count} problèmes:'
+  events:
+    no_venue: Le lieu n'est pas encore connu
   flash:
     accounts:
       failure: Le compte n'a pas pu être mis à jour.

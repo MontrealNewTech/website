@@ -4,12 +4,14 @@ export default function stickyHeader() {
     return
   }
   $(window).on('scroll', function() {
-    if ($(this).scrollTop() > 250) {
+    if ($(this).scrollTop() > 50) {
       $('header').addClass('sticky')
+      $('header').addClass('shadow')
       $('header').removeClass('transparent')
     }
     else {
       $('header').removeClass('sticky')
+      $('header').removeClass('shadow')
       $('header').addClass('transparent')
     }
   })
