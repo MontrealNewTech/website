@@ -82,7 +82,6 @@ group :test do
   gem 'launchy'
   gem 'poltergeist'
   gem 'rspec-its'
-  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'webmock'
