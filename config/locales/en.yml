@@ -76,6 +76,11 @@ en:
     label:
       account:
         admin: Admin user?
+      team:
+        name_en: English name
+        description_en: English description
+        name_fr: French name
+        description_fr: French description
   initiatives:
     index:
       title: Initiatives

@@ -13,6 +13,10 @@ class TeamDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::Text,
+    name_en: Field::String,
+    description_en: Field::Text,
+    name_fr: Field::String,
+    description_fr: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -33,16 +37,20 @@ class TeamDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :member_profiles,
     :id,
-    :name,
-    :description,
+    :name_en,
+    :description_en,
+    :name_fr,
+    :description_fr
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :description,
+    :name_en,
+    :description_en,
+    :name_fr,
+    :description_fr,
     :member_profiles
   ].freeze
 
