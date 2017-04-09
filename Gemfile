@@ -19,10 +19,10 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 # Internationalization
-gem 'route_translator'
-gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem 'activemodel-serializers-xml'
+gem 'globalize', git: 'https://github.com/globalize/globalize'
 gem 'globalize-accessors'
+gem 'route_translator'
 
 # Image uploading
 gem 'carrierwave'
