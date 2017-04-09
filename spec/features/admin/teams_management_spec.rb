@@ -13,8 +13,8 @@ RSpec.feature 'managing teams' do
 
     click_on 'New team'
 
-    fill_form_and_submit :team, name: 'New team',
-                                description: 'Awesome team description.'
+    fill_form_and_submit :team, 'English name' => 'New team',
+                                'English description' => 'Awesome team description.'
 
     expect(page).to have_css '.flash', text: 'Team was successfully created.'
   end
@@ -35,8 +35,8 @@ RSpec.feature 'managing teams' do
     find(:xpath, "//div[@class='selectize-dropdown-content']/..", text: team.name).click
 
     fill_form_and_submit :member_profile, name: "This User's Name",
-                                          position: 'Website Coordinator',
-                                          bio: 'Bio for this user'
+                                          'English position' => 'Website Coordinator',
+                                          'English bio' => 'Bio for this user'
 
     expect(page).to have_content 'MemberProfile was successfully created.'
   end

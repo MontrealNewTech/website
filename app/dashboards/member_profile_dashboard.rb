@@ -16,9 +16,11 @@ class MemberProfileDashboard < Administrate::BaseDashboard
     name: Field::String,
     position: Field::String,
     bio: Field::Text,
+    position_en: Field::String,
+    bio_en: Field::Text,
+    position_fr: Field::String,
+    bio_fr: Field::Text,
     image: FileField,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -29,31 +31,35 @@ class MemberProfileDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :image,
     :name,
-    :position,
+    :position_en,
     :team,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :name,
     :user_email,
     :image,
-    :name,
     :team,
-    :position,
-    :bio,
+    :position_en,
+    :bio_en,
+    :position_fr,
+    :bio_fr,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :name,
     :user,
     :team,
     :image,
-    :name,
-    :position,
-    :bio,
+    :position_en,
+    :bio_en,
+    :position_fr,
+    :bio_fr,
   ].freeze
 
   def display_resource(member)

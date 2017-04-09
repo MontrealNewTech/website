@@ -13,8 +13,10 @@ class TeamDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::Text,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    name_en: Field::String,
+    description_en: Field::Text,
+    name_fr: Field::String,
+    description_fr: Field::Text,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,8 +25,8 @@ class TeamDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :name,
-    :description,
+    :name_en,
+    :description_en,
     :member_profiles,
   ].freeze
 
@@ -33,16 +35,20 @@ class TeamDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :member_profiles,
     :id,
-    :name,
-    :description,
+    :name_en,
+    :description_en,
+    :name_fr,
+    :description_fr
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :description,
+    :name_en,
+    :description_en,
+    :name_fr,
+    :description_fr,
     :member_profiles
   ].freeze
 

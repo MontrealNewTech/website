@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219234347) do
+ActiveRecord::Schema.define(version: 20170409002138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,40 +23,76 @@ ActiveRecord::Schema.define(version: 20170219234347) do
     t.index ["user_id"], name: "index_accounts_on_user_id", using: :btree
   end
 
+  create_table "initiative_translations", force: :cascade do |t|
+    t.integer  "initiative_id", null: false
+    t.string   "locale",        null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "title"
+    t.text     "description"
+    t.index ["initiative_id"], name: "index_initiative_translations_on_initiative_id", using: :btree
+    t.index ["locale"], name: "index_initiative_translations_on_locale", using: :btree
+  end
+
   create_table "initiatives", force: :cascade do |t|
-    t.string   "title",       null: false
-    t.text     "description", null: false
     t.string   "link"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "member_profile_translations", force: :cascade do |t|
+    t.integer  "member_profile_id", null: false
+    t.string   "locale",            null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "position"
+    t.text     "bio"
+    t.index ["locale"], name: "index_member_profile_translations_on_locale", using: :btree
+    t.index ["member_profile_id"], name: "index_member_profile_translations_on_member_profile_id", using: :btree
   end
 
   create_table "member_profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "team_id",    null: false
-    t.string   "name",       null: false
-    t.string   "position"
-    t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+    t.string   "name",       null: false
     t.index ["team_id"], name: "index_member_profiles_on_team_id", using: :btree
     t.index ["user_id"], name: "index_member_profiles_on_user_id", using: :btree
   end
 
-  create_table "partnerships", force: :cascade do |t|
-    t.string   "name",        null: false
+  create_table "partnership_translations", force: :cascade do |t|
+    t.integer  "partnership_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "name"
     t.text     "description"
+    t.index ["locale"], name: "index_partnership_translations_on_locale", using: :btree
+    t.index ["partnership_id"], name: "index_partnership_translations_on_partnership_id", using: :btree
+  end
+
+  create_table "partnerships", force: :cascade do |t|
     t.string   "logo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "team_translations", force: :cascade do |t|
+    t.integer  "team_id",     null: false
+    t.string   "locale",      null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.text     "description"
+    t.index ["locale"], name: "index_team_translations_on_locale", using: :btree
+    t.index ["team_id"], name: "index_team_translations_on_team_id", using: :btree
   end
 
   create_table "teams", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.text     "description", null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

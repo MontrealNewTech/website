@@ -10,7 +10,11 @@ class InitiativeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    description: Field::Text
+    description: Field::Text,
+    title_en: Field::String,
+    description_en: Field::Text,
+    title_fr: Field::String,
+    description_fr: Field::Text
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -19,23 +23,27 @@ class InitiativeDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :title,
-    :description
+    :title_en,
+    :description_en,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :title,
-    :description
+    :title_en,
+    :description_en,
+    :title_fr,
+    :description_fr
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :title,
-    :description
+    :title_en,
+    :description_en,
+    :title_fr,
+    :description_fr
   ].freeze
 
   def display_resource(initiative)

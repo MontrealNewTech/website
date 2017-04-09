@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-RSpec.feature 'collecting email addresses from the home page', js: true do
+RSpec.feature 'collecting email addresses from the home page' do
   include Stubs
 
   scenario 'someone submits a valid email' do
