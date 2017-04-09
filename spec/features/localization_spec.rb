@@ -27,6 +27,5 @@ RSpec.feature 'localization of db records' do
     visit about_path
     expect(page).to have_content 'Un equipe'
     expect(page).to have_content "Ceci c'est le Francais"
-    I18n.locale = I18n.default_locale
   end
 end

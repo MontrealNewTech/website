@@ -13,8 +13,8 @@ RSpec.feature 'managing teams' do
 
     click_on 'New team'
 
-    fill_form_and_submit :team, name: 'New team',
-                                description: 'Awesome team description.'
+    fill_form_and_submit :team, 'English name' => 'New team',
+                                'English description' => 'Awesome team description.'
 
     expect(page).to have_css '.flash', text: 'Team was successfully created.'
   end
