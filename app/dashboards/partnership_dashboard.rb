@@ -12,6 +12,10 @@ class PartnershipDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::Text,
+    name_en: Field::String,
+    description_en: Field::Text,
+    name_fr: Field::String,
+    description_fr: Field::Text,
     logo: FileField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -24,8 +28,8 @@ class PartnershipDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :name,
-    :description,
+    :name_en,
+    :description_en,
     :logo,
   ].freeze
 
@@ -33,8 +37,10 @@ class PartnershipDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
-    :name,
-    :description,
+    :name_en,
+    :description_en,
+    :name_fr,
+    :description_fr,
     :logo,
     :created_at,
     :updated_at,
@@ -44,8 +50,10 @@ class PartnershipDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :name,
-    :description,
+    :name_en,
+    :description_en,
+    :name_fr,
+    :description_fr,
     :logo,
   ].freeze
 

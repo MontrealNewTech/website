@@ -76,11 +76,6 @@ en:
     label:
       account:
         admin: Admin user?
-      team:
-        name_en: English name
-        description_en: English description
-        name_fr: French name
-        description_fr: French description
       initiative:
         title_en: English title
         description_en: English description
@@ -91,6 +86,16 @@ en:
         bio_en: English bio
         position_fr: French position
         bio_fr: French bio
+      partnership:
+        name_en: English name
+        description_en: English description
+        name_fr: French name
+        description_fr: French description
+      team:
+        name_en: English name
+        description_en: English description
+        name_fr: French name
+        description_fr: French description
   initiatives:
     index:
       title: Initiatives

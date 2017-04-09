@@ -66,6 +66,33 @@ RSpec.feature 'localization of db records' do
     expect(page).not_to have_content 'Awesome member profile bio goes here'
   end
 
+  scenario 'adding translations for a partnership' do
+    visit admin_partnerships_path
+    expect(page).to have_content 'Partnerships'
+
+    click_on 'New partnership'
+
+    fill_form_and_submit :partnership, 'English name' => 'New partnership',
+                                       'English description' => 'Awesome partnership description.',
+                                       'French name' => 'Un partnership',
+                                       'French description' => "Ceci c'est le Francais"
+
+    expect(page).to have_css '.flash', text: 'Partnership was successfully created.'
+
+    visit partnerships_path
+    expect(page).to have_content 'New partnership'
+    expect(page).to have_content 'Awesome partnership description.'
+    expect(page).not_to have_content 'Un partnership'
+    expect(page).not_to have_content "Ceci c'est le Francais"
+
+    I18n.locale = :fr
+    visit partnerships_path
+    expect(page).to have_content 'Un partnership'
+    expect(page).to have_content "Ceci c'est le Francais"
+    expect(page).not_to have_content 'New partnership'
+    expect(page).not_to have_content 'Awesome partnership description.'
+  end
+
   scenario 'adding translations for a team' do
     visit admin_teams_path
     expect(page).to have_content 'Teams'
