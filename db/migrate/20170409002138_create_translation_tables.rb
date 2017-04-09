@@ -10,7 +10,6 @@ class CreateTranslationTables < ActiveRecord::Migration[5.0]
     })
 
     MemberProfile.create_translation_table!({
-      name: :string,
       position: :string,
       bio: :text
     },

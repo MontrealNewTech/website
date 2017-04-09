@@ -23,8 +23,8 @@ class InitiativeDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :title,
-    :description
+    :title_en,
+    :description_en,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

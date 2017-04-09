@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20170409002138) do
     t.string   "locale",            null: false
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.string   "name"
     t.string   "position"
     t.text     "bio"
     t.index ["locale"], name: "index_member_profile_translations_on_locale", using: :btree
@@ -58,6 +57,7 @@ ActiveRecord::Schema.define(version: 20170409002138) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+    t.string   "name",       null: false
     t.index ["team_id"], name: "index_member_profiles_on_team_id", using: :btree
     t.index ["user_id"], name: "index_member_profiles_on_user_id", using: :btree
   end

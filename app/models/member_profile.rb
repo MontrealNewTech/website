@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 class MemberProfile < ApplicationRecord
   mount_uploader :image, ImageUploader
-  translates :name, :position, :bio
+  translates :position, :bio
+  globalize_accessors
 
   belongs_to :user
   belongs_to :team
