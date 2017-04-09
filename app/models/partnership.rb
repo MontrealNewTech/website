@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class Partnership < ApplicationRecord
   mount_uploader :logo, ImageUploader
+  translates :name, :description
 
   validates :name, presence: true, uniqueness: true
   validate :logo_size

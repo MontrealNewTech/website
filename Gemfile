@@ -20,6 +20,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # Internationalization
 gem 'route_translator'
+gem 'globalize', git: 'https://github.com/globalize/globalize'
+gem 'activemodel-serializers-xml'
 
 # Image uploading
 gem 'carrierwave'

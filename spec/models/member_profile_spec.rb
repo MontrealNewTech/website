@@ -9,4 +9,15 @@ RSpec.describe MemberProfile, type: :model do
   it { is_expected.to validate_presence_of :name }
 
   it { is_expected.to delegate_method(:email).to(:user).with_prefix }
+
+  it 'can store a translation in french for name, position, and bio' do
+    member_profile = create :member_profile
+
+    I18n.locale = :fr
+    expect(member_profile.name).to be_nil
+    expect(member_profile.position).to be_nil
+    expect(member_profile.bio).to be_nil
+
+    I18n.locale = I18n.default_locale
+  end
 end
