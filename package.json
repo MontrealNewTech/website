@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "babel-generator": "^6.24.1",
-    "babel-helpers": "^6.24.1"
+    "babel-helpers": "^6.24.1",
+    "babel-types": "^6.24.1"
   }
 }
