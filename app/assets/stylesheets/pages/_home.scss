@@ -69,10 +69,12 @@
   /* end social icons */
 
   section {
+
     /*padding: $xxl-space $med-space $med-space;*/
     padding-top: $med-space;
     padding-left: $med-space;
     padding-right: xxl-space;
+
     padding-bottom: $xxxl-space;
     text-align: left;
     }
@@ -201,6 +203,7 @@
 
     background-color: $secondary-color;
     background-image: image-url('background-signup.jpg');
+
     padding: $xxl-space $large-space $xl-space $large-space;
     position: relative;
     z-index: 1;

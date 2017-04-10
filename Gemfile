@@ -19,6 +19,9 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 # Internationalization
+gem 'activemodel-serializers-xml'
+gem 'globalize', git: 'https://github.com/globalize/globalize'
+gem 'globalize-accessors'
 gem 'route_translator'
 
 # Image uploading
@@ -80,7 +83,6 @@ group :test do
   gem 'launchy'
   gem 'poltergeist'
   gem 'rspec-its'
-  gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'webmock'

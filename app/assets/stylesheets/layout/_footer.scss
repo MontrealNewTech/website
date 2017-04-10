@@ -27,8 +27,8 @@ footer {
     padding-top: $large-space;
 
     @include above($small-screen) {
-      text-align: right;
       padding-top: 0;
+      text-align: right;
     }
 
     li {
@@ -46,16 +46,50 @@ footer {
     }
   }
 
-  .links, .bottom {
+  .social {
+    @include size-reset;
+
+    padding-top: $large-space;
+    text-align: left;
     width: 100%;
+
+    @include above($small-screen) {
+      text-align: center;
+    }
+
+    li {
+      display: inline;
+      font-size: $med-font-size;
+
+      @include above($small-screen) {
+        font-size: $large-font-size;
+        padding: 0 $med-space;
+      }
+
+      &:not(:last-child) {
+        padding-right: $med-space;
+      }
+    }
+  }
+
+  .contact,
+  .social,
+  nav {
+    flex: 1;
+  }
+
+  .links,
+  .bottom {
+    width: 100%;
+
     @include above($small-screen) {
       @include flex-center-between;
     }
   }
 
   .bottom {
-    padding-top: $large-space;
     font-size: $small-font-size;
+    padding-top: $large-space;
   }
 
   .social_icons {

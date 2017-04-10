@@ -31,4 +31,8 @@ RSpec.configure do |config|
   config.order = :random
   Kernel.srand config.seed
   config.before(:each) { ActionMailer::Base.deliveries.clear }
+
+  config.after(:each) do
+    I18n.locale = I18n.default_locale
+  end
 end

@@ -17,6 +17,30 @@
   font-style: normal;
 }
 
+.facebook::before {
+  content: '\f09a';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.twitter::before {
+  content: '\f099';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.instagram::before {
+  content: '\f16d';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.medium::before {
+  content: '\f23a';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
 .map::before {
   content: '\f041';
   font-family: 'FontAwesome';

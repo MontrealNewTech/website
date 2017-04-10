@@ -15,7 +15,7 @@ RSpec.describe ApplicationController do
       it 'sends the user to the events path' do
         user = instance_double User, admin?: false
         allow(controller).to receive(:current_user).and_return user
-        expect(controller.after_sign_in_path_for(user)).to eq community_events_en_path
+        expect(controller.after_sign_in_path_for(user)).to eq calendar_en_path
       end
 
       context 'locale is in french' do
@@ -23,8 +23,7 @@ RSpec.describe ApplicationController do
           I18n.locale = :fr
           user = instance_double User, admin?: false
           allow(controller).to receive(:current_user).and_return user
-          expect(controller.after_sign_in_path_for(user)).to eq community_events_fr_path
-          I18n.locale = :en
+          expect(controller.after_sign_in_path_for(user)).to eq calendar_fr_path
         end
       end
     end
