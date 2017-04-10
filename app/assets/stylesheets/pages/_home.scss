@@ -152,13 +152,17 @@
       padding-right: $xxl-space;
       font-weight: bold;
       letter-spacing: 2px;
+      text-shadow: 2px 2px 4px #000000;
+    
 
-      @include on($small-screen) {
+/*      @include on($small-screen) {
         text-shadow: 2px 2px 4px #000000;
-      }
+      }*/
 
       @include above($small-screen) {
-        font-size: $xl-font-size;
+        font-size: $xxl-font-size;
+        line-height: 4rem;
+        padding-top: $xxxl-space;
       }
     }
 
