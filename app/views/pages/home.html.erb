@@ -1,6 +1,18 @@
 <%= provide :title, t('.title') %>
 
+<!-- Social Icons Start -->
+
+<ul id="social_side_links">
+  <li><a href="https://www.facebook.com/mtlnewtech/" target="_blank"><%= image_tag 'facebook', alt: 'facebook' %></a></li>
+  <li><a href="https://twitter.com/mtlnewtech/" target="_blank"><%= image_tag 'twitter', alt: 'twitter' %></a></li>
+  <li><a href="https://www.linkedin.com/company-beta/9318526/" target="_blank"><%= image_tag 'linkedin', alt: 'linkedin' %></a></li>
+  <li><a href="https://www.instagram.com/mtlnewtech/" target="_blank"><%= image_tag 'instagram', alt: 'instagram' %></a></li>
+</ul>
+
+<!-- Social Icons End -->
+
 <section id='mtlnewtech'>
+
   <div class='headers'>
     <h1><%= t('.mtlnewtech.main') %></h1>
     <h2><%= t('.mtlnewtech.sub') %></h2>
@@ -22,7 +34,7 @@
           </p>
           <p class='map fixed-width-icon'><%= event.location %></p>
           <div class='links'>
-            <%= link_to t('.get_tickets'), eventbrite_ticket_link(event), target: '_blank', rel: 'nofollow', class: 'button' %>
+            <%= link_to t('.get_tickets'), eventbrite_ticket_link(event), target: '_blank', rel: 'nofollow', class: 'outline-button' %>
             <%= link_to t('.more'), event.link, target: '_blank', class: 'more' %>
           </div>
         </div>
@@ -46,11 +58,23 @@
   </div>
   <div class='apply-to-demo'>
     <h2><%= t('.apply_to_demo') %></h2>
-    <%= link_to t('.apply_link'), DEMO[:apply], target: '_blank', class: 'button' %>
+    <%= link_to t('.apply_link'), DEMO[:apply], target: '_blank', class: 'outline-button' %>
   </div>
 </section>
 
+  <div class='photos'>
+    <%= image_tag 'mtl_new_tech_group_1', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_2', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_3', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_4', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_5', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_6', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_7', alt: 'Montreal New Tech and Montreal Startups' %>
+    <%= image_tag 'mtl_new_tech_group_8', alt: 'Montreal New Tech and Montreal Startups' %>
+  </div>
+
 <section id='what_we_do'>
+
   <div class='content'>
     <h1><%= t('.what_we_do') %></h1>
     <p><%= t('pages.about.about_us') %></p>

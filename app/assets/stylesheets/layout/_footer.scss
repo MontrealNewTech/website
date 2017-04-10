@@ -91,4 +91,13 @@ footer {
     font-size: $small-font-size;
     padding-top: $large-space;
   }
+
+  .social_icons {
+    padding-top: 15px;
+
+    img {
+      max-width: 35px;
+      padding-right: 10px;
+    }
+  }
 }

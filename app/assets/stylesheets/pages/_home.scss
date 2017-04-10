@@ -19,11 +19,71 @@
     padding: 0;
   }
 
+  p {
+  line-height: $base-line-height;
+  padding-bottom: 60px;
+  }
+
+  /* social icons */
+  @include above($medium-screen) {
+
+    #social_side_links 
+    {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    padding: 60;
+    list-style: none;
+    z-index: 99;
+    }
+
+  #social_side_links li a {display: block;}
+
+  #social_side_links li a img 
+    {
+    display: block;
+    border-radius: 0;
+    background-color: $grey;
+    max-width:45px;
+    padding: 10px;
+    -webkit-transition:  background .2s ease-in-out;
+    -moz-transition:  background .2s ease-in-out;
+    -o-transition:  background .2s ease-in-out;
+    transition:  background .2s ease-in-out;
+    }
+
+  #social_side_links li a:hover img 
+    {
+    background: rgba(0, 0, 0, .9);
+    }
+  }
+
+  @include on($medium-screen)
+ {
+    #social_side_links 
+    {
+      display: none;
+    }
+  }
+
+  /* end social icons */
+
   section {
-    padding: $xxl-space $med-space $med-space;
+
+    /*padding: $xxl-space $med-space $med-space;*/
+    padding-top: $med-space;
+    padding-left: $med-space;
+    padding-right: xxl-space;
+
     padding-bottom: $xxxl-space;
     text-align: left;
-  }
+    }
+
+    .photos {
+
+      @include squairy-light-background;
+
+    }
 
   header {
     position: fixed;
@@ -70,7 +130,7 @@
     text-align: left;
 
     @include above($small-screen) {
-      padding: $xl-space;
+      padding: $large-space;
     }
   }
 
@@ -91,29 +151,38 @@
     h1 {
       color: $background-color;
       font-size: $large-font-size;
+      padding-right: $xxl-space;
       font-weight: bold;
       letter-spacing: 2px;
+      text-shadow: 2px 2px 4px #000000;
+    
+
+/*      @include on($small-screen) {
+        text-shadow: 2px 2px 4px #000000;
+      }*/
 
       @include above($small-screen) {
-        font-size: $xl-font-size;
+        font-size: $xxl-font-size;
+        line-height: 4rem;
+        padding-top: $xxxl-space;
       }
     }
 
     h2 {
-      font-size: $normal-font-size;
+      font-size: $base-line-height;
+      padding-right: $xxl-space;
 
-      @include above($small-screen) {
-        font-size: $large-font-size;
+      @include above($medium-screen) {
+      /*  font-size: $large-font-size;*/
       }
     }
   }
 
   #events {
-    /*@include squairy-light-background;*/
-    /*@include big-h2;*/
-
     @include above($small-screen) {
-    @include flex-column-center;
+   /* @include flex-column-center;*/
+
+    background: transparent;
 
       h2 {
         font-size: $xl-font-size;
@@ -122,27 +191,31 @@
   }
 
   #what_we_do {
-    /*@include big-h2;*/
     @include squairy-light-background;
+
+    @include above($medium-screen) {
+      padding-right: $xl-space;
+    }
   }
 
   #sign_up {
     @include flex-column-then-row;
 
     background-color: $secondary-color;
-    /*color: $background-color;*/
+    background-image: image-url('background-signup.jpg');
+
     padding: $xxl-space $large-space $xl-space $large-space;
     position: relative;
     z-index: 1;
 
     input[type='submit'] {
-      @include button($color: $darker-background);
+      @include button($color: $white);
       width: auto;
     }
 
     input[type="email"] {
       background: transparent;
-      border-bottom: 2px solid $background-color;
+      border-bottom: 2px solid $text;
       color: $background-color;
       padding: $little-space;
       width: 100%;
@@ -187,8 +260,9 @@
     margin-bottom: $large-space;
 
     h2 {
-      color: $main-color-dark;
-      font-size: $xl-font-size;
+      color: $text;
+      font-size: $large-font-size;
+      font-weight: bold;
     }
   }
 
@@ -196,6 +270,7 @@
     color: $text;
     font-size: $normal-font-size;
   }
+
 
   .apply-to-demo {
     background-color: $background-color;
@@ -217,7 +292,13 @@
 
     h2 {
       color: $text;
-      font-size: $large-font-size;
+      font-size: $base-line-height;
+    }
+
+    @include above($small-screen) {
+      h2 {
+        font-size: $large-font-size;
+      }
     }
   }
 
@@ -259,8 +340,7 @@
 
   .featured {
     background: $grey;
-/*    color: $background-color;
-*/    margin: 0;
+    margin: 0;
 
     a {
       color: $background-color;
