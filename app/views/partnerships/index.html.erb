@@ -7,7 +7,7 @@
   </div>
 
   <h2><%= t('.partners') %></h2>
-  <% @sponsors.each do |partner| %>
+  <% @partnerships.each do |partner| %>
     <article class='partner'>
       <%= cl_image_tag partner.logo, width: 350, crop: :scale %>
       <div class='info'>
