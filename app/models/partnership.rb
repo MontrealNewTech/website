@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 class Partnership < ApplicationRecord
   extend Enumerize
-  PARTNERSHIP_TYPES = %w(community_partner Partnership).freeze
+  PARTNERSHIP_TYPES = %w(community_partner partnership).freeze
 
   mount_uploader :logo, ImageUploader
   translates :name, :description
