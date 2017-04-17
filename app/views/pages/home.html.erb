@@ -83,16 +83,16 @@
 
 <section id='partnerships'>
   <h2><%= t('.partnerships') %></h2>
-  <div class='logos'>
+  <div class='partnerships-logos'>
     <% @partnerships.each do |partner| %>
-      <div class='logo'><img src="<%= partner.logo %>"></div>
+      <div class='partnership-logo'><img src="<%= partner.logo %>"></div>
     <% end %>
   </div>
 
   <h3><%= t('.community_partners') %></h3>
-  <div class='logos'>
+  <div class='partnerships-logos'>
     <% @community_partners.each do |partner| %>
-      <div class='logo'><img src="<%= partner.logo %>"></div>
+      <div class='partnership-logo'><img src="<%= partner.logo %>"></div>
     <% end %>
   </div>
 </section>

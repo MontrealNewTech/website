@@ -20,48 +20,40 @@
   }
 
   p {
-  line-height: $base-line-height;
-  padding-bottom: 60px;
+    line-height: $base-line-height;
+    padding-bottom: 60px;
   }
 
-  /* social icons */
   @include above($medium-screen) {
-
-    #social_side_links
-    {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    padding: 60;
-    list-style: none;
-    z-index: 99;
+    #social_side_links {
+      list-style: none;
+      padding: 60;
+      position: fixed;
+      right: 20px;
+      top: 100px;
+      z-index: 99;
     }
 
-  #social_side_links li a {display: block;}
-
-  #social_side_links li a img
-    {
-    display: block;
-    border-radius: 0;
-    background-color: $grey;
-    max-width:45px;
-    padding: 10px;
-    -webkit-transition:  background .2s ease-in-out;
-    -moz-transition:  background .2s ease-in-out;
-    -o-transition:  background .2s ease-in-out;
-    transition:  background .2s ease-in-out;
+    #social_side_links li a {
+      display: block;
     }
 
-  #social_side_links li a:hover img
-    {
-    background: rgba(0, 0, 0, .9);
+    #social_side_links li a img {
+      background-color: $grey;
+      border-radius: 0;
+      display: block;
+      max-width: 45px;
+      padding: 10px;
+      transition: background .2s ease-in-out;
+    }
+
+    #social_side_links li a:hover img {
+      background: rgba(0, 0, 0, .9);
     }
   }
 
-  @include on($medium-screen)
- {
-    #social_side_links
-    {
+  @include on($medium-screen) {
+    #social_side_links {
       display: none;
     }
   }
@@ -69,21 +61,17 @@
   /* end social icons */
 
   section {
-
-    /*padding: $xxl-space $med-space $med-space;*/
     padding-top: $med-space;
     padding-left: $med-space;
-    padding-right: xxl-space;
+    padding-right: $med-space;
 
     padding-bottom: $xxxl-space;
     text-align: left;
-    }
+  }
 
-    .photos {
-
-      @include squairy-light-background;
-
-    }
+  .photos {
+    @include squairy-light-background;
+  }
 
   header {
     position: fixed;
@@ -100,8 +88,8 @@
         color: $background-color;
       }
 
-    &.shadow {
-         box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+      &.shadow {
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
       }
     }
 
@@ -156,11 +144,6 @@
       letter-spacing: 2px;
       text-shadow: 2px 2px 4px #000000;
 
-
-/*      @include on($small-screen) {
-        text-shadow: 2px 2px 4px #000000;
-      }*/
-
       @include above($small-screen) {
         font-size: $xxl-font-size;
         line-height: 4rem;
@@ -173,16 +156,14 @@
       padding-right: $xxl-space;
 
       @include above($medium-screen) {
-      /*  font-size: $large-font-size;*/
       }
     }
   }
 
   #events {
     @include above($small-screen) {
-   /* @include flex-column-center;*/
 
-    background: transparent;
+      background: transparent;
 
       h2 {
         font-size: $xl-font-size;
@@ -270,7 +251,6 @@
     color: $text;
     font-size: $normal-font-size;
   }
-
 
   .apply-to-demo {
     background-color: $background-color;
