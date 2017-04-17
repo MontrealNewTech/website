@@ -27,7 +27,7 @@
   /* social icons */
   @include above($medium-screen) {
 
-    #social_side_links 
+    #social_side_links
     {
     position: fixed;
     top: 100px;
@@ -39,7 +39,7 @@
 
   #social_side_links li a {display: block;}
 
-  #social_side_links li a img 
+  #social_side_links li a img
     {
     display: block;
     border-radius: 0;
@@ -52,7 +52,7 @@
     transition:  background .2s ease-in-out;
     }
 
-  #social_side_links li a:hover img 
+  #social_side_links li a:hover img
     {
     background: rgba(0, 0, 0, .9);
     }
@@ -60,7 +60,7 @@
 
   @include on($medium-screen)
  {
-    #social_side_links 
+    #social_side_links
     {
       display: none;
     }
@@ -141,10 +141,10 @@
   #mtlnewtech {
     @include flex-column-then-row;
 
+    background-attachment: scroll;
     background-image: image-url('homepage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
     min-height: 100vh;
     text-align: center;
 
@@ -155,7 +155,7 @@
       font-weight: bold;
       letter-spacing: 2px;
       text-shadow: 2px 2px 4px #000000;
-    
+
 
 /*      @include on($small-screen) {
         text-shadow: 2px 2px 4px #000000;
