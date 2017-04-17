@@ -14,4 +14,31 @@ RSpec.describe Partnership, type: :model do
     expect(partnership.name).to be_nil
     expect(partnership.description).to be_nil
   end
+
+  describe 'relationships' do
+    Partnership::PARTNERSHIP_TYPES.each do |relationship_type|
+      it "allows #{relationship_type}" do
+        partnership = build(:partnership, relationship: relationship_type)
+        expect(partnership).to be_valid
+      end
+    end
+
+    it 'is invalid with a disallowed relationship type' do
+      partnership = build(:partnership, relationship: 'nope not allowed')
+      expect(partnership).not_to be_valid
+      expect(partnership.errors.keys).to eq [:relationship]
+    end
+
+    it 'is invalid with an empty relationship type' do
+      partnership = build(:partnership, relationship: nil)
+      expect(partnership).not_to be_valid
+      expect(partnership.errors.keys).to eq [:relationship]
+    end
+
+    it 'is invalid with a blank relationship type' do
+      partnership = build(:partnership, relationship: '')
+      expect(partnership).not_to be_valid
+      expect(partnership.errors.keys).to eq [:relationship]
+    end
+  end
 end

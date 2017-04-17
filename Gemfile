@@ -30,6 +30,7 @@ gem 'cloudinary'
 
 # Admin dashboard
 gem 'administrate'
+gem 'enumerize'
 
 # Authentication
 gem 'devise'
