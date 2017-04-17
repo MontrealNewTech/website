@@ -6,7 +6,7 @@ class Partnership < ApplicationRecord
   mount_uploader :logo, ImageUploader
   translates :name, :description
   globalize_accessors
-  enumerize :relationship, in: PARTNERSHIP_TYPES, default: :community_partner
+  enumerize :relationship, in: PARTNERSHIP_TYPES, default: :community_partner, scope: true
 
   validates :name, presence: true, uniqueness: true
   validates :relationship, presence: true, inclusion: { in: PARTNERSHIP_TYPES }

@@ -6,7 +6,19 @@
       <%= mail_to PARTNERSHIPS[:email], t('.reach_out'), class: 'button mail' %>
   </div>
 
+  <h2><%= t('.partners') %></h2>
   <% @sponsors.each do |partner| %>
+    <article class='partner'>
+      <%= cl_image_tag partner.logo, width: 350, crop: :scale %>
+      <div class='info'>
+        <h2><%= partner.name %></h2>
+        <p><%= simple_format partner.description %></p>
+      </div>
+    </article>
+  <% end %>
+
+  <h2><%= t('.community_partners') %></h2>
+  <% @community_partners.each do |partner| %>
     <article class='partner'>
       <%= cl_image_tag partner.logo, width: 350, crop: :scale %>
       <div class='info'>
