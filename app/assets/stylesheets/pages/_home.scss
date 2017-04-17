@@ -331,4 +331,19 @@
       }
     }
   }
+
+  .partnership-logos {
+    @include flex-row-center;
+    flex-flow: wrap;
+
+    img {
+      display: inline-block;
+      max-height: 18vh;
+      padding: $large-space;
+
+      @include above($small-screen) {
+        max-height: 25vh;
+      }
+    }
+  }
 }
