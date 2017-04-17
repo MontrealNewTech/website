@@ -12,6 +12,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::Text,
+    relationship: EnumField,
     name_en: Field::String,
     description_en: Field::Text,
     name_fr: Field::String,
@@ -30,6 +31,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
     :id,
     :name_en,
     :description_en,
+    :relationship,
     :logo,
   ].freeze
 
@@ -38,6 +40,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :name_en,
+    :relationship,
     :description_en,
     :name_fr,
     :description_fr,
@@ -54,6 +57,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
     :description_en,
     :name_fr,
     :description_fr,
+    :relationship,
     :logo,
   ].freeze
 

@@ -127,6 +127,8 @@ GEM
     dotenv-rails (2.2.0)
       dotenv (= 2.2.0)
       railties (>= 3.2, < 5.1)
+    enumerize (2.1.0)
+      activesupport (>= 3.2)
     erubis (2.7.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
@@ -404,6 +406,7 @@ DEPENDENCIES
   database_cleaner
   devise
   dotenv-rails
+  enumerize
   factory_girl_rails
   faker
   formulaic
