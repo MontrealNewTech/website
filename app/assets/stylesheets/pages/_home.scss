@@ -29,37 +29,23 @@
 
     #social_side_links 
     {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    padding: 60;
-    list-style: none;
-    z-index: 99;
+      font-size: $med-font-size;
+      position: fixed;
+      top: 100px;
+      right: 30px;
+      z-index: 99;
+      padding: 12px;
+      background: $grey;
+      border-radius: $round-border;
+      text-align: center;
+      line-height: $larger-space;
     }
 
-  #social_side_links li a {display: block;}
-
-  #social_side_links li a img 
-    {
-    display: block;
-    border-radius: 0;
-    background-color: $grey;
-    max-width:45px;
-    padding: 10px;
-    -webkit-transition:  background .2s ease-in-out;
-    -moz-transition:  background .2s ease-in-out;
-    -o-transition:  background .2s ease-in-out;
-    transition:  background .2s ease-in-out;
-    }
-
-  #social_side_links li a:hover img 
-    {
-    background: rgba(0, 0, 0, .9);
-    }
+   #social_side_links a {color: $white;}
   }
 
-  @include on($medium-screen)
- {
+  @include on($medium-screen) {
+    
     #social_side_links 
     {
       display: none;
@@ -69,20 +55,15 @@
   /* end social icons */
 
   section {
-
-    /*padding: $xxl-space $med-space $med-space;*/
-    padding-top: $med-space;
+    padding-bottom: $xxxl-space;
     padding-left: $med-space;
     padding-right: xxl-space;
-
-    padding-bottom: $xxxl-space;
+    padding-top: $med-space; 
     text-align: left;
     }
 
     .photos {
-
       @include squairy-light-background;
-
     }
 
   header {
@@ -151,15 +132,10 @@
     h1 {
       color: $background-color;
       font-size: $large-font-size;
-      padding-right: $xxl-space;
       font-weight: bold;
       letter-spacing: 2px;
-      text-shadow: 2px 2px 4px #000000;
-    
-
-/*      @include on($small-screen) {
-        text-shadow: 2px 2px 4px #000000;
-      }*/
+      padding-right: $xxl-space;
+      text-shadow: 2px 2px 4px $grey;
 
       @include above($small-screen) {
         font-size: $xxl-font-size;
@@ -171,18 +147,12 @@
     h2 {
       font-size: $base-line-height;
       padding-right: $xxl-space;
-
-      @include above($medium-screen) {
-      /*  font-size: $large-font-size;*/
-      }
     }
   }
 
   #events {
     @include above($small-screen) {
-   /* @include flex-column-center;*/
-
-    background: transparent;
+      background: transparent;
 
       h2 {
         font-size: $xl-font-size;

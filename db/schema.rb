@@ -23,6 +23,28 @@ ActiveRecord::Schema.define(version: 20170409002138) do
     t.index ["user_id"], name: "index_accounts_on_user_id", using: :btree
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string   "email",      null: false
+    t.string   "name"
+    t.inet     "remote_ip"
+    t.integer  "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "description", null: false
+    t.datetime "starts_at",   null: false
+    t.integer  "duration"
+    t.integer  "location_id"
+    t.string   "cover_image"
+    t.string   "slug"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["location_id"], name: "index_events_on_location_id", using: :btree
+  end
+
   create_table "initiative_translations", force: :cascade do |t|
     t.integer  "initiative_id", null: false
     t.string   "locale",        null: false
@@ -36,6 +58,14 @@ ActiveRecord::Schema.define(version: 20170409002138) do
 
   create_table "initiatives", force: :cascade do |t|
     t.string   "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "address",    null: false
+    t.text     "directions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,12 +84,20 @@ ActiveRecord::Schema.define(version: 20170409002138) do
   create_table "member_profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "team_id",    null: false
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
-    t.string   "name",       null: false
     t.index ["team_id"], name: "index_member_profiles_on_team_id", using: :btree
     t.index ["user_id"], name: "index_member_profiles_on_user_id", using: :btree
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "description"
+    t.string   "logo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "partnership_translations", force: :cascade do |t|
@@ -77,6 +115,16 @@ ActiveRecord::Schema.define(version: 20170409002138) do
     t.string   "logo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "bio"
+    t.string   "position"
+    t.string   "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_team_members_on_user_id", using: :btree
   end
 
   create_table "team_translations", force: :cascade do |t|
@@ -113,6 +161,7 @@ ActiveRecord::Schema.define(version: 20170409002138) do
   end
 
   add_foreign_key "accounts", "users"
+  add_foreign_key "events", "locations"
   add_foreign_key "member_profiles", "teams"
   add_foreign_key "member_profiles", "users"
 end
