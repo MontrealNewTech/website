@@ -77,25 +77,25 @@ en:
       account:
         admin: Admin user?
       initiative:
+        description_en: English description
+        description_fr: French description
         title_en: English title
-        description_en: English description
         title_fr: French title
-        description_fr: French description
       member_profile:
-        position_en: English position
         bio_en: English bio
-        position_fr: French position
         bio_fr: French bio
+        position_en: English position
+        position_fr: French position
       partnership:
-        name_en: English name
         description_en: English description
-        name_fr: French name
         description_fr: French description
+        name_en: English name
+        name_fr: French name
       team:
-        name_en: English name
         description_en: English description
-        name_fr: French name
         description_fr: French description
+        name_en: English name
+        name_fr: French name
   initiatives:
     index:
       title: Initiatives
@@ -131,27 +131,27 @@ en:
       about: Learn more about MTL New Tech
       apply_link: Go to application
       apply_to_demo: Want to demo your product to other Montréal entrepreneurs, developers, investors, and journalists?
+      community_partners: Community Partners
       events: Events
       get_tickets: Get Tickets
       more: Find out more
       mtlnewtech:
         main: Fueling Montreal’s Startup Community
         sub: Dedicated to the success of Montreal startup entrepreneurs
+      partnerships: Our Partners
       sign_up:
         header: Want us to notify you?
         sub: We'll send you reminders about upcoming events and updates about the community.
       title: Montréal Startups
       what_we_do: What We Do
-      partnerships: Our Partners
-      community_partners: Community Partners
   partnerships:
     index:
       about_partnerships: Montreal New Tech partners with local organizations who are dedicated to helping us support the startup ecosytem.
+      community_partners: Community Partners
       header: Our Partners
       interested: Interested in partnering with Montreal New Tech? Our partnerships coordinator would love to hear from you!
-      reach_out: Reach out
       partners: Our partners
-      community_partners: Community Partners
+      reach_out: Reach out
   previous: Previous
   time:
     formats:
