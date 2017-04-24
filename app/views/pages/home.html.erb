@@ -1,18 +1,14 @@
 <%= provide :title, t('.title') %>
 
-<!-- Social Icons Start -->
-
-<ul id="social_side_links">
-  <li><a href="https://www.facebook.com/mtlnewtech/" target="_blank"><%= image_tag 'facebook', alt: 'facebook' %></a></li>
-  <li><a href="https://twitter.com/mtlnewtech/" target="_blank"><%= image_tag 'twitter', alt: 'twitter' %></a></li>
-  <li><a href="https://www.linkedin.com/company-beta/9318526/" target="_blank"><%= image_tag 'linkedin', alt: 'linkedin' %></a></li>
-  <li><a href="https://www.instagram.com/mtlnewtech/" target="_blank"><%= image_tag 'instagram', alt: 'instagram' %></a></li>
-</ul>
-
-<!-- Social Icons End -->
+<div id="social_side_links">
+    <a href='https://www.facebook.com/mtlnewtech/' target='_blank' class='facebook'></a><br>
+    <a href='https://twitter.com/mtlnewtech/' target='_blank' class='twitter'></a><br>
+     <a href='https://www.linkedin.com/company-beta/9318526/' target='_blank' class='linkedin'></a><br>
+    <a href='https://www.instagram.com/mtlnewtech/' target='_blank' class='instagram'></a><br>
+    <a href='https://medium.com/@mtlnewtech/' target='_blank' class='medium'></a>
+</div>
 
 <section id='mtlnewtech'>
-
   <div class='headers'>
     <h1><%= t('.mtlnewtech.main') %></h1>
     <h2><%= t('.mtlnewtech.sub') %></h2>
@@ -74,6 +70,7 @@
   </div>
 
 <section id='what_we_do'>
+
   <div class='content'>
     <h1><%= t('.what_we_do') %></h1>
     <p><%= t('pages.about.about_us') %></p>
