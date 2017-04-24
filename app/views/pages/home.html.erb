@@ -1,34 +1,5 @@
 <%= provide :title, t('.title') %>
 
-<!-- Social Icons Start -->
-
-<!-- <ul id="social_side_links">
-  <li><a href="https://www.facebook.com/mtlnewtech/" target="_blank"><%= image_tag 'facebook', alt: 'facebook' %></a></li>
-  <li><a href="https://twitter.com/mtlnewtech/" target="_blank"><%= image_tag 'twitter', alt: 'twitter' %></a></li>
-  <li><a href="https://www.linkedin.com/company-beta/9318526/" target="_blank"><%= image_tag 'linkedin', alt: 'linkedin' %></a></li>
-  <li><a href="https://www.instagram.com/mtlnewtech/" target="_blank"><%= image_tag 'instagram', alt: 'instagram' %></a></li> -->
-<!-- <ul id="social_side_links">
-  <li>
-    <a href='https://www.facebook.com/mtlnewtech/' target='_blank' class='facebook'></a>
-  </li>
-
-  <li>
-     <a href='https://twitter.com/mtlnewtech/' target='_blank' class='twitter'></a>
-  </li>
-
-   <li>
-      <a href='https://www.linkedin.com/company-beta/9318526/' target='_blank' class='linkedin'></a>
-  </li>
-
-  <li>
-    <a href='https://www.instagram.com/mtlnewtech/' target='_blank' class='instagram'></a>
-  </li>
-
-  <li>
-      <a href='https://medium.com/@mtlnewtech/' target='_blank' class='medium'></a>
-  </li>
-</ul> -->
-
 <div id="social_side_links">
     <a href='https://www.facebook.com/mtlnewtech/' target='_blank' class='facebook'></a><br>
     <a href='https://twitter.com/mtlnewtech/' target='_blank' class='twitter'></a><br>
@@ -37,10 +8,7 @@
     <a href='https://medium.com/@mtlnewtech/' target='_blank' class='medium'></a>
 </div>
 
-<!-- Social Icons End -->
-
 <section id='mtlnewtech'>
-
   <div class='headers'>
     <h1><%= t('.mtlnewtech.main') %></h1>
     <h2><%= t('.mtlnewtech.sub') %></h2>
@@ -107,5 +75,21 @@
     <h1><%= t('.what_we_do') %></h1>
     <p><%= t('pages.about.about_us') %></p>
     <%= link_to t('.about'), about_path, class: 'outline-button' %>
+  </div>
+</section>
+
+<section id='partnerships'>
+  <h2><%= t('.partnerships') %></h2>
+  <div class='partnership-logos'>
+    <% @partnerships.each do |partner| %>
+      <div class='partnership-logo'><img src="<%= partner.logo %>"></div>
+    <% end %>
+  </div>
+
+  <h3><%= t('.community_partners') %></h3>
+  <div class='partnership-logos'>
+    <% @community_partners.each do |partner| %>
+      <div class='partnership-logo'><img src="<%= partner.logo %>"></div>
+    <% end %>
   </div>
 </section>
