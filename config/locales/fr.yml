@@ -76,10 +76,32 @@ fr:
     label:
       account:
         admin: Admin utilisateur?
+      initiative:
+        description_en: English description
+        description_fr: French description
+        title_en: English title
+        title_fr: French title
+      member_profile:
+        bio_en: English bio
+        bio_fr: French bio
+        position_en: English position
+        position_fr: French position
+      partnership:
+        description_en: English description
+        description_fr: French description
+        name_en: English name
+        name_fr: French name
+      team:
+        description_en: English description
+        description_fr: French description
+        name_en: English name
+        name_fr: French name
   initiatives:
     index:
       title: Initiatives
   layouts:
+    application:
+      meta: This is the meta description
     footer:
       about: À propos
       address: 51 Rue Sherbrooke O, Montréal, QC, H2X 1X2
@@ -109,12 +131,14 @@ fr:
       about: En savoir plus sur MTL New Tech
       apply_link: Accéder à l'application
       apply_to_demo: Vous voulez faire la démonstration de votre produit auprès d'autres entrepreneurs, promoteurs, investisseurs et journalistes Montréalais?
+      community_partners: Community Partners
       events: Événements
       get_tickets: Procurez-vous des billets
       more: Pour en savoir plus
       mtlnewtech:
         main: Faire carburer la Communauté Startup de Montréal Supporter
         sub: Dédié à la réussite des entrepreneurs startups de Montréal
+      partnerships: Our Partners
       sign_up:
         header: Voulez-vous recevoir nos notifications?
         sub: Nous vous ferons parvenir des rappels sur les événements à venir et les mises à jour au sujet de la communauté.
@@ -123,8 +147,10 @@ fr:
   partnerships:
     index:
       about_partnerships: Montréal New Tech s'associe à des organismes locaux dédiés à nous aider à soutenir l'écosystème startup.
+      community_partners: Community Partners
       header: Nos Partenaires
       interested: Intéressé par un partenariat avec Montréal New Tech? Notre coordonnateur des partenariats aimerait vous entendre!
+      partners: Our partners
       reach_out: Contactez-nous
   previous: Précédent
   time:
