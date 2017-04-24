@@ -12,7 +12,8 @@ RSpec.describe PartnershipsController do
     end
 
     it 'fetches all the partnerships' do
-      expect(Partnership).to receive(:all)
+      expect(Partnership).to receive(:with_relationship).with(:partnership)
+      expect(Partnership).to receive(:with_relationship).with(:community_partner)
       subject
     end
   end
