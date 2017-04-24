@@ -54,7 +54,7 @@ footer {
     width: 100%;
 
     @include above($small-screen) {
-      text-align: center;
+      text-align: left;
     }
 
     li {
@@ -73,7 +73,7 @@ footer {
   }
 
   .contact,
-  .social,
+ /* .social,  // social icons in centre */
   nav {
     flex: 1;
   }
@@ -93,11 +93,12 @@ footer {
   }
 
   .social_icons {
-    padding-top: 15px;
+    padding-top: 20px;
+    font-size: $large-font-size;
+    letter-spacing: $xsm-space;
 
-    img {
-      max-width: 35px;
-      padding-right: 10px;
+    @include above($medium-screen) {
+      display: none;
     }
   }
 }
