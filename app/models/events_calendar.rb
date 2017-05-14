@@ -19,6 +19,10 @@ class EventsCalendar
   end
 
   def filtered_events(range)
-    @events.reject { |event| !range.include?(event.start_at.to_date) }
+    @events.reject do |event|
+      event.start_at.nil? ||
+        event.end_at.nil? ||
+        !range.include?(event.start_at.to_date)
+    end
   end
 end

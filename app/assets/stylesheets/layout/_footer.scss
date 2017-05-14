@@ -46,34 +46,7 @@ footer {
     }
   }
 
-  .social {
-    @include size-reset;
-
-    padding-top: $large-space;
-    text-align: left;
-    width: 100%;
-
-    @include above($small-screen) {
-      text-align: left;
-    }
-
-    li {
-      display: inline;
-      font-size: $med-font-size;
-
-      @include above($small-screen) {
-        font-size: $large-font-size;
-        padding: 0 $med-space;
-      }
-
-      &:not(:last-child) {
-        padding-right: $med-space;
-      }
-    }
-  }
-
   .contact,
- /* .social,  // social icons in centre */
   nav {
     flex: 1;
   }
@@ -92,13 +65,13 @@ footer {
     padding-top: $large-space;
   }
 
-  .social_icons {
-    padding-top: 20px;
+  .social-icons {
     font-size: $large-font-size;
     letter-spacing: $xsm-space;
+    padding-top: $large-space;
 
-    @include above($medium-screen) {
-      display: none;
+    li {
+      display: inline;
     }
   }
 }

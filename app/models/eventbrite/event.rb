@@ -27,17 +27,17 @@ module Eventbrite
 
     def meta_info_for(event)
       {
-        description: event.description.html.html_safe,
+        description: event.description&.html&.html_safe,
         link: event.url,
-        title: event.name.text,
+        title: event.name&.text,
         cover_image_url: event.logo&.original&.url
       }
     end
 
     def times_for(event)
       {
-        end_at: Time.parse(event.end.local),
-        start_at: Time.parse(event.start.local)
+        end_at: Time.parse(event.end&.local),
+        start_at: Time.parse(event.start&.local)
       }
     end
 

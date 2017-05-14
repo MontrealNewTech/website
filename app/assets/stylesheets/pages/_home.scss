@@ -15,50 +15,51 @@
     }
   }
 
+  .social-side-links {
+    display: none
+  }
+
+  @include above($medium-screen) {
+    .social-side-links {
+      background: $grey;
+      border-radius: $round-border;
+      display: inline;
+      font-size: $med-font-size;
+      line-height: $larger-space;
+      padding: 12px;
+      position: fixed;
+      right: 30px;
+      text-align: center;
+      top: 100px;
+      z-index: 99;
+
+      ul {
+        @include size-reset;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: $light-text;
+      }
+    }
+  }
+
   main {
     padding: 0;
   }
 
   p {
-  line-height: $base-line-height;
-  padding-bottom: 60px;
+    line-height: $base-line-height;
   }
-
-  /* social icons */
-  @include above($medium-screen) {
-
-    #social_side_links 
-    {
-      font-size: $med-font-size;
-      position: fixed;
-      top: 100px;
-      right: 30px;
-      z-index: 99;
-      padding: 12px;
-      background: $grey;
-      border-radius: $round-border;
-      text-align: center;
-      line-height: $larger-space;
-    }
-
-   #social_side_links a {color: $white;}
-  }
-
-  @include on($medium-screen) {
-    
-    #social_side_links 
-    {
-      display: none;
-    }
-  }
-
-  /* end social icons */
 
   section {
     padding-bottom: $xxxl-space;
     padding-left: $med-space;
-    padding-right: xxl-space;
-    padding-top: $med-space; 
+    padding-right: $med-space;
+    padding-top: $med-space;
     text-align: left;
     }
 
@@ -81,12 +82,12 @@
         color: $grey;
       }
 
-      .featured {
-        color: $background-color;
-      }
-
       &.shadow {
         box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+      }
+
+      .featured {
+        color: $background-color;
       }
     }
 
@@ -107,10 +108,10 @@
   }
 
   .headers {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    flex: 1;
     flex-direction: column;
+    justify-content: center;
     padding: $med-space;
     text-align: left;
 
@@ -136,7 +137,6 @@
     h1 {
       color: $background-color;
       font-size: $large-font-size;
-      padding-right: $xxl-space;
       font-weight: bold;
       letter-spacing: 2px;
       padding-right: $xxl-space;
@@ -163,6 +163,57 @@
         font-size: $xl-font-size;
       }
     }
+
+    h3 {
+      font-size: $med-font-size;
+    }
+  }
+
+  .event {
+    margin-bottom: $large-space;
+
+    @include flex-column-then-row;
+
+    @include above($small-screen) {
+      &:nth-child(odd) {
+        .info {
+          order: 2;
+        }
+      }
+
+      a {
+        &:first-child {
+          margin-right: $little-space;
+        }
+
+        &:last-child {
+          margin-left: $little-space;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      background: $lightest-grey;
+    }
+
+    .image {
+      flex: 1;
+      padding: $large-space;
+    }
+
+    .info {
+      flex: 1;
+      padding: $large-space;
+    }
+
+    .links {
+      @include flex-column-then-row;
+
+      a {
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
 
   #what_we_do {
@@ -171,6 +222,10 @@
     @include above($medium-screen) {
       padding-right: $xl-space;
     }
+
+    a {
+      margin-top: $xl-space;
+    }
   }
 
   #sign_up {
@@ -178,7 +233,6 @@
 
     background-color: $secondary-color;
     background-image: image-url('background-signup.jpg');
-
     padding: $xxl-space $large-space $xl-space $large-space;
     position: relative;
     z-index: 1;
@@ -217,7 +271,7 @@
     }
 
     .field {
-      border: none;
+      border: 0;
     }
   }
 
@@ -227,7 +281,7 @@
     padding: $little-space;
 
     @include above($small-screen) {
-      padding: $med-space $xl-space;
+      padding-right: $xl-space;
     }
   }
 
@@ -277,35 +331,6 @@
     }
   }
 
-
-  .event {
-    @include flex-column-then-row;
-
-    img {
-      @include above($small-screen) {
-        padding: 0 0 $large-space $large-space;
-      }
-    }
-
-    .links {
-      @include flex-column-then-row;
-
-      a {
-        margin-bottom: $med-space;
-        text-align: center;
-        width: 100%;
-      }
-    }
-  }
-
-  .info {
-    flex: 1;
-  }
-
-  .image {
-    flex: 1;
-  }
-
   .more {
     color: $main-color;
     font-family: $headers;
@@ -315,6 +340,7 @@
 
   .featured {
     background: $grey;
+    border: 1px solid $grey;
     margin: 0;
 
     a {
