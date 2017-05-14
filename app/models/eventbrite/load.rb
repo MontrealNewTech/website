@@ -3,7 +3,7 @@ module Eventbrite
   class Load
     def events
       Rails.cache.fetch 'mtl_newtech_eventbrite_events', expires_in: 10.minutes do
-        (parse api_response_from(events_endpoint)).events
+        (parse api_response_from(events_endpoint)).events.first(3)
       end
     end
 
@@ -32,7 +32,7 @@ module Eventbrite
     end
 
     def events_endpoint
-      URI "#{EVENTBRITE[:api]}events/search/?organizer.id=#{EVENTBRITE[:organizer_id]}"
+      URI "#{EVENTBRITE[:api]}users/me/owned_events/?order_by=start_desc"
     end
 
     def venues_endpoint_for(id)

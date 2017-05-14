@@ -15,50 +15,44 @@
     }
   }
 
+  @include above($medium-screen) {
+    .social-side-links {
+      background: $grey;
+      border-radius: $round-border;
+      font-size: $med-font-size;
+      line-height: $larger-space;
+      padding: 12px;
+      position: fixed;
+      right: 30px;
+      text-align: center;
+      top: 100px;
+      z-index: 99;
+    }
+
+    .social-side-links a {
+      color: $white;
+    }
+  }
+
+  @include on($medium-screen) {
+    .social-side-links {
+      display: none;
+    }
+  }
+
   main {
     padding: 0;
   }
 
   p {
-  line-height: $base-line-height;
-  padding-bottom: 60px;
+    line-height: $base-line-height;
   }
-
-  /* social icons */
-  @include above($medium-screen) {
-
-    #social_side_links 
-    {
-      font-size: $med-font-size;
-      position: fixed;
-      top: 100px;
-      right: 30px;
-      z-index: 99;
-      padding: 12px;
-      background: $grey;
-      border-radius: $round-border;
-      text-align: center;
-      line-height: $larger-space;
-    }
-
-   #social_side_links a {color: $white;}
-  }
-
-  @include on($medium-screen) {
-    
-    #social_side_links 
-    {
-      display: none;
-    }
-  }
-
-  /* end social icons */
 
   section {
     padding-bottom: $xxxl-space;
     padding-left: $med-space;
     padding-right: xxl-space;
-    padding-top: $med-space; 
+    padding-top: $med-space;
     text-align: left;
     }
 
@@ -107,10 +101,10 @@
   }
 
   .headers {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    flex: 1;
     flex-direction: column;
+    justify-content: center;
     padding: $med-space;
     text-align: left;
 
@@ -136,7 +130,6 @@
     h1 {
       color: $background-color;
       font-size: $large-font-size;
-      padding-right: $xxl-space;
       font-weight: bold;
       letter-spacing: 2px;
       padding-right: $xxl-space;
@@ -163,6 +156,40 @@
         font-size: $xl-font-size;
       }
     }
+
+    .event {
+      // @include alternate-info-and-photo-position;
+    }
+
+    .event {
+      @include flex-column-then-row;
+
+      img {
+        @include above($small-screen) {
+          padding: 0 0 $large-space $large-space;
+        }
+      }
+
+      .info {
+        flex: 1;
+        width: 100%;
+      }
+
+      .image {
+        flex: 1;
+        order: 1;
+      }
+
+      .links {
+        @include flex-column-then-row;
+
+        a {
+          margin-bottom: $med-space;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
   }
 
   #what_we_do {
@@ -178,7 +205,6 @@
 
     background-color: $secondary-color;
     background-image: image-url('background-signup.jpg');
-
     padding: $xxl-space $large-space $xl-space $large-space;
     position: relative;
     z-index: 1;
@@ -275,35 +301,6 @@
         font-size: $large-font-size;
       }
     }
-  }
-
-
-  .event {
-    @include flex-column-then-row;
-
-    img {
-      @include above($small-screen) {
-        padding: 0 0 $large-space $large-space;
-      }
-    }
-
-    .links {
-      @include flex-column-then-row;
-
-      a {
-        margin-bottom: $med-space;
-        text-align: center;
-        width: 100%;
-      }
-    }
-  }
-
-  .info {
-    flex: 1;
-  }
-
-  .image {
-    flex: 1;
   }
 
   .more {
