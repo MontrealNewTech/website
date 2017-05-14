@@ -75,12 +75,12 @@
         color: $grey;
       }
 
-      .featured {
-        color: $background-color;
-      }
-
       &.shadow {
         box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+      }
+
+      .featured {
+        color: $background-color;
       }
     }
 
@@ -157,36 +157,51 @@
       }
     }
 
-    .event {
-      // @include alternate-info-and-photo-position;
+    h3 {
+      font-size: $med-font-size;
     }
+  }
 
-    .event {
-      @include flex-column-then-row;
+  .event {
+    margin-bottom: $large-space;
 
-      img {
-        @include above($small-screen) {
-          padding: 0 0 $large-space $large-space;
+    @include flex-column-then-row;
+
+    @include above($small-screen) {
+      &:nth-child(odd) {
+        .info {
+          order: 2;
         }
       }
+    }
 
-      .info {
-        flex: 1;
+    &:nth-child(odd) {
+      background: $lightest-grey;
+    }
+
+    .image {
+      flex: 1;
+      padding: $large-space;
+    }
+
+    .info {
+      flex: 1;
+      padding: $large-space;
+    }
+
+    .links {
+      @include flex-column-then-row;
+
+      a {
+        text-align: center;
         width: 100%;
-      }
 
-      .image {
-        flex: 1;
-        order: 1;
-      }
+        &:first-child {
+          margin-right: $little-space;
+        }
 
-      .links {
-        @include flex-column-then-row;
-
-        a {
-          margin-bottom: $med-space;
-          text-align: center;
-          width: 100%;
+        &:last-child {
+          margin-left: $little-space;
         }
       }
     }
@@ -197,6 +212,10 @@
 
     @include above($medium-screen) {
       padding-right: $xl-space;
+    }
+
+    a {
+      margin-top: $xl-space;
     }
   }
 
@@ -243,7 +262,7 @@
     }
 
     .field {
-      border: none;
+      border: 0;
     }
   }
 
@@ -253,7 +272,7 @@
     padding: $little-space;
 
     @include above($small-screen) {
-      padding: $med-space $xl-space;
+      padding-right: $xl-space;
     }
   }
 
@@ -312,6 +331,7 @@
 
   .featured {
     background: $grey;
+    border: 1px solid $grey;
     margin: 0;
 
     a {
