@@ -2,7 +2,7 @@
   background: $color;
   border-radius: $base-border-radius;
   box-sizing: border-box;
-  border: $main-color-border;
+  border: 1px solid darken($color, 8%);
   color: set-text-color($color);
   cursor: pointer;
   display: inline-block;
@@ -45,6 +45,7 @@ input[type='submit'],
 
 .outline-button {
   @include button($color: transparent);
+  border: $main-color-border;
   color: $main-color;
 }
 
