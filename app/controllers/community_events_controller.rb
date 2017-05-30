@@ -8,7 +8,7 @@ class CommunityEventsController < ApplicationController
   private
 
   def from_param_or_today
-    params[:date] ? Date.parse(params[:date]) : Date.current
+    params[:date] ? Date.parse(params[:date]) : Date.current.beginning_of_week(:sunday)
   end
 
   def community_events
