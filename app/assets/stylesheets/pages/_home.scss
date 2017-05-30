@@ -278,10 +278,10 @@
   .mailing-list,
   .apply-to-demo {
     flex: 1;
-    padding: $little-space;
+    padding: $med-space;
 
     @include above($small-screen) {
-      padding-right: $xl-space;
+      padding: $large-space;
     }
   }
 
