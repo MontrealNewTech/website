@@ -116,8 +116,8 @@ en:
       events: Events
       initiatives: Initiatives
       our_initiatives: Our Initiatives
-      startup_landscape: Start Up Landscape
       sign_up: Sign Up
+      startup_landscape: Start Up Landscape
   log_out: Log Out
   models:
     null_date:

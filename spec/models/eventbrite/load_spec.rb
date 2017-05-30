@@ -5,7 +5,7 @@ RSpec.describe Eventbrite::Load do
   include Stubs
 
   describe '#events' do
-    let(:expected_uri) { URI "#{EVENTBRITE[:api]}events/search/?organizer.id=#{EVENTBRITE[:organizer_id]}" }
+    let(:expected_uri) { URI "#{EVENTBRITE[:api]}users/me/owned_events/?order_by=start_desc" }
 
     subject { described_class.new.events }
 

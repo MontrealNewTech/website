@@ -24,7 +24,7 @@ RSpec.describe EventsCalendar do
       let(:events) do
         dates.map do |date|
           next if date.day.even?
-          Event.new(start_at: date.to_time)
+          Event.new(start_at: date.to_time, end_at: date.to_time + 2.hours)
         end.compact
       end
 
@@ -43,8 +43,14 @@ RSpec.describe EventsCalendar do
     context 'there are multiple events on the same date but starting at different times' do
       let(:events) do
         [5, 8, 10].map do |hour|
-          Event.new(start_at: dates.first.to_time.change(hour: hour))
-        end << Event.new(start_at: dates.first(2).last)
+          Event.new(
+            start_at: dates.first.to_time.change(hour: hour),
+            end_at: dates.first.to_time.change(hour: hour + 1)
+          )
+        end << Event.new(
+          start_at: dates.to_a.at(1).to_time,
+          end_at: dates.to_a.at(1).to_time + 1.hour
+        )
       end
 
       it 'fills in the missing dates with null events' do
