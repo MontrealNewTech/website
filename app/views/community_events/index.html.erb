@@ -9,8 +9,6 @@
     <a href=<%= COMMUNITY_CALENDAR[:add] %> target='_blank' class='button calendar-add'><%= t('.add_your_event') %></a>
   </div>
 
-  <%= debug @date %>
-
   <div class='date-nav'>
     <%= link_to url_for(date: @date.last_week(:sunday)), class: 'previous' do %>
       <span class='text'><%= t('previous') %></span>
