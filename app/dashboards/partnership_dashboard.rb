@@ -18,6 +18,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
     name_fr: Field::String,
     description_fr: Field::Text,
     logo: FileField,
+    external_link: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -44,6 +45,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
     :description_en,
     :name_fr,
     :description_fr,
+    :external_link,
     :logo,
     :created_at,
     :updated_at,
@@ -58,6 +60,7 @@ class PartnershipDashboard < Administrate::BaseDashboard
     :name_fr,
     :description_fr,
     :relationship,
+    :external_link,
     :logo,
   ].freeze
 

@@ -10,6 +10,7 @@ class Partnership < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :relationship, presence: true, inclusion: { in: PARTNERSHIP_TYPES }
+  validates :external_link, url: { allow_blank: true }
   validate :logo_size
 
   private

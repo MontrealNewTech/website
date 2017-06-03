@@ -7,6 +7,13 @@ RSpec.describe Partnership, type: :model do
   it { is_expected.to validate_presence_of :name }
   it { is_expected.to validate_uniqueness_of :name }
 
+  it 'allows only valid urls' do
+    subject.external_link = 'not_a_valid_url.com'
+    expect(subject).not_to be_valid
+    subject.external_link = 'http://is_a_valid_url.com'
+    expect(subject).to be_valid
+  end
+
   it 'can store a translation in french for name and description' do
     partnership = create :partnership
 

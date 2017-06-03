@@ -77,7 +77,7 @@
   <h2><%= t('.partnerships') %></h2>
   <div class='partnership-logos'>
     <% @partnerships.each do |partner| %>
-      <div class='partnership-logo'><img src="<%= partner.logo %>"></div>
+      <div class='partnership-logo'><%= partner_logo(partner) %></div>
     <% end %>
   </div>
 

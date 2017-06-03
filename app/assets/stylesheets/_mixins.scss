@@ -104,12 +104,12 @@
     width: 100%;
   }
 
-  img {
+  .photo {
     margin-bottom: $med-space;
   }
 
   @include above($small-screen) {
-    img {
+    .photo {
       margin-bottom: 0;
     }
 
@@ -120,7 +120,7 @@
     }
 
     &:nth-child(even) {
-      img {
+      .photo {
         order: 2;
       }
 

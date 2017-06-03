@@ -31,6 +31,7 @@ gem 'cloudinary'
 # Admin dashboard
 gem 'administrate'
 gem 'enumerize'
+gem 'validate_url'
 
 # Authentication
 gem 'devise'
