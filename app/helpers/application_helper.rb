@@ -9,6 +9,11 @@ module ApplicationHelper
     end
   end
 
+  def meta_description(meta)
+    return t('meta.main') if meta.blank?
+    meta
+  end
+
   def show_error(object, field)
     messages = object.errors.full_messages_for field
     return if messages.empty?
