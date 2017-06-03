@@ -99,10 +99,6 @@ en:
   initiatives:
     index:
       title: Initiatives
-  meta:
-    main: Montreal NewTech is Montreal's largest startup community. We're dedicated to the success of Montreal startup entrepreneurs.
-    calendar: Montréal Startup Community and Developer Events - This is our curated calendar of startup and developer events happening in Montreal.
-    initiatives: Montreal NewTech gathers 250+ entrepreneurs once a month local startups can demo their products to entrepreneurs, developers, investors, and journalists.
   layouts:
     footer:
       about: About us
@@ -120,6 +116,10 @@ en:
       sign_up: Sign Up
       startup_landscape: Start Up Landscape
   log_out: Log Out
+  meta:
+    calendar: Montréal Startup Community and Developer Events - This is our curated calendar of startup and developer events happening in Montreal.
+    initiatives: Montreal NewTech gathers 250+ entrepreneurs once a month local startups can demo their products to entrepreneurs, developers, investors, and journalists.
+    main: Montreal NewTech is Montreal's largest startup community. We're dedicated to the success of Montreal startup entrepreneurs.
   models:
     null_date:
       strftime: No %{nullable} on this date

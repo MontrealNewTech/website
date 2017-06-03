@@ -100,8 +100,6 @@ fr:
     index:
       title: Initiatives
   layouts:
-    application:
-      meta: This is the meta description
     footer:
       about: À propos
       address: 51 Rue Sherbrooke O, Montréal, QC, H2X 1X2
@@ -118,6 +116,10 @@ fr:
       sign_up: S'inscrire
       startup_landscape: Start Up Landscape
   log_out: Déconnecter
+  meta:
+    calendar:  Événements de développement et de startups à Montréal - C'est notre calendrier organisé d'événements de startups et de développement qui se déroulent à Montréal.
+    initiatives: Montréal NewTech rassemble plus de 250 entrepreneurs une fois par mois, les start-ups locales peuvent démo leurs produits auprès des entrepreneurs, des développeurs, des investisseurs et des journalistes.
+    main: Montréal NewTech est la plus grande communauté de start-ups de Montréal. Nous sommes dévoués au succès des entrepreneurs startups de Montréal.
   models:
     null_date:
       strftime: Non %{nullable} à cette date
@@ -137,7 +139,7 @@ fr:
       get_tickets: Procurez-vous des billets
       more: Pour en savoir plus
       mtlnewtech:
-        main: Faire carburer la Communauté Startup de Montréal Supporter
+        main: Faire carburer la Communauté Startup de Montréal
         sub: Dédié à la réussite des entrepreneurs startups de Montréal
       partnerships: Our Partners
       sign_up:
