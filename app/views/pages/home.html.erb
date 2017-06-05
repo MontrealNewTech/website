@@ -84,7 +84,7 @@
   <h3><%= t('.community_partners') %></h3>
   <div class='partnership-logos'>
     <% @community_partners.each do |partner| %>
-      <div class='partnership-logo'><img src="<%= partner.logo %>"></div>
+      <div class='partnership-logo'><%= partner_logo(partner) %></div>
     <% end %>
   </div>
 </section>
