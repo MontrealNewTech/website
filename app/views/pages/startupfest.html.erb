@@ -1,0 +1,88 @@
+<% startup_fest_website = 'http://www.startupfestival.com/' %>
+<% ticket_link = 'http://www.startupfestival.com/' %>
+<% demo_table_content = 'http://www.startupfestival.com/' %>
+
+<a href=<%= startup_fest_website %> target='blank'>
+  <%= image_tag 'startupfest-banner', role: 'banner', class: 'banner' %>
+</a>
+
+<section class='join-us'>
+  <div class='content'>
+    <h2><%= t('.join_us_1') %></h2>
+    <h3><%= t('.join_us_2') %></h3>
+    <%= link_to t('.startupfest_pass'), ticket_link, target: 'blank', class: 'button' %>
+    <p><%= t('.for_only') %></p>
+    <div class='price'><%= t('.price') %></div>
+    <h3><%= t('.partnership') %></h3>
+  </div>
+</section>
+
+<section class='qi'>
+  <div class='info'>
+    <p><%= t('.qi_1') %></p>
+    <p><%= t('.qi_2') %></p>
+  </div>
+  <div class='feature'>
+    <%= image_tag 'qi-logo' %>
+  </div>
+</section>
+
+<section class='details'>
+  <div class='content'>
+    <p><%= t('.details_1') %></p>
+    <%= link_to t('.get_your_ticket'), ticket_link, class: 'button' %>
+    <p><%= t('.details_2') %></p>
+    <p><%= t('.details_3') %></p>
+  </div>
+</section>
+
+<section class='eligibility'>
+  <h3><%= t('.eligibility_1') %></h3>
+  <div class='criteria'>
+    <div class='pied-piper'><%= t('.eligibility_2') %></div>
+    <div class='hour-glass'><%= t('.eligibility_3') %></div>
+    <div class='people'><%= t('.eligibility_4') %></div>
+  </div>
+</section>
+
+<section class='more-details'>
+  <div class='feature'>
+    <h3><%= t('.more_details_1') %></h3>
+  </div>
+  <div class='info'>
+    <% link = link_to t('.startup_festival'), startup_fest_website, target: 'blank' %>
+    <p><%= t('.more_details_2_html', link: link) %></p>
+    <p><%= t('.more_details_3') %></p>
+    <p><%= link_to t('.more_details_4'), startup_fest_website, target: 'blank' %></p>
+  </div>
+</section>
+
+<a href=<%= startup_fest_website %> target='blank'>
+  <%= image_tag 'startupfest-stage', class: 'banner' %>
+</a>
+
+<section class='cta'>
+  <%= link_to t('.get_your_ticket'), ticket_link, class: 'button' %>
+  <h4><%= t('.contest') %></h4>
+</section>
+
+<section class='demo-table'>
+  <%= link_to t('.enter_for_demo_table'), demo_table_content, class: 'button' %>
+  <h5><%= t('.enter_for_demo_table') %></h5>
+</section>
+
+<section class='final-cta'>
+  <div class='feature'>
+    <h3><%= t('.get_your_pass') %></h3>
+  </div>
+  <div class='info'>
+    <p><%= t('.payment') %></p>
+    <%= link_to t('.get_your_ticket'), ticket_link, class: 'button' %>
+  </div>
+</section>
+
+<section class='thank-you'>
+  <h4><%= t('.thanks') %></h4>
+  <p><%= t('.sign_off') %></p>
+</section>
+

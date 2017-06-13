@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :partnerships, only: :index
 
     get '/about' => 'pages#about', as: :about
+    get '/startupfest' => 'pages#startupfest', as: :startupfest
+    get '/startupfestival' => 'pages#startupfest', as: :startupfest
     get '/calendar' => 'community_events#index'
   end
 

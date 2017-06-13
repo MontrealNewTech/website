@@ -47,16 +47,10 @@
   font-style: normal;
 }
 
-.linkedin::before {
-  content: '\f0e1';
-  font-family: 'FontAwesome';
-  font-style: normal;
-}
-
 .map::before {
   content: '\f041';
   font-family: 'FontAwesome';
-  font-style: normal;;
+  font-style: normal;
   padding-right: $little-space;
 }
 
@@ -74,24 +68,6 @@
   padding-right: $little-space;
 }
 
-.facebook::before {
-  content: '\f09a';
-  font-family: 'FontAwesome';
-  font-style: normal;
-}
-
-.twitter::before {
-  content: '\f099';
-  font-family: 'FontAwesome';
-  font-style: normal;
-}
-
-.instagram::before {
-  content: '\f16d';
-  font-family: 'FontAwesome';
-  font-style: normal;
-}
-
 .new-tab::before {
   content: '\f08e';
   font-family: 'FontAwesome';
@@ -101,6 +77,24 @@
 .close::before {
   content: '\f00d';
   cursor: pointer;
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.pied-piper::before {
+  content: '\f1a8';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.hour-glass::before {
+  content: '\f250';
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.people::before {
+  content: '\f0c0';
   font-family: 'FontAwesome';
   font-style: normal;
 }

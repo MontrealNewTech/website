@@ -9,4 +9,7 @@ class PagesController < ApplicationController
   def about
     @teams = Team.includes(:member_profiles)
   end
+
+  def startupfest
+  end
 end

@@ -1,0 +1,122 @@
+[data-controller=pages][data-action=startupfest] {
+  main {
+    padding: 0;
+  }
+
+  section {
+    @include flex-column-center;
+    padding: 0 $little-space;
+    text-align: center;
+
+    @include above($small-screen) {
+      padding: $xl-space $med-space;
+    }
+  }
+
+  a:hover {
+    color: $main-color;
+  }
+
+  .content {
+    max-width: $medium-screen;
+  }
+
+  .banner {
+    border-radius: 0;
+  }
+
+  .join-us {
+    font-family: $headers;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    color: $main-color;
+  }
+
+  .pass {
+    padding: $little-space;
+  }
+
+  .price {
+    color: $main-color;
+    font-size: $xl-font-size;
+  }
+
+  .qi {
+    @include flex-column-then-row;
+    background-color: $main-color;
+    color: $background-color;
+  }
+
+  .details {
+    @include squairy-light-background;
+  }
+
+  .criteria {
+    @include flex-column-then-row;
+  }
+
+  .pied-piper,
+  .hour-glass,
+  .people {
+    flex: 1;
+    padding: $med-space;
+  }
+
+  .pied-piper::before,
+  .hour-glass::before,
+  .people::before {
+    color: $main-color;
+    display: block;
+    font-size: 8rem;
+    padding: $large-space 0;
+  }
+
+  .more-details {
+    @include flex-column-then-row;
+
+    background-color: $lightest-grey;
+
+    h3 {
+      color: $main-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .final-cta {
+    @include flex-column-then-row;
+    @include squairy-light-background;
+
+    h3 {
+      text-transform: uppercase;
+    }
+  }
+
+  .info {
+    flex: 2;
+
+    p {
+      padding: $med-space;
+    }
+  }
+
+  .feature {
+    flex: 1;
+    padding: $large-space;
+  }
+
+  .demo-table {
+    background: $main-color;
+    color: $background-color;
+
+    .button {
+      @include button($color: $white);
+    }
+  }
+}
+
+
