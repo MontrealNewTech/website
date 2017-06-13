@@ -372,6 +372,7 @@
       display: inline-block;
       max-height: 18vh;
       padding: $large-space;
+      width: inherit;
 
       @include above($small-screen) {
         max-height: 25vh;
