@@ -115,9 +115,10 @@ fr:
       initiatives: Initiatives
       sign_up: S'inscrire
       startup_landscape: Start Up Landscape
+      startupfest: Startupfest
   log_out: Déconnecter
   meta:
-    calendar:  Événements de développement et de startups à Montréal - C'est notre calendrier organisé d'événements de startups et de développement qui se déroulent à Montréal.
+    calendar: Événements de développement et de startups à Montréal - C'est notre calendrier organisé d'événements de startups et de développement qui se déroulent à Montréal.
     initiatives: Montréal NewTech rassemble plus de 250 entrepreneurs une fois par mois, les start-ups locales peuvent démo leurs produits auprès des entrepreneurs, des développeurs, des investisseurs et des journalistes.
     main: Montréal NewTech est la plus grande communauté de start-ups de Montréal. Nous sommes dévoués au succès des entrepreneurs startups de Montréal.
   models:
@@ -147,6 +148,35 @@ fr:
         sub: Nous vous ferons parvenir des rappels sur les événements à venir et les mises à jour au sujet de la communauté.
       title: Montréal Startups
       what_we_do: Ce que nous faisons
+    startupfest:
+      contest: And you could win a demo table at Startupfest!
+      demo_table: If you are a Montreal startup with a product to demo, this may also be your chance! Quartier de l'Innovation will have a tent and will offer selected startups the opportunity to have their own demo table for a day worth 1250$ plux taxes!
+      details_1: You can buy your pass now for Startupfest with an amazing discount. Quartier de l’Innovation will cover all but $150 of the cost for up to 50 Startup entrepreneurs that qualify. Regular price is $550.
+      details_2: Please make sure to check the criteria below to confirm that you are eligible to this offer.
+      details_3: "(We're still looking for more partners to help us offer more tickets at this great price... in case you know any!)"
+      eligibility_1: You can buy this ticket if
+      eligibility_2: You are part of the MTL NewTech or Quartier de l'Innovation communities
+      eligibility_3: You are in a startup that has been operating for less than 2 years or are a young professional or aspiring entrepreneur with less than 2 years of experience
+      eligibility_4: You are part of a team smaller than 15 people
+      enter_for_demo_table: Enter to win a demo table for a day
+      for_only: for only
+      get_your_pass: Fill out the form, get your exclusive pass, and come join us at startupfest
+      get_your_ticket: Get your ticket
+      join_us_1: Join us for startup festival on July 12-15, 2017!
+      join_us_2: Quartier de l’Innovation & MTL NewTech have an awesome deal for you
+      more_details_1: Startupfest is our yearly startup pilgrimage!
+      more_details_2_html: "%{link} is THE event where local startups meet with entrepreneurs from around the world, investors and other institutional players. And we know that our community of early stage startups cannot always afford the 550$ ticket price, even though it is really worth it!"
+      more_details_3: Where there is a will there is a way and we want everyone in our great innovation and entrepreneurship community to take advantage of this amazing gathering! So, just like every year, we try our best to find an awesome partner to help us achieve that goal. This year, we are thankful to Quartier de l’Innovation who jumped in to help us bring Montreal aspiring entrepreneurs and startups to Startup Festival for only 150$!
+      more_details_4: "Don't miss anything, and go learn more about it right now! (then come back to get this awesome deal) \U0001F609"
+      partnership: Thanks to our great partnership
+      payment: The payment is fast and simple via PayPal. You will receive your tickets later on in your email
+      price: "$150"
+      qi_1: We are grateful and proud to announce that Quartier de l’Innovation is on board to significantly subsidize a limited number of tickets for startups that cannot afford it and have some really cool programming planned for Startupfest.
+      qi_2: Huge THANKS to QI for their support and for making this awesome deal happen for our communities.
+      sign_off: MTL NewTech & Quartier de l’Innovation team
+      startup_festival: Startup Festival
+      startupfest_pass: Get your Startupfest pass
+      thanks: Thank you! Looking forward to see you at Startupfest!
   partnerships:
     index:
       about_partnerships: Montréal New Tech s'associe à des organismes locaux dédiés à nous aider à soutenir l'écosystème startup.

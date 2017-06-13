@@ -17,6 +17,7 @@
       <% end %>
       <li><%= link_to t('.community_events'), calendar_path %></li>
       <li><%= link_to t('.initiatives'), initiatives_path %></li>
+      <li><%= link_to t('.startupfest'), startupfest_path %></li>
       <li><%= link_to t('.startup_landscape'), "http://landscape.startupscollective.com", target: 'blank' %></li>
       <% if current_user.present? %>
         <li><%= link_to t('log_out'), destroy_user_session_path, method: :delete %></li>
