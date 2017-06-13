@@ -353,6 +353,17 @@
     }
   }
 
+  #partnerships {
+    h2,
+    h3 {
+      padding: 0 $xl-space;
+    }
+
+    h3 {
+      font-size: $large-font-size;
+    }
+  }
+
   .partnership-logos {
     @include flex-row-center;
     flex-flow: wrap;
