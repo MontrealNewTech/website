@@ -156,9 +156,10 @@ en:
       details_3: "(We're still looking for more partners to help us offer more tickets at this great price... in case you know any!)"
       eligibility_1: You can buy this ticket if
       eligibility_2: You are part of the MTL NewTech or Quartier de l'Innovation communities
-      eligibility_3: You are in a startup that has been operating for less than 2 years or are a young professional or aspiring entrepreneur with less than 2 years of experience
+      eligibility_3: You are in a startup that has been operating for less than 3 years (for the startup ticket) or are a young professional or aspiring entrepreneur with less than 3 years of experience (for the professional ticket)
       eligibility_4: You are part of a team smaller than 15 people
       enter_for_demo_table: Enter to win a demo table for a day
+      fill_form: Then fill out this form with your info
       for_only: for only
       get_your_pass: Fill out the form, get your exclusive pass, and come join us at startupfest
       get_your_ticket: Get your ticket
@@ -172,11 +173,12 @@ en:
       payment: The payment is fast and simple via PayPal. You will receive your tickets later on in your email
       price: "$150"
       qi_1: We are grateful and proud to announce that Quartier de l’Innovation is on board to significantly subsidize a limited number of tickets for startups that cannot afford it and have some really cool programming planned for Startupfest.
+      other_tickets: You do not fit the criteria above? Quartier de l'Innovation and MTL NewTech haven't forgotten about you, reach out to us and we will find you a sweet deal as well!
       qi_2: Huge THANKS to QI for their support and for making this awesome deal happen for our communities.
       sign_off: MTL NewTech & Quartier de l’Innovation team
       startup_festival: Startup Festival
       startupfest_pass: Get your Startupfest pass
-      thanks: Thank you! Looking forward to see you at Startupfest!
+      thanks: Thank you! Looking forward to seeing you at Startupfest!
   partnerships:
     index:
       about_partnerships: Montreal New Tech partners with local organizations who are dedicated to helping us support the startup ecosytem.

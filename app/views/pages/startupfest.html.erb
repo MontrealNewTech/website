@@ -1,5 +1,7 @@
 <% startup_fest_website = 'http://www.startupfestival.com/' %>
-<% ticket_link = 'http://www.startupfestival.com/' %>
+<% ticket_link_150 = 'http://go.mtlnewtech.com/startupfest150startup' %>
+<% ticket_link_290 = 'http://go.mtlnewtech.com/startupfest150prostartup' %>
+<% info_form_link = 'http://go.mtlnewtech.com/startupfest2017tix' %>
 <% demo_table_content = 'http://www.startupfestival.com/' %>
 
 <a href=<%= startup_fest_website %> target='blank'>
@@ -10,9 +12,26 @@
   <div class='content'>
     <h2><%= t('.join_us_1') %></h2>
     <h3><%= t('.join_us_2') %></h3>
-    <%= link_to t('.startupfest_pass'), ticket_link, target: 'blank', class: 'button' %>
+
+    <form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
+      <input type='hidden' name='cmd' value='_s-xclick'>
+      <input type='hidden' name='hosted_button_id' value='7T6YFRJRJDBW2'>
+      <input type='hidden' name='on0' value='Pass Startupfest'>
+
+      <input type='submit' name='submit' value='<%= t('.startupfest_pass') %>'>
+
+      <select name='os0'>
+        <option value='Startups'>Startups $150.00 CAD</option>
+        <option value='Aspiring Entrepreneurs'>Aspiring Entrepreneurs $150.00 CAD</option>
+        <option value='Professional Aspiring Entrepreneur'>Professional Aspiring Entrepreneur $290.00 CAD</option>
+      </select>
+
+      <input type='hidden' name='currency_code' value='CAD'>
+    </form>
+
     <p><%= t('.for_only') %></p>
     <div class='price'><%= t('.price') %></div>
+    <%= link_to t('.fill_form'), info_form_link, target: 'blank', class: 'info-form' %>
     <h3><%= t('.partnership') %></h3>
   </div>
 </section>
@@ -30,7 +49,24 @@
 <section class='details'>
   <div class='content'>
     <p><%= t('.details_1') %></p>
-    <%= link_to t('.get_your_ticket'), ticket_link, class: 'button' %>
+
+    <form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
+      <input type='hidden' name='cmd' value='_s-xclick'>
+      <input type='hidden' name='hosted_button_id' value='7T6YFRJRJDBW2'>
+      <input type='hidden' name='on0' value='Pass Startupfest'>
+
+
+      <select name='os0'>
+        <option value='Startups'>Startups $150.00 CAD</option>
+        <option value='Aspiring Entrepreneurs'>Aspiring Entrepreneurs $150.00 CAD</option>
+        <option value='Professional Aspiring Entrepreneur'>Professional Aspiring Entrepreneur $290.00 CAD</option>
+      </select>
+
+      <input type='submit' name='submit' value='<%= t('.startupfest_pass') %>'>
+      <input type='hidden' name='currency_code' value='CAD'>
+      <%= link_to t('.fill_form'), info_form_link, target: 'blank', class: 'info-form' %>
+    </form>
+
     <p><%= t('.details_2') %></p>
     <p><%= t('.details_3') %></p>
   </div>
@@ -62,7 +98,23 @@
 </a>
 
 <section class='cta'>
-  <%= link_to t('.get_your_ticket'), ticket_link, class: 'button' %>
+    <form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
+      <input type='hidden' name='cmd' value='_s-xclick'>
+      <input type='hidden' name='hosted_button_id' value='7T6YFRJRJDBW2'>
+      <input type='hidden' name='on0' value='Pass Startupfest'>
+
+
+      <select name='os0'>
+        <option value='Startups'>Startups $150.00 CAD</option>
+        <option value='Aspiring Entrepreneurs'>Aspiring Entrepreneurs $150.00 CAD</option>
+        <option value='Professional Aspiring Entrepreneur'>Professional Aspiring Entrepreneur $290.00 CAD</option>
+      </select>
+
+      <input type='submit' name='submit' value='<%= t('.startupfest_pass') %>'>
+      <input type='hidden' name='currency_code' value='CAD'>
+      <%= link_to t('.fill_form'), info_form_link, target: 'blank', class: 'info-form' %>
+    </form>
+
   <h4><%= t('.contest') %></h4>
 </section>
 
@@ -77,7 +129,24 @@
   </div>
   <div class='info'>
     <p><%= t('.payment') %></p>
-    <%= link_to t('.get_your_ticket'), ticket_link, class: 'button' %>
+    <form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
+      <input type='hidden' name='cmd' value='_s-xclick'>
+      <input type='hidden' name='hosted_button_id' value='7T6YFRJRJDBW2'>
+      <input type='hidden' name='on0' value='Pass Startupfest'>
+
+
+      <select name='os0'>
+        <option value='Startups'>Startups $150.00 CAD</option>
+        <option value='Aspiring Entrepreneurs'>Aspiring Entrepreneurs $150.00 CAD</option>
+        <option value='Professional Aspiring Entrepreneur'>Professional Aspiring Entrepreneur $290.00 CAD</option>
+      </select>
+
+      <input type='submit' name='submit' value='<%= t('.startupfest_pass') %>'>
+      <input type='hidden' name='currency_code' value='CAD'>
+      <%= link_to t('.fill_form'), info_form_link, target: 'blank', class: 'info-form' %>
+    </form>
+
+    <p><%= t('.other_tickets') %></p>
   </div>
 </section>
 
